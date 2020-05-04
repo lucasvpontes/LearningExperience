@@ -9,11 +9,18 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LearningExperience.Core", "
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LearningExperience.Api", "LearningExperience.Api\LearningExperience.Api.csproj", "{327A7F8D-44F1-4C85-A8D5-AF37E5498812}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LearningExperience.Models", "LearningExperience.Models\LearningExperience.Models.csproj", "{D1FE3B00-7F46-4CF1-8292-DD48D37FEC2C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LearningExperience.Models", "LearningExperience.Models\LearningExperience.Models.csproj", "{D1FE3B00-7F46-4CF1-8292-DD48D37FEC2C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LearningExperience.Services", "LearningExperience.Services\LearningExperience.Services.csproj", "{89D8EBF1-35FD-422F-A97D-01785DC876C0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LearningExperience.Services", "LearningExperience.Services\LearningExperience.Services.csproj", "{89D8EBF1-35FD-422F-A97D-01785DC876C0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LearningExperience.Repository", "LearningExperience.Repository\LearningExperience.Repository.csproj", "{A41E56A2-5B08-4D1E-B57A-E2D977CCB416}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LearningExperience.Repository", "LearningExperience.Repository\LearningExperience.Repository.csproj", "{A41E56A2-5B08-4D1E-B57A-E2D977CCB416}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{BE29E765-035D-4461-B3FF-4C863DA7A9BB}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LearningExperience.Utils", "LearningExperience.Utils\LearningExperience.Utils.csproj", "{4C6A00AF-D95D-4E43-BB3F-F79DBD8071E0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +52,10 @@ Global
 		{A41E56A2-5B08-4D1E-B57A-E2D977CCB416}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A41E56A2-5B08-4D1E-B57A-E2D977CCB416}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A41E56A2-5B08-4D1E-B57A-E2D977CCB416}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4C6A00AF-D95D-4E43-BB3F-F79DBD8071E0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4C6A00AF-D95D-4E43-BB3F-F79DBD8071E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4C6A00AF-D95D-4E43-BB3F-F79DBD8071E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4C6A00AF-D95D-4E43-BB3F-F79DBD8071E0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
