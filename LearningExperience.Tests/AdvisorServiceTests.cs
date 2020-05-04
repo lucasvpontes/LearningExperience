@@ -2,7 +2,7 @@ using NUnit.Framework;
 
 namespace LearningExperience.Tests
 {
-    public class Tests
+    public class AdvisorServiceTests
     {
         [SetUp]
         public void Setup()

@@ -4,4 +4,15 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Castle.Windsor" Version="5.0.1" />
+    <PackageReference Include="mongocsharpdriver" Version="2.10.3" />
+    <PackageReference Include="System.Configuration.ConfigurationManager" Version="4.7.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\LearningExperience.Models\LearningExperience.Models.csproj" />
+    <ProjectReference Include="..\LearningExperience.Utils\LearningExperience.Utils.csproj" />
+  </ItemGroup>
+
 </Project>

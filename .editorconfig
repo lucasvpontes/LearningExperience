@@ -1,0 +1,7 @@
+﻿[*.cs]
+
+# CS8632: The annotation for nullable reference types should only be used in code within a '#nullable' annotations context.
+dotnet_diagnostic.CS8632.severity = none
+
+# CS0618: Type or member is obsolete
+dotnet_diagnostic.CS0618.severity = none
