@@ -13,7 +13,18 @@ namespace LearningExperience.Utils
     {
         public static readonly TimeZoneInfo hwZone = TimeZoneInfo.CreateCustomTimeZone("BR_No_DST", new TimeSpan(-3, 0, 0), "BR No DST", "BR no DST");
 
-        public static DateTime BrazilTime(DateTime? dateTime = null)
+
+        public static string GetCollectionName(string collectionName)
+        {
+            collectionName = collectionName.Replace("ys", "ies");
+            if (collectionName.EndsWith("chs"))
+            {
+                collectionName = collectionName.Substring(0, collectionName.Length - 3) + "ches";
+            }
+            return collectionName;
+        }
+
+public static DateTime BrazilTime(DateTime? dateTime = null)
         {
             if (dateTime == null)
                 dateTime = DateTime.Now;
