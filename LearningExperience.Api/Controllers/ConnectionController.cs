@@ -1,12 +1,9 @@
-﻿using LearningExperience.Models;
-using LearningExperience.Services;
-using Microsoft.AspNetCore.Mvc;
-using System.Collections.Generic;
-using Swashbuckle.AspNetCore.Swagger;
+﻿using Microsoft.AspNetCore.Mvc;
 
-namespace LearningExperience.Api.Controllers
+namespace LearningExperience.Controllers
 {
-    [Route("api/v1/")]
+
+    [Route("api/v1/[controller]")]
     [ApiController]
     public class ConnectionController : ControllerBase
     {
@@ -15,9 +12,12 @@ namespace LearningExperience.Api.Controllers
         /// </summary>
         [Route("ping")]
         [HttpGet]
-        public string GetPing() {
+        public string GetPing()
+        {
             return "Pong!";
         }
 
+
     }
 }
+
