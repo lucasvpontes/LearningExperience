@@ -21,6 +21,4 @@
     <ProjectReference Include="..\LearningExperience.Services\LearningExperience.Services.csproj" />
   </ItemGroup>
 
-
-
 </Project>
