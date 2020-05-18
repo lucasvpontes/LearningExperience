@@ -12,7 +12,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\LearningExperience.Models\LearningExperience.Models.csproj" />
-    <ProjectReference Include="..\LearningExperience.Utils\LearningExperience.Utils.csproj" />
   </ItemGroup>
 
 </Project>

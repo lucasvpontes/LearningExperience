@@ -19,7 +19,6 @@
     <ProjectReference Include="..\LearningExperience.Ioc\LearningExperience.Ioc.csproj" />
     <ProjectReference Include="..\LearningExperience.Repository\LearningExperience.Repository.csproj" />
     <ProjectReference Include="..\LearningExperience.Services\LearningExperience.Services.csproj" />
-    <ProjectReference Include="..\LearningExperience.Utils\LearningExperience.Utils.csproj" />
   </ItemGroup>
 
 </Project>
