@@ -81,7 +81,14 @@ namespace LearningExperience.Repository
 
         public virtual Task InsertOneAsync(TDocument document)
         {
-            return Task.Run(() => _collection.InsertOneAsync(document));
+            try
+            {
+                return Task.Run(() => _collection.InsertOneAsync(document));
+            }
+            catch(Exception e)
+            {
+                throw e;
+            }
         }
 
         public void InsertMany(ICollection<TDocument> documents)
