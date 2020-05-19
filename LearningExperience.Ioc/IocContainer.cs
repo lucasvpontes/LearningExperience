@@ -9,7 +9,9 @@ namespace LearningExperience.Ioc
         public static IServiceCollection RegisterRepositories(this IServiceCollection services)
         {
             return services
-                .AddScoped(typeof(IMongoRepository<>), typeof(MongoRepository<>));
+                .AddScoped(typeof(IMongoRepository<>), typeof(MongoRepository<>))
+                .AddScoped(typeof(IAdvisorRepository), typeof(AdvisorRepository))
+                .AddScoped(typeof(IPatientRepository), typeof(PatientRepository));
         }
         public static IServiceCollection RegisterServices(this IServiceCollection services)
         {
