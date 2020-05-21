@@ -24,7 +24,7 @@ namespace LearningExperience.Controllers
         [HttpPost]
         public async Task<OkResult> RegisterPatient(PatientDTO patientDTO)
         {
-           await _patientService.AddPatient(patientDTO.Patient);
+            await _patientService.AddPatient(patientDTO.Patient);
             return Ok();
         }
 
@@ -38,7 +38,7 @@ namespace LearningExperience.Controllers
         [HttpPost("RemovePatient")]
         public async Task<OkResult> RemoveAdvisor(PatientDTO patientDTO)
         {
-         await _patientService.RemovePatient(patientDTO.Patient);
+            await _patientService.RemovePatient(patientDTO.Patient);
             return Ok();
         }
 
@@ -50,9 +50,9 @@ namespace LearningExperience.Controllers
         }
 
         [HttpPost("UpdateMultiplePatient")]
-        public async Task<OkResult> UpdateMultipleAdvisors(PatientDTO patientDTO)
+        public async Task<OkResult> UpdateMultipleAdvisors(PatientsRequestDTO patientsDTO)
         {
-            await _patientService.UpdateMultiplePatients(patientDTO.Patient);
+            await _patientService.UpdateMultiplePatients(patientsDTO.Patients);
             return Ok();
         }
 

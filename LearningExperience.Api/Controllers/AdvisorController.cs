@@ -49,9 +49,9 @@ namespace LearningExperience.Controllers
         }
 
         [HttpPost("UpdateMultipleAdvisors")]
-        public async Task<OkResult> UpdateMultipleAdvisors(AdvisorDTO advisorDTO)
+        public async Task<OkResult> UpdateMultipleAdvisors(AdvisorsRequestDTO advisorsDTO)
         {
-            await _advisorService.UpdateMultipleAdvisors(advisorDTO.Advisor);
+            await _advisorService.UpdateMultipleAdvisors(advisorsDTO.Advisors);
             return Ok();
         }
 
