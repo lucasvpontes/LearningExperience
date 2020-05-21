@@ -31,14 +31,14 @@ namespace LearningExperience.Services
             await _advisorRepository.RemoveAdvisor(advisorRemoved);
         }
 
-        public async Task UpdateAdvisor(Advisor advisorRemoved)
+        public async Task UpdateAdvisor(Advisor advisorUpdated)
         {
-            await _advisorRepository.UpdateAdvisor(advisorRemoved);
+            await _advisorRepository.UpdateAdvisor(advisorUpdated);
         }
 
-        public async Task UpdateMultipleAdvisors(Advisor advisorRemoved)
+        public async Task UpdateMultipleAdvisors(List<Advisor> advisorsUpdated)
         {
-            await _advisorRepository.UpdateMultipleAdvisors(advisorRemoved);
+            await _advisorRepository.UpdateMultipleAdvisors(advisorsUpdated);
         }
     }
 }

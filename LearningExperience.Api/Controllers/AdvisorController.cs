@@ -1,6 +1,7 @@
 ﻿using LearningExperience.Models;
 using LearningExperience.Models.DTO;
 using LearningExperience.Services;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 using System.Threading.Tasks;
@@ -10,6 +11,7 @@ namespace LearningExperience.Controllers
 
     [ApiController]
     [Route("api/v1/[controller]")]
+    [Authorize]
     public class AdvisorController : ControllerBase
     {
         private readonly IAdvisorService _advisorService;
@@ -49,9 +51,9 @@ namespace LearningExperience.Controllers
         }
 
         [HttpPost("UpdateMultipleAdvisors")]
-        public async Task<OkResult> UpdateMultipleAdvisors(AdvisorDTO advisorDTO)
+        public async Task<OkResult> UpdateMultipleAdvisors(AdvisorsRequestDTO advisorsDTO)
         {
-            await _advisorService.UpdateMultipleAdvisors(advisorDTO.Advisor);
+            await _advisorService.UpdateMultipleAdvisors(advisorsDTO.Advisors);
             return Ok();
         }
 
