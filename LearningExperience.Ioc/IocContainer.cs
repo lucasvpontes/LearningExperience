@@ -11,13 +11,15 @@ namespace LearningExperience.Ioc
             return services
                 .AddScoped(typeof(IMongoRepository<>), typeof(MongoRepository<>))
                 .AddScoped(typeof(IAdvisorRepository), typeof(AdvisorRepository))
-                .AddScoped(typeof(IPatientRepository), typeof(PatientRepository));
+                .AddScoped(typeof(IPatientRepository), typeof(PatientRepository))
+                .AddScoped(typeof(IUserRepository), typeof(UserRepository));
         }
         public static IServiceCollection RegisterServices(this IServiceCollection services)
         {
             return services
                 .AddTransient<IAdvisorService, AdvisorService>()
-                .AddTransient<IPatientService, PatientService>();
+                .AddTransient<IPatientService, PatientService>()
+                .AddTransient<IUserService, UserService>();
         }
     }
 }
