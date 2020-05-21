@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace LearningExperience.Services
 {
-    public class PatientService : IPatientService
+    public class PatientService: IPatientService
     {
         private readonly IPatientRepository _patientRepository;
 
@@ -16,9 +16,9 @@ namespace LearningExperience.Services
             _patientRepository = patientRepository;
         }
 
-        public async Task AddPatient(Patient patient)
+        public async Task AddPatient(Patient Patient)
         {
-            await _patientRepository.AddPatient(patient);
+            await _patientRepository.AddPatient(Patient);
         }
 
         public IEnumerable<Patient> GetAll()
@@ -32,14 +32,14 @@ namespace LearningExperience.Services
             await _patientRepository.RemovePatient(patientRemoved);
         }
 
-        public async Task UpdatePatient(Patient patientsUpdated)
+        public async Task UpdatePatient(Patient patientRemoved)
         {
-            await _patientRepository.UpdatePatient(patientsUpdated);
+            await _patientRepository.UpdatePatient(patientRemoved);
         }
 
-        public async Task UpdateMultiplePatients(List<Patient> patientsUpdated)
+        public async Task UpdateMultiplePatients(Patient PatientRemoved)
         {
-            await _patientRepository.UpdateMultiplePatients(patientsUpdated);
+            await _patientRepository.UpdateMultiplePatients(PatientRemoved);
         }
     }
 }

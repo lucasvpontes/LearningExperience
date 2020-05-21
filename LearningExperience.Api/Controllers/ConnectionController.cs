@@ -1,12 +1,10 @@
-﻿using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 
 namespace LearningExperience.Controllers
 {
 
     [Route("api/v1/[controller]")]
     [ApiController]
-    [Authorize]
     public class ConnectionController : ControllerBase
     {
         /// <summary>

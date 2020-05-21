@@ -6,11 +6,11 @@ namespace LearningExperience.Services
 {
     public interface IPatientService
     {
-        Task AddPatient(Patient patient);
+        Task AddPatient(Patient Patient);
         IEnumerable<Patient> GetAll();
-        Task RemovePatient(Patient patientRemoved);
-        Task UpdatePatient(Patient patientUpdated);
-        Task UpdateMultiplePatients(List<Patient> patientsUpdated);
+        Task RemovePatient(Patient PatientRemoved);
+        Task UpdatePatient(Patient PatientRemoved);
+        Task UpdateMultiplePatients(Patient PatientRemoved);
     }
 }
 
