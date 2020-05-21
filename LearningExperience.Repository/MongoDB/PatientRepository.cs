@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace LearningExperience.Repository
 {
-    public class PatientRepository : IPatientRepository
+    public class PatientRepository: IPatientRepository
     {
         private readonly IMongoRepository<Patient> _mongoRepository;
 
@@ -16,9 +16,9 @@ namespace LearningExperience.Repository
             _mongoRepository = mongoRepository;
         }
 
-        public async Task AddPatient(Patient patient)
+        public async Task AddPatient(Patient Patient)
         {
-            await _mongoRepository.InsertOneAsync(patient);
+            await _mongoRepository.InsertOneAsync(Patient);
         }
 
         public IEnumerable<Patient> GetAll()
@@ -32,24 +32,21 @@ namespace LearningExperience.Repository
         public async Task RemovePatient(Patient patientRemoved)
         {
             await _mongoRepository.DeleteOneAsync(
-                patient => patient.Name == patientRemoved.Name);
+                patient => patient.Name == patientRemoved.Name) ;
         }
 
-        public async Task UpdatePatient(Patient patientUpated)
+        public async Task UpdatePatient(Patient patientRemoved)
         {
             var update = Builders<Patient>.Update
-            .Set(patient => patient.Name, patientUpated.Name);
-            await _mongoRepository.UpdateOneAsync(Patient => Patient.DiseaseLevel == patientUpated.DiseaseLevel, update);
+            .Set(patient => patient.Name, patientRemoved.Name);
+            await _mongoRepository.UpdateOneAsync(Patient => Patient.DiseaseLevel == patientRemoved.DiseaseLevel, update);
         }
 
-        public async Task UpdateMultiplePatients(List<Patient> patientsUpdated)
+        public async Task UpdateMultiplePatients(Patient PatientRemoved)
         {
-            foreach (Patient patientUpdated in patientsUpdated)
-            {
-                var update = Builders<Patient>.Update
-                .Set(Patient => Patient.Name, patientUpdated.Name);
-                await _mongoRepository.UpdateManyAsync(Patient => Patient.DiseaseLevel == patientUpdated.DiseaseLevel, update);
-            }
+            var update = Builders<Patient>.Update
+            .Set(Patient => Patient.Name, PatientRemoved.Name);
+            await _mongoRepository.UpdateManyAsync(Patient => Patient.DiseaseLevel == PatientRemoved.DiseaseLevel, update);
         }
     }
 }

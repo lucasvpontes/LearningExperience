@@ -9,8 +9,8 @@ namespace LearningExperience.Repository
         Task AddAdvisor(Advisor advisor);
         IEnumerable<Advisor> GetAll();
         Task RemoveAdvisor(Advisor advisorRemoved);
-        Task UpdateAdvisor(Advisor advisorUpdated);
-        Task UpdateMultipleAdvisors(List<Advisor> advisors);
+        Task UpdateAdvisor(Advisor advisorRemoved);
+        Task UpdateMultipleAdvisors(Advisor advisorRemoved);
     }
 }
 

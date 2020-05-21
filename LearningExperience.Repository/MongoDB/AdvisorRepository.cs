@@ -44,13 +44,11 @@ namespace LearningExperience.Repository
             await _mongoRepository.UpdateOneAsync(advisor => advisor.Name == advisorRemoved.Name, update);
         }
 
-        public async Task UpdateMultipleAdvisors(List<Advisor> advisors)
+        public async Task UpdateMultipleAdvisors(Advisor advisorRemoved)
         {
-            foreach(Advisor advisorUpdate in advisors) { 
             var update = Builders<Advisor>.Update
-            .Set(advisor => advisor.Name, advisorUpdate.Name);
-            await _mongoRepository.UpdateManyAsync(advisor => advisor.Name == advisorUpdate.Name, update);
-            }
+            .Set(advisor => advisor.Name, advisorRemoved.Name);
+            await _mongoRepository.UpdateManyAsync(advisor => advisor.Name == advisorRemoved.Name, update);
         }
     }
 }
