@@ -22,11 +22,11 @@ namespace LearningExperience.Api.Controllers
 
         [AllowAnonymous]
         [HttpPost]
-        public IActionResult CreateToken([FromBody] UserDTO userDTO)
+        public IActionResult CreateToken([FromBody] AuthenticateUserDTO userDTO)
         {
-            if (userDTO.User.Email == null) return Unauthorized();
+            if (userDTO.Email == null) return Unauthorized();
             string tokenString = string.Empty;
-            bool validUser = Authenticate(userDTO.User);
+            bool validUser = Authenticate(userDTO);
             if (validUser)
             {
                 tokenString = BuildJWTToken();
@@ -56,7 +56,7 @@ namespace LearningExperience.Api.Controllers
             return new JwtSecurityTokenHandler().WriteToken(token);
         }
 
-        private bool Authenticate(User login)
+        private bool Authenticate(AuthenticateUserDTO login)
         {
             bool validUser = false;
 

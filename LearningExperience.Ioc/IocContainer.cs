@@ -21,5 +21,6 @@ namespace LearningExperience.Ioc
                 .AddTransient<IPatientService, PatientService>()
                 .AddTransient<IUserService, UserService>();
         }
+
     }
 }

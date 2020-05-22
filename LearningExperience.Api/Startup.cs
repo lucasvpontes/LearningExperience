@@ -119,14 +119,14 @@ namespace LearningExperience.Api
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
-            if (env.IsDevelopment())
-            {
-                app.UseDeveloperExceptionPage();
-            }
+            app.UseCors(builder => builder
+                .AllowAnyOrigin()
+                .AllowAnyMethod()
+                .AllowAnyHeader());
+
             app.UseHttpsRedirection();
             app.UseAuthentication();
             app.UseSwagger();
-            app.UseCors();
             app.UseSwaggerUI(c =>
             {
                 c.SwaggerEndpoint("swagger/v1/swagger.json", "API TAT");
