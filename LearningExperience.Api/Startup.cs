@@ -35,7 +35,7 @@ namespace LearningExperience.Api
                     {
                         builder.WithOrigins("*")
                         .AllowAnyHeader()
-                        .AllowAnyMethod(); ;
+                        .AllowAnyMethod();
                     });
             });
 
