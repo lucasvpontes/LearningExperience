@@ -33,7 +33,9 @@ namespace LearningExperience.Api
                 options.AddDefaultPolicy(
                     builder =>
                     {
-                        builder.WithOrigins("*");
+                        builder.WithOrigins("*")
+                        .AllowAnyHeader()
+                        .AllowAnyMethod(); ;
                     });
             });
 
