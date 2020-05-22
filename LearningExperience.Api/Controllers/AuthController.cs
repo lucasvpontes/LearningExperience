@@ -60,7 +60,7 @@ namespace LearningExperience.Api.Controllers
         {
             bool validUser = false;
 
-            if (login.Email == "thecodebuzz" && login.Password == "dont-tell-anyone")
+            if (login.Email == "teste123" && login.Password == "123")
             {
                 validUser = true;
             }
