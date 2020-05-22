@@ -35,8 +35,10 @@ namespace LearningExperience.Api.Controllers
             {
                 return Unauthorized();
             }
-            return Ok(new { Token = tokenString });
+            return Ok(new { Token = tokenString, TokenExpiresIn =_jwtTokenSettings.TokenExpiry });
         }
+
+
 
         private string BuildJWTToken()
         {
