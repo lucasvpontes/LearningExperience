@@ -81,7 +81,6 @@ namespace LearningExperience.Api
             serviceProvider.GetRequiredService<IOptions<MongoDbSettings>>().Value);
 
             services
-                .AddCors()
                 .RegisterRepositories()
                 .RegisterServices()
                 .AddControllers();
