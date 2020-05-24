@@ -1,4 +1,5 @@
 ﻿using LearningExperience.Models;
+using LearningExperience.Models.DTO;
 using LearningExperience.Repository;
 using MongoDB.Bson;
 using MongoDB.Driver;
@@ -9,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace LearningExperience.Repository
 {
-    public class AdvisorRepository: IAdvisorRepository
+    public class AdvisorRepository : IAdvisorRepository
     {
         private readonly IMongoRepository<Advisor> _mongoRepository;
 
@@ -18,8 +19,16 @@ namespace LearningExperience.Repository
             _mongoRepository = mongoRepository;
         }
 
-        public async Task AddAdvisor(Advisor advisor)
+        public async Task AddAdvisor(AdvisorDTO advisorInsert)
         {
+            Advisor advisor = new Advisor()
+            {
+                Name = advisorInsert.Name,
+                Profession = advisorInsert.Profession,
+                Education = advisorInsert.Education,
+                Specialization = advisorInsert.Specialization,
+                Comment = advisorInsert.Comment,
+            };
             await _mongoRepository.InsertOneAsync(advisor);
         }
 
@@ -31,26 +40,23 @@ namespace LearningExperience.Repository
             return advisors;
         }
 
-        public async Task RemoveAdvisor(Advisor advisorRemoved)
+        public async Task RemoveAdvisor(AdvisorDTO advisorRemoved)
         {
             await _mongoRepository.DeleteOneAsync(
-                advisor => advisor.Name == advisorRemoved.Name) ;
+                advisor => advisor.Id == advisorRemoved.Id);
         }
 
-        public async Task UpdateAdvisor(Advisor advisorRemoved)
+        public async Task UpdateAdvisor(AdvisorDTO advisorUpdated)
         {
             var update = Builders<Advisor>.Update
-            .Set(advisor => advisor.Name, advisorRemoved.Name);
-            await _mongoRepository.UpdateOneAsync(advisor => advisor.Name == advisorRemoved.Name, update);
-        }
+            .Set(advisor => advisor.Name, advisorUpdated.Name)
+            .Set(advisor => advisor.Profession, advisorUpdated.Profession)
+            .Set(advisor => advisor.Education, advisorUpdated.Education)
+            .Set(advisor => advisor.Specialization, advisorUpdated.Specialization)
+            .Set(advisor => advisor.Comment, advisorUpdated.Comment)
+            .Set(advisor => advisor.LastUpdate, DateTime.Now);
 
-        public async Task UpdateMultipleAdvisors(List<Advisor> advisors)
-        {
-            foreach(Advisor advisorUpdate in advisors) { 
-            var update = Builders<Advisor>.Update
-            .Set(advisor => advisor.Name, advisorUpdate.Name);
-            await _mongoRepository.UpdateManyAsync(advisor => advisor.Name == advisorUpdate.Name, update);
-            }
+            await _mongoRepository.UpdateOneAsync(advisor => advisor.Id == advisorUpdated.Id, update);
         }
     }
 }

@@ -1,4 +1,5 @@
 ﻿using LearningExperience.Models;
+using LearningExperience.Models.DTO;
 using LearningExperience.Repository;
 using System.Collections.Generic;
 using System.Threading.Tasks;
@@ -15,7 +16,7 @@ namespace LearningExperience.Services
             _advisorRepository = advisorRepository;
         }
 
-        public async Task AddAdvisor(Advisor advisor)
+        public async Task AddAdvisor(AdvisorDTO advisor)
         {
             await _advisorRepository.AddAdvisor(advisor);
         }
@@ -26,19 +27,14 @@ namespace LearningExperience.Services
             return advisors;
         }
 
-        public async Task RemoveAdvisor(Advisor advisorRemoved)
+        public async Task RemoveAdvisor(AdvisorDTO advisorRemoved)
         {
             await _advisorRepository.RemoveAdvisor(advisorRemoved);
         }
 
-        public async Task UpdateAdvisor(Advisor advisorUpdated)
+        public async Task UpdateAdvisor(AdvisorDTO advisorUpdated)
         {
             await _advisorRepository.UpdateAdvisor(advisorUpdated);
-        }
-
-        public async Task UpdateMultipleAdvisors(List<Advisor> advisorsUpdated)
-        {
-            await _advisorRepository.UpdateMultipleAdvisors(advisorsUpdated);
         }
     }
 }

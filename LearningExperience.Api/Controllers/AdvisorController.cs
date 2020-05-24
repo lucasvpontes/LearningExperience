@@ -25,7 +25,7 @@ namespace LearningExperience.Controllers
         [HttpPost]
         public async Task<OkResult> RegisterAdvisor(AdvisorDTO advisorDTO)
         {
-           await _advisorService.AddAdvisor(advisorDTO.Advisor);
+           await _advisorService.AddAdvisor(advisorDTO);
             return Ok();
         }
 
@@ -39,24 +39,15 @@ namespace LearningExperience.Controllers
         [HttpPost("RemoveAdvisor")]
         public async Task<OkResult> RemoveAdvisor(AdvisorDTO advisorDTO)
         {
-         await _advisorService.RemoveAdvisor(advisorDTO.Advisor);
+         await _advisorService.RemoveAdvisor(advisorDTO);
             return Ok();
         }
 
         [HttpPost("UpdateAdvisor")]
         public async Task<OkResult> UpdateAdvisor(AdvisorDTO advisorDTO)
         {
-            await _advisorService.UpdateAdvisor(advisorDTO.Advisor);
+            await _advisorService.UpdateAdvisor(advisorDTO);
             return Ok();
         }
-
-        [HttpPost("UpdateMultipleAdvisors")]
-        public async Task<OkResult> UpdateMultipleAdvisors(AdvisorsRequestDTO advisorsDTO)
-        {
-            await _advisorService.UpdateMultipleAdvisors(advisorsDTO.Advisors);
-            return Ok();
-        }
-
-
     }
 }

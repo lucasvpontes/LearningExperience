@@ -1,4 +1,5 @@
 ﻿using MongoDB.Bson.Serialization.Attributes;
+using System;
 
 namespace LearningExperience.Models
 {
@@ -11,6 +12,6 @@ namespace LearningExperience.Models
         public string Education { get; set; }
         public string Specialization { get; set; }
         public string? Comment { get; set; }
-        public string? LastUpdate { get; set; }
+        public DateTime? LastUpdate { get; set; }
     }
 }

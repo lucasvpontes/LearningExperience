@@ -1,4 +1,5 @@
-﻿using LearningExperience.Models;
+﻿using LearningExperience.DTO;
+using LearningExperience.Models;
 using LearningExperience.Repository;
 using MongoDB.Driver;
 using System.Collections.Generic;
@@ -16,7 +17,7 @@ namespace LearningExperience.Services
             _patientRepository = patientRepository;
         }
 
-        public async Task AddPatient(Patient patient)
+        public async Task AddPatient(PatientDTO patient)
         {
             await _patientRepository.AddPatient(patient);
         }
@@ -27,19 +28,14 @@ namespace LearningExperience.Services
             return patients;
         }
 
-        public async Task RemovePatient(Patient patientRemoved)
+        public async Task RemovePatient(PatientDTO patientRemoved)
         {
             await _patientRepository.RemovePatient(patientRemoved);
         }
 
-        public async Task UpdatePatient(Patient patientsUpdated)
+        public async Task UpdatePatient(PatientDTO patientsUpdated)
         {
             await _patientRepository.UpdatePatient(patientsUpdated);
-        }
-
-        public async Task UpdateMultiplePatients(List<Patient> patientsUpdated)
-        {
-            await _patientRepository.UpdateMultiplePatients(patientsUpdated);
         }
     }
 }

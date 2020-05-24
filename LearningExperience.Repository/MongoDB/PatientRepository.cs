@@ -1,6 +1,7 @@
-﻿using LearningExperience.Models;
-using LearningExperience.Repository;
+﻿using LearningExperience.DTO;
+using LearningExperience.Models;
 using MongoDB.Driver;
+using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
@@ -16,8 +17,20 @@ namespace LearningExperience.Repository
             _mongoRepository = mongoRepository;
         }
 
-        public async Task AddPatient(Patient patient)
+        public async Task AddPatient(PatientDTO patientToInsert)
         {
+            var patient = new Patient()
+            {
+                Name = patientToInsert.Name,
+                Age = patientToInsert.Age,
+                DiseaseLevel = patientToInsert.DiseaseLevel,
+                ColorsIssue = patientToInsert.ColorsIssue,
+                FavoriteObject = patientToInsert.FavoriteObject,
+                FavoriteJoke = patientToInsert.FavoriteJoke,
+                FavoritePastTime = patientToInsert.FavoritePastTime,
+                Comment = patientToInsert.FavoritePastTime,
+                LastUpdate = patientToInsert.LastUpdate
+            };
             await _mongoRepository.InsertOneAsync(patient);
         }
 
@@ -29,27 +42,23 @@ namespace LearningExperience.Repository
             return patients;
         }
 
-        public async Task RemovePatient(Patient patientRemoved)
+        public async Task RemovePatient(PatientDTO patientRemoved)
         {
             await _mongoRepository.DeleteOneAsync(
-                patient => patient.Name == patientRemoved.Name);
+                patient => patient.Id == patientRemoved.Id);
         }
 
-        public async Task UpdatePatient(Patient patientUpated)
+        public async Task UpdatePatient(PatientDTO patientUpated)
         {
             var update = Builders<Patient>.Update
-            .Set(patient => patient.Name, patientUpated.Name);
-            await _mongoRepository.UpdateOneAsync(Patient => Patient.DiseaseLevel == patientUpated.DiseaseLevel, update);
-        }
-
-        public async Task UpdateMultiplePatients(List<Patient> patientsUpdated)
-        {
-            foreach (Patient patientUpdated in patientsUpdated)
-            {
-                var update = Builders<Patient>.Update
-                .Set(Patient => Patient.Name, patientUpdated.Name);
-                await _mongoRepository.UpdateManyAsync(Patient => Patient.DiseaseLevel == patientUpdated.DiseaseLevel, update);
-            }
+            .Set(patient => patient.Name, patientUpated.Name)
+            .Set(patient => patient.DiseaseLevel, patientUpated.DiseaseLevel)
+            .Set(patient => patient.ColorsIssue, patientUpated.ColorsIssue)
+            .Set(patient => patient.FavoriteObject, patientUpated.FavoriteObject)
+            .Set(patient => patient.FavoritePastTime, patientUpated.FavoritePastTime)
+            .Set(patient => patient.Comment, patientUpated.Comment)
+            .Set(patient => patient.LastUpdate, DateTime.Now);
+            await _mongoRepository.UpdateOneAsync(Patient => Patient.Id == patientUpated.Id, update);
         }
     }
 }

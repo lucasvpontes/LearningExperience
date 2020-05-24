@@ -1,6 +1,5 @@
 ﻿using LearningExperience.DTO;
 using LearningExperience.Models;
-using LearningExperience.Models.DTO;
 using LearningExperience.Services;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -26,7 +25,7 @@ namespace LearningExperience.Controllers
         [HttpPost]
         public async Task<OkResult> RegisterPatient(PatientDTO patientDTO)
         {
-            await _patientService.AddPatient(patientDTO.Patient);
+            await _patientService.AddPatient(patientDTO);
             return Ok();
         }
 
@@ -34,30 +33,26 @@ namespace LearningExperience.Controllers
         public IEnumerable<Patient> GetAll()
         {
             var patients = _patientService.GetAll();
+            //foreach(Patient patient in patients)
+            //{
+            //   var deseaseLevel =  Enum.GetName(typeof(DiseaseLevel), patient.DiseaseLevel);
+            //}
+
             return patients;
         }
 
         [HttpPost("RemovePatient")]
         public async Task<OkResult> RemoveAdvisor(PatientDTO patientDTO)
         {
-            await _patientService.RemovePatient(patientDTO.Patient);
+            await _patientService.RemovePatient(patientDTO);
             return Ok();
         }
 
         [HttpPost("UpdatePatient")]
         public async Task<OkResult> UpdateAdvisor(PatientDTO patientDTO)
         {
-            await _patientService.UpdatePatient(patientDTO.Patient);
+            await _patientService.UpdatePatient(patientDTO);
             return Ok();
         }
-
-        [HttpPost("UpdateMultiplePatient")]
-        public async Task<OkResult> UpdateMultipleAdvisors(PatientsRequestDTO patientsDTO)
-        {
-            await _patientService.UpdateMultiplePatients(patientsDTO.Patients);
-            return Ok();
-        }
-
-
     }
 }
