@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace LearningExperience.Models.Enums
+﻿namespace LearningExperience.Models.Enums
 {
     public enum DiseaseLevel
     {

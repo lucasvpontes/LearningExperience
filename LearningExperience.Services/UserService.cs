@@ -1,4 +1,5 @@
 ﻿using LearningExperience.Models;
+using LearningExperience.Models.DTO;
 using LearningExperience.Repository;
 using System.Collections.Generic;
 using System.Threading.Tasks;
@@ -40,6 +41,17 @@ namespace LearningExperience.Services
         {
             await _userRepository.UpdateMultipleUsers(usersUpdated); 
         }
+
+        public bool ValidateUser(AuthenticateUserDTO user)
+        {
+            return _userRepository.ValidateUser(user);
+        }
+
+        public User GetUserByLogin(AuthenticateUserDTO user)
+        {
+            return _userRepository.GetUserByLogin(user);
+        }
+
     }
 }
 

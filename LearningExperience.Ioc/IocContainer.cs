@@ -19,7 +19,8 @@ namespace LearningExperience.Ioc
             return services
                 .AddTransient<IAdvisorService, AdvisorService>()
                 .AddTransient<IPatientService, PatientService>()
-                .AddTransient<IUserService, UserService>();
+                .AddTransient<IUserService, UserService>()
+                .AddTransient<IAuthService, AuthService>();
         }
 
     }
