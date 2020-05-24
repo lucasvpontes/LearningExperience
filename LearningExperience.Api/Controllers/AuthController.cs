@@ -17,22 +17,25 @@ namespace LearningExperience.Api.Controllers
     {
         private readonly IJwtTokenSettings _jwtTokenSettings;
         private readonly IUserService _userService;
+        private readonly IAuthService _authService;
         Dictionary<string, string> tokenParams;
-        public AuthController(IJwtTokenSettings jwtTokenSettings, IUserService userService)
+        public AuthController(IJwtTokenSettings jwtTokenSettings, IUserService userService, IAuthService authService)
         {
             _jwtTokenSettings = jwtTokenSettings;
             _userService = userService;
+            _authService = authService;
             tokenParams = new Dictionary<string, string>();
+
         }
 
         [AllowAnonymous]
         [HttpPost]
         public IActionResult CreateToken([FromBody] AuthenticateUserDTO userDTO)
         {
-            if (userDTO.Email == null) return Unauthorized(new { Message = "Usuário ou senha incorretos" });
+            if (userDTO.Email == null) return Ok(new { Status = ReturnStatusCode.NotAuthorized, Message = "Usuário ou senha incorretos" });
 
             string tokenString = string.Empty;
-            tokenParams.Add("SecretKey", _jwtTokenSettings.SecretKey);
+            tokenParams.Add("secretKey", _jwtTokenSettings.SecretKey);
             tokenParams.Add("issuer", _jwtTokenSettings.Issuer);
             tokenParams.Add("audience", _jwtTokenSettings.Audience);
             tokenParams.Add("tokenExpirity", _jwtTokenSettings.TokenExpiry);
@@ -42,14 +45,30 @@ namespace LearningExperience.Api.Controllers
             if (IsvalidUser)
             {
 
-                tokenString = BuildJWTToken();
-                return Ok(new { Token = tokenString, TokenExpiresIn = _jwtTokenSettings.TokenExpiry, Id = validUser.Id });
+                tokenString = _authService.BuildJWTToken(tokenParams);
+                return Ok(new { Status = ReturnStatusCode.Ok, Token = tokenString, TokenExpiresIn = _jwtTokenSettings.TokenExpiry, Id = validUser.Id });
             }
             else
             {
-                return Unauthorized(new { Message = "Usuário ou senha incorretos" });
+                return Ok(new { Status = ReturnStatusCode.NotAuthorized, Message = "Usuário ou senha incorretos" });
             }
         }
+
+        //private string BuildJWTToken(Dictionary<string, string> tokenParams)
+        //{
+        //    var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(tokenParams.GetValueOrDefault("secretKey")));
+        //    var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
+        //    var issuer = tokenParams.GetValueOrDefault("issuer");
+        //    var audience = tokenParams.GetValueOrDefault("audience");
+        //    var jwtValidity = DateTime.Now.AddMinutes(Convert.ToDouble(tokenParams.GetValueOrDefault("tokenExpirity")));
+
+        //    var token = new JwtSecurityToken(issuer,
+        //      audience,
+        //      expires: jwtValidity,
+        //      signingCredentials: creds);
+
+        //    return new JwtSecurityTokenHandler().WriteToken(token);
+        //}
 
         [Route("api/v1/[controller]/RegisterLogin")]
         [AllowAnonymous]
@@ -58,23 +77,5 @@ namespace LearningExperience.Api.Controllers
         {
             return Ok();
         }
-
-        private string BuildJWTToken()
-        {
-            var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_jwtTokenSettings.SecretKey));
-            var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
-            var issuer = _jwtTokenSettings.Issuer;
-            var audience = _jwtTokenSettings.Audience;
-            var jwtValidity = DateTime.Now.AddMinutes(Convert.ToDouble(_jwtTokenSettings.TokenExpiry));
-
-            var token = new JwtSecurityToken(issuer,
-              audience,
-              expires: jwtValidity,
-              signingCredentials: creds);
-
-            return new JwtSecurityTokenHandler().WriteToken(token);
-        }
-
-
     }
 }

@@ -10,7 +10,7 @@ namespace LearningExperience.Models
     public class Patient : Document 
     {
         public DiseaseLevel DiseaseLevel { get; set; }
-        public string Age { get; set; }
+        public int Age { get; set; }
         public bool ColorsIssue { get; set; }
         public string? FavoriteObject { get; set; }
         public string? FavoriteJoke { get; set; }
