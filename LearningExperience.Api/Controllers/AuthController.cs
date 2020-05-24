@@ -17,13 +17,11 @@ namespace LearningExperience.Api.Controllers
     {
         private readonly IJwtTokenSettings _jwtTokenSettings;
         private readonly IUserService _userService;
-        private readonly IAuthService _authService;
         Dictionary<string, string> tokenParams;
-        public AuthController(IJwtTokenSettings jwtTokenSettings, IUserService userService, IAuthService authService)
+        public AuthController(IJwtTokenSettings jwtTokenSettings, IUserService userService)
         {
             _jwtTokenSettings = jwtTokenSettings;
             _userService = userService;
-            _authService = authService;
             tokenParams = new Dictionary<string, string>();
         }
 
@@ -31,7 +29,7 @@ namespace LearningExperience.Api.Controllers
         [HttpPost]
         public IActionResult CreateToken([FromBody] AuthenticateUserDTO userDTO)
         {
-            if (userDTO.Email == null) return Unauthorized(new { Status = ReturnStatus.Unathorized, Message = "Usuário ou senha incorretos" });
+            if (userDTO.Email == null) return Unauthorized(new { Message = "Usuário ou senha incorretos" });
 
             string tokenString = string.Empty;
             tokenParams.Add("SecretKey", _jwtTokenSettings.SecretKey);
@@ -44,12 +42,12 @@ namespace LearningExperience.Api.Controllers
             if (IsvalidUser)
             {
 
-                tokenString = _authService.BuildJWTToken(tokenParams);
-                return Ok(new { Status = ReturnStatus.OK, Token = tokenString, TokenExpiresIn = _jwtTokenSettings.TokenExpiry, Id = validUser.Id });
+                tokenString = BuildJWTToken();
+                return Ok(new { Token = tokenString, TokenExpiresIn = _jwtTokenSettings.TokenExpiry, Id = validUser.Id });
             }
             else
             {
-                return Unauthorized(new { Status = ReturnStatus.Unathorized, Message = "Usuário ou senha incorretos" });
+                return Unauthorized(new { Message = "Usuário ou senha incorretos" });
             }
         }
 
@@ -59,6 +57,22 @@ namespace LearningExperience.Api.Controllers
         public IActionResult RegisterLogin([FromBody] AuthenticateUserDTO userDTO)
         {
             return Ok();
+        }
+
+        private string BuildJWTToken()
+        {
+            var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_jwtTokenSettings.SecretKey));
+            var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
+            var issuer = _jwtTokenSettings.Issuer;
+            var audience = _jwtTokenSettings.Audience;
+            var jwtValidity = DateTime.Now.AddMinutes(Convert.ToDouble(_jwtTokenSettings.TokenExpiry));
+
+            var token = new JwtSecurityToken(issuer,
+              audience,
+              expires: jwtValidity,
+              signingCredentials: creds);
+
+            return new JwtSecurityTokenHandler().WriteToken(token);
         }
 
 
