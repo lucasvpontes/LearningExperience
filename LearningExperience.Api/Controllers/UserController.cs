@@ -24,9 +24,9 @@ namespace LearningExperience.Controllers
 
         [Route("RegisterUser")]
         [HttpPost]
-        public async Task<IActionResult> RegisterUser(UserDTO userDTO)
+        public async Task<IActionResult> RegisterUser(AuthenticateUserDTO userDTO)
         {
-            await _userService.AddUser(userDTO.User);
+            await _userService.AddUser(userDTO);
             return Ok(new { StatusCode = ReturnStatusCode.Ok });
         }
 
@@ -38,24 +38,18 @@ namespace LearningExperience.Controllers
         }
 
         [HttpPost("RemoveUser")]
-        public async Task<OkResult> RemoveUser(UserDTO userDTO)
+        public async Task<OkResult> RemoveUser(AuthenticateUserDTO userDTO)
         {
-            await _userService.RemoveUser(userDTO.User);
+            await _userService.RemoveUser(userDTO);
             return Ok();
         }
 
         [HttpPost("UpdateUser")]
-        public async Task<OkResult> UpdateUser(UserDTO userDTO)
+        public async Task<OkResult> UpdateUser(AuthenticateUserDTO userDTO)
         {
-            await _userService.UpdateUser(userDTO.User);
+            await _userService.UpdateUser(userDTO);
             return Ok();
         }
 
-        [HttpPost("UpdateMultipleUsers")]
-        public async Task<OkResult> UpdateMultipleUsers(UsersRequestDTO usersDTO)
-        {
-            await _userService.UpdateMultipleUsers(usersDTO.Users);
-            return Ok();
-        }
     }
 }

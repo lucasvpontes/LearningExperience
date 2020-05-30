@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace LearningExperience.Services
 {
-    public class UserService: IUserService
+    public class UserService : IUserService
     {
         private readonly IUserRepository _userRepository;
 
@@ -16,8 +16,9 @@ namespace LearningExperience.Services
             _userRepository = userRepository;
         }
 
-        public async Task AddUser(User user)
+        public async Task AddUser(AuthenticateUserDTO user)
         {
+            if(!VerifyIfUserExists(user))
             await _userRepository.AddUser(user);
         }
 
@@ -27,19 +28,14 @@ namespace LearningExperience.Services
             return users;
         }
 
-        public async Task RemoveUser(User userRemoved)
+        public async Task RemoveUser(AuthenticateUserDTO userRemoved)
         {
             await _userRepository.RemoveUser(userRemoved);
         }
 
-        public async Task UpdateUser(User user)
+        public async Task UpdateUser(AuthenticateUserDTO user)
         {
             await _userRepository.UpdateUser(user);
-        }
-
-        public async Task UpdateMultipleUsers(List<User> usersUpdated)
-        {
-            await _userRepository.UpdateMultipleUsers(usersUpdated); 
         }
 
         public bool ValidateUser(AuthenticateUserDTO user)
@@ -50,6 +46,16 @@ namespace LearningExperience.Services
         public User GetUserByLogin(AuthenticateUserDTO user)
         {
             return _userRepository.GetUserByLogin(user);
+        }
+
+        private bool VerifyIfUserExists(AuthenticateUserDTO user)
+        {
+            var userAuth = _userRepository.VerifyIfUserExists(user);
+
+            if (userAuth == null)
+                return false;
+
+            return true;
         }
 
     }

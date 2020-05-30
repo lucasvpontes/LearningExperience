@@ -20,9 +20,16 @@ namespace LearningExperience.Repository
             _mongoRepository = mongoRepository;
         }
 
-        public async Task AddUser(User user)
+        public async Task AddUser(AuthenticateUserDTO user)
         {
-            await _mongoRepository.InsertOneAsync(user);
+            var newUser = new User()
+            {
+                Email = user.Email,
+                Password = user.Password,
+                Name = user.Name
+            };
+            
+            await _mongoRepository.InsertOneAsync(newUser);
         }
 
         public IEnumerable<User> GetAll()
@@ -33,27 +40,17 @@ namespace LearningExperience.Repository
             return users;
         }
 
-        public async Task RemoveUser(User userRemoved)
+        public async Task RemoveUser(AuthenticateUserDTO userRemoved)
         {
             await _mongoRepository.DeleteOneAsync(
-                user => user.Name == userRemoved.Name);
+                user => user.Email == userRemoved.Email);
         }
 
-        public async Task UpdateUser(User userUpdated)
+        public async Task UpdateUser(AuthenticateUserDTO userUpdated)
         {
             var update = Builders<User>.Update
             .Set(user => user.Id, userUpdated.Id);
             await _mongoRepository.UpdateOneAsync(user => user.Id == userUpdated.Id, update);
-        }
-
-        public async Task UpdateMultipleUsers(List<User> usersUpdated)
-        {
-            foreach (User userUpdated in usersUpdated)
-            {
-                var update = Builders<User>.Update
-                .Set(user => user.Name, userUpdated.Name);
-                await _mongoRepository.UpdateManyAsync(user => user.Name == userUpdated.Name, update);
-            }
         }
 
         public bool ValidateUser(AuthenticateUserDTO userAuth)
@@ -61,18 +58,19 @@ namespace LearningExperience.Repository
             var validUser = _mongoRepository.FindOne(user => user.Email == userAuth.Email && user.Password == userAuth.Password);
            
             if(validUser == null)
-            {
-                return false;
-            } else
-            {
-                return true;
-            }
-           
+                 return false;
+             else
+                 return true;
         }
 
         public User GetUserByLogin(AuthenticateUserDTO userAuth)
         {
             return _mongoRepository.FindOne(user => user.Email == userAuth.Email && user.Password == userAuth.Password);
+        }
+
+        public User VerifyIfUserExists(AuthenticateUserDTO userAuth)
+        {
+           return _mongoRepository.FindOne(user => user.Email == userAuth.Email);
         }
     }
 }

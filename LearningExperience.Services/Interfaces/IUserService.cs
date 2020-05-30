@@ -7,11 +7,10 @@ namespace LearningExperience.Services
 {
     public interface IUserService
     {
-        Task AddUser(User user);
+        Task AddUser(AuthenticateUserDTO user);
         IEnumerable<User> GetAll();
-        Task RemoveUser(User user);
-        Task UpdateUser(User user);
-        Task UpdateMultipleUsers(List<User> usersUpdated);
+        Task RemoveUser(AuthenticateUserDTO user);
+        Task UpdateUser(AuthenticateUserDTO user);
         bool ValidateUser(AuthenticateUserDTO user);
         User GetUserByLogin(AuthenticateUserDTO user);
     }
