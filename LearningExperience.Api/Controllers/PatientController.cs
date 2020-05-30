@@ -1,5 +1,6 @@
 ﻿using LearningExperience.DTO;
 using LearningExperience.Models;
+using LearningExperience.Models.Enums;
 using LearningExperience.Services;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -23,21 +24,16 @@ namespace LearningExperience.Controllers
 
         [Route("RegisterPatient")]
         [HttpPost]
-        public async Task<OkResult> RegisterPatient(PatientDTO patientDTO)
+        public async Task<IActionResult> RegisterPatient(PatientDTO patientDTO)
         {
             await _patientService.AddPatient(patientDTO);
-            return Ok();
+            return Ok(new { StatusCode = ReturnStatusCode.Ok });
         }
 
         [HttpGet("GetAll")]
         public IEnumerable<Patient> GetAll()
         {
             var patients = _patientService.GetAll();
-            //foreach(Patient patient in patients)
-            //{
-            //   var deseaseLevel =  Enum.GetName(typeof(DiseaseLevel), patient.DiseaseLevel);
-            //}
-
             return patients;
         }
 

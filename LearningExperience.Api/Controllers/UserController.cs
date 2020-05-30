@@ -1,5 +1,6 @@
 ﻿using LearningExperience.Models;
 using LearningExperience.Models.DTO;
+using LearningExperience.Models.Enums;
 using LearningExperience.Services;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -23,10 +24,10 @@ namespace LearningExperience.Controllers
 
         [Route("RegisterUser")]
         [HttpPost]
-        public async Task<OkResult> RegisterUser(UserDTO userDTO)
+        public async Task<IActionResult> RegisterUser(UserDTO userDTO)
         {
             await _userService.AddUser(userDTO.User);
-            return Ok();
+            return Ok(new { StatusCode = ReturnStatusCode.Ok });
         }
 
         [HttpGet("GetAll")]
