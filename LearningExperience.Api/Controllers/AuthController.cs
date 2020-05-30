@@ -4,11 +4,7 @@ using LearningExperience.Models.Enums;
 using LearningExperience.Services;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.IdentityModel.Tokens;
-using System;
 using System.Collections.Generic;
-using System.IdentityModel.Tokens.Jwt;
-using System.Text;
 
 namespace LearningExperience.Api.Controllers
 {

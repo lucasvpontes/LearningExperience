@@ -1,5 +1,6 @@
 ﻿using LearningExperience.Models;
 using LearningExperience.Models.DTO;
+using LearningExperience.Models.Enums;
 using LearningExperience.Services;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -23,10 +24,10 @@ namespace LearningExperience.Controllers
 
         [Route("RegisterAdvisor")]
         [HttpPost]
-        public async Task<OkResult> RegisterAdvisor(AdvisorDTO advisorDTO)
+        public async Task<IActionResult> RegisterAdvisor(AdvisorDTO advisorDTO)
         {
            await _advisorService.AddAdvisor(advisorDTO);
-            return Ok();
+            return Ok(new { StatusCode = ReturnStatusCode.Ok });
         }
 
         [HttpGet("GetAll")]
