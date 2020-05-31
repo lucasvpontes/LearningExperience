@@ -38,17 +38,24 @@ namespace LearningExperience.Controllers
         }
 
         [HttpPost("RemovePatient")]
-        public async Task<OkResult> RemoveAdvisor(PatientDTO patientDTO)
+        public async Task<OkResult> RemovePatient(PatientDTO patientDTO)
         {
             await _patientService.RemovePatient(patientDTO);
             return Ok();
         }
 
         [HttpPost("UpdatePatient")]
-        public async Task<IActionResult> UpdateAdvisor(PatientDTO patientDTO)
+        public async Task<IActionResult> UpdatePatient(PatientDTO patientDTO)
         {
             await _patientService.UpdatePatient(patientDTO);
             return Ok(new { StatusCode = ReturnStatusCode.Ok });
+        }
+
+        [HttpGet("GetPatientById")]
+        public Patient GetPatientById(string patientId)
+        {
+            var patient = _patientService.GetPatientById(patientId);
+            return patient;
         }
     }
 }

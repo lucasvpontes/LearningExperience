@@ -41,6 +41,10 @@ namespace LearningExperience.Repository
             );
             return patients;
         }
+        public Patient GetPatientById(string patientId)
+        {
+            return _mongoRepository.FindOne(filter => filter.Id == patientId);
+        }
 
         public async Task RemovePatient(PatientDTO patientRemoved)
         {

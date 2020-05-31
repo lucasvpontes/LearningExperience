@@ -11,6 +11,7 @@ namespace LearningExperience.Services
         IEnumerable<Patient> GetAll();
         Task RemovePatient(PatientDTO patientRemoved);
         Task UpdatePatient(PatientDTO patientUpdated);
+        Patient GetPatientById(string patientId);
     }
 }
 

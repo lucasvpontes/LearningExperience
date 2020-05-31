@@ -28,6 +28,11 @@ namespace LearningExperience.Services
             return patients;
         }
 
+        public Patient GetPatientById(string patientId)
+        {
+            return _patientRepository.GetPatientById(patientId);
+        }
+
         public async Task RemovePatient(PatientDTO patientRemoved)
         {
             await _patientRepository.RemovePatient(patientRemoved);
