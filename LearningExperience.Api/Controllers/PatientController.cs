@@ -45,10 +45,10 @@ namespace LearningExperience.Controllers
         }
 
         [HttpPost("UpdatePatient")]
-        public async Task<OkResult> UpdateAdvisor(PatientDTO patientDTO)
+        public async Task<IActionResult> UpdateAdvisor(PatientDTO patientDTO)
         {
             await _patientService.UpdatePatient(patientDTO);
-            return Ok();
+            return Ok(new { StatusCode = ReturnStatusCode.Ok });
         }
     }
 }
