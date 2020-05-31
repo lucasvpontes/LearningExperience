@@ -11,6 +11,7 @@ namespace LearningExperience.Repository
         IEnumerable<Advisor> GetAll();
         Task RemoveAdvisor(AdvisorDTO advisorRemoved);
         Task UpdateAdvisor(AdvisorDTO advisorUpdated);
+        Advisor GetAdvisorById(string advisorId);
     }
 }
 

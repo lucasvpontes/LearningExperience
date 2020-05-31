@@ -50,5 +50,12 @@ namespace LearningExperience.Controllers
             await _advisorService.UpdateAdvisor(advisorDTO);
             return Ok();
         }
+
+        [HttpGet("GetAdvisorById")]
+        public Advisor GetAdvisorById(string advisorId)
+        {
+            var advisor = _advisorService.GetAdvisorById(advisorId);
+            return advisor;
+        }
     }
 }

@@ -58,6 +58,13 @@ namespace LearningExperience.Repository
 
             await _mongoRepository.UpdateOneAsync(advisor => advisor.Id == advisorUpdated.Id, update);
         }
+
+
+        public Advisor GetAdvisorById(string advisorId)
+        {
+            return _mongoRepository.FindOne(filter => filter.Id == advisorId);
+        }
+
     }
 }
 

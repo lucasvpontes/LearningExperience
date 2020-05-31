@@ -21,6 +21,11 @@ namespace LearningExperience.Services
             await _advisorRepository.AddAdvisor(advisor);
         }
 
+        public Advisor GetAdvisorById(string advisorId)
+        {
+          return _advisorRepository.GetAdvisorById(advisorId);
+        }
+
         public IEnumerable<Advisor> GetAll()
         {
             var advisors = _advisorRepository.GetAll();
