@@ -7,9 +7,9 @@ namespace LearningExperience.Models
 
     public abstract class Document : IDocument
     {
-        public string Id => Guid.NewGuid().ToString();
+        public string Id { get; set; }
         public string Name { get; set; }
-        public DateTime CreatedAt => DateTime.Now;
+        public DateTime CreatedAt { get; set; }
         public bool Deleted { get; set; }
     }
 }

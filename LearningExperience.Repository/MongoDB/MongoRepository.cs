@@ -75,6 +75,8 @@ namespace LearningExperience.Repository
 
         public virtual void InsertOne(TDocument document)
         {
+            document.Id = Guid.NewGuid().ToString();
+            document.CreatedAt = DateTime.Now;
             _collection.InsertOne(document);
         }
 
@@ -82,6 +84,8 @@ namespace LearningExperience.Repository
         {
             try
             {
+                document.Id = Guid.NewGuid().ToString();
+                document.CreatedAt = DateTime.Now;
                 return Task.Run(() => _collection.InsertOneAsync(document));
             }
             catch(Exception e)

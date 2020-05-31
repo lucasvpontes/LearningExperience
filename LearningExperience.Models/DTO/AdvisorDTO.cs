@@ -4,7 +4,7 @@ namespace LearningExperience.Models.DTO
 {
     public class AdvisorDTO
     {
-        public string Id { get; set; }
+        public string? Id { get; set; }
         public string Name { get; set; }
         public string Profession { get; set; }
         public string Education { get; set; }
