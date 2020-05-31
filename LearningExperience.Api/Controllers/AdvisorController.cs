@@ -45,10 +45,10 @@ namespace LearningExperience.Controllers
         }
 
         [HttpPost("UpdateAdvisor")]
-        public async Task<OkResult> UpdateAdvisor(AdvisorDTO advisorDTO)
+        public async Task<IActionResult> UpdateAdvisor(AdvisorDTO advisorDTO)
         {
             await _advisorService.UpdateAdvisor(advisorDTO);
-            return Ok();
+            return Ok(new { StatusCode = ReturnStatusCode.Ok});
         }
 
         [HttpGet("GetAdvisorById")]
