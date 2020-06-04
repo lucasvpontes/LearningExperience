@@ -14,7 +14,7 @@ namespace LearningExperience.DTO
         public string? FavoriteObject { get; set; }
         public string? FavoriteJoke { get; set; }
         public string? FavoritePastTime { get; set; }
-        public string? Comment { get; set; }
+        public string? Observation { get; set; }
         public DateTime? LastUpdate { get; set; }
     }
 }

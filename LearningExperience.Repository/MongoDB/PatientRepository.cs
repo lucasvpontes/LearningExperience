@@ -28,7 +28,7 @@ namespace LearningExperience.Repository
                 FavoriteObject = patientToInsert.FavoriteObject,
                 FavoriteJoke = patientToInsert.FavoriteJoke,
                 FavoritePastTime = patientToInsert.FavoritePastTime,
-                Comment = patientToInsert.FavoritePastTime,
+                Observation = patientToInsert.Observation,
                 LastUpdate = patientToInsert.LastUpdate
             };
             await _mongoRepository.InsertOneAsync(patient);
@@ -60,7 +60,7 @@ namespace LearningExperience.Repository
             .Set(patient => patient.ColorsIssue, patientUpated.ColorsIssue)
             .Set(patient => patient.FavoriteObject, patientUpated.FavoriteObject)
             .Set(patient => patient.FavoritePastTime, patientUpated.FavoritePastTime)
-            .Set(patient => patient.Comment, patientUpated.Comment)
+            .Set(patient => patient.Observation, patientUpated.Observation)
             .Set(patient => patient.LastUpdate, DateTime.Now);
             await _mongoRepository.UpdateOneAsync(Patient => Patient.Id == patientUpated.Id, update);
         }

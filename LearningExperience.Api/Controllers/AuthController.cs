@@ -57,26 +57,16 @@ namespace LearningExperience.Api.Controllers
             string tokenString = string.Empty;
 
             if (email || password || name)
-                return Unauthorized(new { ReturnStatusCode.NotAuthorized, Message = "Usuário, senha ou nome vazio" });
+                return Unauthorized(new { ReturnStatusCode.NotAuthorized, Message = "Usuário, senha ou nome vazio", IsSignuped = false });
 
             if (userDTO.Password != userDTO.RepeatPassword)
-                return Unauthorized(new { ReturnStatusCode.NotAuthorized, Message = "Senhas não indenticas" });
+                return Unauthorized(new { ReturnStatusCode.NotAuthorized, Message = "Senhas não indenticas", IsSignuped = false });
 
             _userService.AddUser(userDTO);
             AddParamsToJWT();
 
-            bool IsvalidUser = _userService.ValidateUser(userDTO);
-            var validUser = _userService.GetUserByLogin(userDTO);
-
-            if (IsvalidUser)
-            {
-                tokenString = _authService.BuildJWTToken(tokenParams);
-                return Ok(new { StatusCode = ReturnStatusCode.Ok, Token = tokenString, TokenExpiresIn = _jwtTokenSettings.TokenExpiry, Id = validUser.Id });
-            }
-            else
-            {
-                return Ok(new { ReturnStatusCode.NotAuthorized, Message = "Erro ao inserir o usuário" });
-            }
+            tokenString = _authService.BuildJWTToken(tokenParams);
+            return Ok(new { StatusCode = ReturnStatusCode.Ok, Message = "Cadastrado com sucesso", IsSignuped = true });
         }
 
         private Dictionary<string, string> AddParamsToJWT()
