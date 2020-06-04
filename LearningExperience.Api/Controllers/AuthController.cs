@@ -54,6 +54,9 @@ namespace LearningExperience.Api.Controllers
         [HttpPost]
         public IActionResult RegisterLogin([FromBody] AuthenticateUserDTO userDTO)
         {
+            if (userDTO.Password != userDTO.RepeatPassword)
+                return Unauthorized(new { ReturnStatusCode.NotAuthorized });
+
             _userService.AddUser(userDTO);
             return Ok(new { StatusCode = ReturnStatusCode.Ok });
         }
