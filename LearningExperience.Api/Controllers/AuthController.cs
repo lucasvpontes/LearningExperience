@@ -54,8 +54,15 @@ namespace LearningExperience.Api.Controllers
         [HttpPost]
         public IActionResult RegisterLogin([FromBody] AuthenticateUserDTO userDTO)
         {
+            var email = string.IsNullOrEmpty(userDTO.Email);
+            var password = string.IsNullOrEmpty(userDTO.Password);
+            var name = string.IsNullOrEmpty(userDTO.Name);
+
+            if (email || password || name)
+                return Unauthorized(new { ReturnStatusCode.NotAuthorized, Message="Usuário, senha ou nome vazio" });
+
             if (userDTO.Password != userDTO.RepeatPassword)
-                return Unauthorized(new { ReturnStatusCode.NotAuthorized });
+                return Unauthorized(new { ReturnStatusCode.NotAuthorized, Message = "Senhas não indenticas" });
 
             _userService.AddUser(userDTO);
             return Ok(new { StatusCode = ReturnStatusCode.Ok });
