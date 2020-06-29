@@ -10,7 +10,7 @@ API desenvolvida em .netCore 3.1.
 
 #### Para rodar o projeto, podemos utilizar o IIS, Docker ou a própria API.
 Basta fazer o clone do projeto através do comando: "git clone" começar a codar!
-Para isso você pode simplesmente clicar em run, e rodar na porta de sua preferência, validando os endpoints com o projeto 'PostmanCollections', também presente no TeacherAssistantTool!
+Para isso você pode simplesmente clicar em IIS Experss dentro do seu Visual Studio, ou utilizar um dos métodos acima citados, e rodar na porta de sua preferência, validando os endpoints com o projeto 'PostmanCollections', também presente no TeacherAssistantTool!
 
 ### Para ter mais conhecimentos sobre o .net Core e o C# no geral, recomendamos o guide da própria microsoft
 https://docs.microsoft.com/pt-br/dotnet/csharp/
