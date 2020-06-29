@@ -20,7 +20,7 @@ namespace LearningExperience.Services
             var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
             var issuer = tokenParams.GetValueOrDefault("issuer");
             var audience = tokenParams.GetValueOrDefault("audience");
-            var jwtValidity = DateTime.Now.AddMinutes(Convert.ToDouble(tokenParams.GetValueOrDefault("tokenExpirity")));
+            DateTime jwtValidity = DateTime.Now.AddSeconds(Convert.ToDouble(tokenParams.GetValueOrDefault("tokenExpirity")));
 
             var token = new JwtSecurityToken(issuer,
               audience,
