@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>LearningExperience.Api</name>
+    </assembly>
+    <members>
+        <member name="M:LearningExperience.Controllers.ConnectionController.GetPing">
+            <summary>
+            Realizar o teste da API
+            </summary>
+        </member>
+    </members>
+</doc>

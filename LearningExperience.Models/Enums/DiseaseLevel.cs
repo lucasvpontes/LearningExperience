@@ -3,7 +3,7 @@
     public enum DiseaseLevel
     {
         Baixo = 0,
-        Médio = 1,
+        Medio = 1,
         Alto = 2
     }
 }
