@@ -1,8 +1,6 @@
-﻿using LearningExperience.Application.Repositories;
-
-namespace LearningExperience.Infrastructure.JWTAuthentication.Entities
+﻿namespace LearningExperience.Application.Repositories
 {
-    public class JwtTokenSettings: IJwtTokenSettings
+    public interface IJwtTokenSettings
     {
         public string SecretKey { get; set; }
         public string Issuer { get; set; }
