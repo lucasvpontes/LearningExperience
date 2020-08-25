@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace LearningExperience.Models.DTO
+﻿namespace LearningExperience.Domain.Users
 {
     public class AuthenticateUserDto
     {

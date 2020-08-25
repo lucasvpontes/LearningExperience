@@ -1,13 +1,11 @@
-﻿using LearningExperience.DTO;
-using LearningExperience.Models;
-using LearningExperience.Models.Enums;
-using LearningExperience.Services;
+﻿using LearningExperience.Domain.Patients;
+using LearningExperience.Domain.ValueObjects;
+using LearningExperience.DTO;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace LearningExperience.Controllers
+namespace LearningExperience.Api.UseCases.RegisterPatient
 {
 
     [ApiController]
@@ -15,9 +13,9 @@ namespace LearningExperience.Controllers
     [Authorize]
     public class PatientController : ControllerBase
     {
-        private readonly IPatientService _patientService;
+        private readonly IPatient _patientService;
 
-        public PatientController(IPatientService patientService)
+        public PatientController(IPatient patientService)
         {
             _patientService = patientService;
         }
@@ -29,33 +27,4 @@ namespace LearningExperience.Controllers
             await _patientService.AddPatient(patientDTO);
             return Ok(new { StatusCode = ReturnStatusCode.Ok });
         }
-
-        [HttpGet("GetAll")]
-        public IEnumerable<Patient> GetAll()
-        {
-            var patients = _patientService.GetAll();
-            return patients;
-        }
-
-        [HttpPost("RemovePatient")]
-        public async Task<OkResult> RemovePatient(PatientDto patientDTO)
-        {
-            await _patientService.RemovePatient(patientDTO);
-            return Ok();
-        }
-
-        [HttpPost("UpdatePatient")]
-        public async Task<IActionResult> UpdatePatient(PatientDto patientDTO)
-        {
-            await _patientService.UpdatePatient(patientDTO);
-            return Ok(new { StatusCode = ReturnStatusCode.Ok });
-        }
-
-        [HttpGet("GetPatientById")]
-        public Patient GetPatientById(string patientId)
-        {
-            var patient = _patientService.GetPatientById(patientId);
-            return patient;
-        }
-    }
 }

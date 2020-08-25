@@ -1,11 +1,9 @@
-﻿using LearningExperience.Models;
-using LearningExperience.Models.DTO;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace LearningExperience.Services
+namespace LearningExperience.Domain.Users
 {
-    public interface IUserService
+    public interface IUser
     {
         Task AddUser(AuthenticateUserDto user);
         IEnumerable<User> GetAll();

@@ -1,4 +1,5 @@
 ﻿using LearningExperience.DTO;
+using LearningExperience.Infrastructure.MongoDataAccess.Entities;
 using LearningExperience.Models;
 using MongoDB.Driver;
 using System;
@@ -46,13 +47,13 @@ namespace LearningExperience.Infrastructure.MongoDataAccess.Repositories
             return _mongoRepository.FindOne(filter => filter.Id == patientId);
         }
 
-        public async Task RemovePatient(PatientDTO patientRemoved)
+        public async Task RemovePatient(PatientDto patientRemoved)
         {
             await _mongoRepository.DeleteOneAsync(
                 patient => patient.Id == patientRemoved.Id);
         }
 
-        public async Task UpdatePatient(PatientDTO patientUpated)
+        public async Task UpdatePatient(PatientDto patientUpated)
         {
             var update = Builders<Patient>.Update
             .Set(patient => patient.Name, patientUpated.Name)

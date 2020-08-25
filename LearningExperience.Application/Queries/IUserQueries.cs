@@ -3,7 +3,7 @@ using LearningExperience.Models.DTO;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace LearningExperience.Services
+namespace LearningExperience.Application.Queries
 {
     public interface IUserQueries
     {

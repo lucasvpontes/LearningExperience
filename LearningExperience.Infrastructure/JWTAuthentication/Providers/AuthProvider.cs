@@ -1,17 +1,13 @@
-﻿using LearningExperience.Models;
-using LearningExperience.Models.DTO;
-using LearningExperience.Repository;
-using Microsoft.IdentityModel.Tokens;
+﻿using Microsoft.IdentityModel.Tokens;
 using System;
 using System.Collections.Generic;
 using System.IdentityModel.Tokens.Jwt;
 using System.Text;
-using System.Threading.Tasks;
 
 
-namespace LearningExperience.Services
+namespace LearningExperience.Infrastructure.JWTAuthentication.Providers
 {
-    public class AuthService: IAuthService
+    public class AuthProvider: IAuthService
     {
 
         public string BuildJWTToken(Dictionary<string, string> tokenParams)

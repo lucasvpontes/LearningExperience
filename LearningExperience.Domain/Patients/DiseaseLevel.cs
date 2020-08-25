@@ -1,4 +1,4 @@
-﻿namespace LearningExperience.Models.Enums
+﻿namespace LearningExperience.Domain.Patients
 {
     public enum DiseaseLevel
     {

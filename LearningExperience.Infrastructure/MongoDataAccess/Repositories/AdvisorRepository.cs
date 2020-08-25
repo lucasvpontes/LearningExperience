@@ -1,7 +1,6 @@
-﻿using LearningExperience.Models;
+﻿using LearningExperience.Application.Repositories;
+using LearningExperience.Infrastructure.MongoDataAccess.Entities;
 using LearningExperience.Models.DTO;
-using LearningExperience.Repository;
-using MongoDB.Bson;
 using MongoDB.Driver;
 using System;
 using System.Collections.Generic;
@@ -19,7 +18,7 @@ namespace LearningExperience.Infrastructure.MongoDataAccess.Repositories
             _mongoRepository = mongoRepository;
         }
 
-        public async Task AddAdvisor(AdvisorDTO advisorInsert)
+        public async Task AddAdvisor(AdvisorDto advisorInsert)
         {
             Advisor advisor = new Advisor()
             {
@@ -40,13 +39,13 @@ namespace LearningExperience.Infrastructure.MongoDataAccess.Repositories
             return advisors;
         }
 
-        public async Task RemoveAdvisor(AdvisorDTO advisorRemoved)
+        public async Task RemoveAdvisor(AdvisorDto advisorRemoved)
         {
             await _mongoRepository.DeleteOneAsync(
                 advisor => advisor.Id == advisorRemoved.Id);
         }
 
-        public async Task UpdateAdvisor(AdvisorDTO advisorUpdated)
+        public async Task UpdateAdvisor(AdvisorDto advisorUpdated)
         {
             var update = Builders<Advisor>.Update
             .Set(advisor => advisor.Name, advisorUpdated.Name)

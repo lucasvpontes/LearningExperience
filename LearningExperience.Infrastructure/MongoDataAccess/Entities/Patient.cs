@@ -2,7 +2,7 @@
 using MongoDB.Bson.Serialization.Attributes;
 using System;
 
-namespace LearningExperience.Models
+namespace LearningExperience.Infrastructure.MongoDataAccess.Entities
 {
 
     [BsonCollection("Patients")]

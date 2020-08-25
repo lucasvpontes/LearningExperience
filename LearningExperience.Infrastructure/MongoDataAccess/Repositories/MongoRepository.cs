@@ -1,4 +1,5 @@
-﻿using LearningExperience.Models;
+﻿using LearningExperience.Infrastructure.MongoDataAccess.Entities;
+using LearningExperience.Models;
 using LearningExperience.Models.Interfaces;
 using MongoDB.Driver;
 using System;

@@ -1,17 +1,15 @@
-﻿using LearningExperience.Models;
-using LearningExperience.Models.DTO;
-using LearningExperience.Repository;
+﻿using LearningExperience.Application.Repositories;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
 
-namespace LearningExperience.Services
+namespace LearningExperience.Domain.Users
 {
-    public class UserService : IUserService
+    public class User : IUser
     {
         private readonly IUserRepository _userRepository;
 
-        public UserService(IUserRepository userRepository)
+        public User(IUserRepository userRepository)
         {
             _userRepository = userRepository;
         }

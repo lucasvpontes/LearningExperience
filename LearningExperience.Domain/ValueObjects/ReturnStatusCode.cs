@@ -1,5 +1,6 @@
-﻿namespace LearningExperience.Models.Enums
+﻿namespace LearningExperience.Domain.ValueObjects
 {
+    //TO-DO - Corrigir os status code no Ionic, inutilizando este enum
     public enum ReturnStatusCode
     {
         Ok = 200,

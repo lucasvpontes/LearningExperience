@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace LearningExperience.Services
 {
-    public interface IAdvisorService
+    public interface IAdvisor
     {
         Task AddAdvisor(AdvisorDto advisor);
         IEnumerable<Advisor> GetAll();

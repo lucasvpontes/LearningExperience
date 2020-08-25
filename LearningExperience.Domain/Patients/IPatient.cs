@@ -1,11 +1,9 @@
-﻿using LearningExperience.DTO;
-using LearningExperience.Models;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace LearningExperience.Services
+namespace LearningExperience.Domain.Patients
 {
-    public interface IPatientService
+    public interface IPatient
     {
         Task AddPatient(PatientDto patient);
         IEnumerable<Patient> GetAll();

@@ -1,4 +1,4 @@
-﻿namespace LearningExperience.Models
+﻿namespace LearningExperience.Infrastructure.MongoDataAccess.Entities
 {
     public class MongoDbSettings : IMongoDbSettings
     {

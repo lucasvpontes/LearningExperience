@@ -1,6 +1,6 @@
 ﻿using MongoDB.Bson.Serialization.Attributes;
 
-namespace LearningExperience.Models
+namespace LearningExperience.Infrastructure.MongoDataAccess.Entities
 {
 
     [BsonCollection("Users")]

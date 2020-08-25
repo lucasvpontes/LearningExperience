@@ -15,9 +15,9 @@ namespace LearningExperience.Controllers
     [Authorize]
     public class AdvisorController : ControllerBase
     {
-        private readonly IAdvisorService _advisorService;
+        private readonly IAdvisor _advisorService;
 
-        public AdvisorController(IAdvisorService advisorService)
+        public AdvisorController(IAdvisor advisorService)
         {
             _advisorService = advisorService;
         }

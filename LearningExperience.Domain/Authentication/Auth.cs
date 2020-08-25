@@ -9,9 +9,9 @@ using System.Text;
 using System.Threading.Tasks;
 
 
-namespace LearningExperience.Services
+namespace LearningExperience.Domain.Authentication
 {
-    public class AuthService: IAuthService
+    public class Auth: IAuth
     {
 
         public string BuildJWTToken(Dictionary<string, string> tokenParams)

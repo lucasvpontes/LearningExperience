@@ -6,13 +6,13 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 
 
-namespace LearningExperience.Services
+namespace LearningExperience.Domain.Patients
 {
-    public class PatientService : IPatientService
+    public class Patient : IPatient
     {
         private readonly IPatientRepository _patientRepository;
 
-        public PatientService(IPatientRepository patientRepository)
+        public Patient(IPatientRepository patientRepository)
         {
             _patientRepository = patientRepository;
         }

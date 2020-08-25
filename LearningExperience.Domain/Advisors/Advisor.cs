@@ -7,11 +7,11 @@ using System.Threading.Tasks;
 
 namespace LearningExperience.Services
 {
-    public class AdvisorService: IAdvisorService
+    public class Advisor: IAdvisor
     {
         private readonly IAdvisorRepository _advisorRepository;
 
-        public AdvisorService(IAdvisorRepository advisorRepository)
+        public Advisor(IAdvisorRepository advisorRepository)
         {
             _advisorRepository = advisorRepository;
         }

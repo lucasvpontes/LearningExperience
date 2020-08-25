@@ -1,8 +1,7 @@
-﻿using LearningExperience.Models;
-using LearningExperience.Models.Enums;
+﻿using LearningExperience.Domain.Patients;
 using System;
 
-namespace LearningExperience.DTO
+namespace LearningExperience.Api.UseCases.RegisterPatient
 {
     public class PatientDto
     {

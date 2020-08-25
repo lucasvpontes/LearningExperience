@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
-namespace LearningExperience.Controllers
+namespace LearningExperience.Api.UseCases.Connection
 {
     //TO-DO - Alterar para HealthCheck
     [Route("api/v1/[controller]")]

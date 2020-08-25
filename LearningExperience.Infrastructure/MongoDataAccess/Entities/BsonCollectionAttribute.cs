@@ -1,9 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
-namespace LearningExperience.Models
+namespace LearningExperience.Infrastructure.MongoDataAccess.Entities
 {
 
     [AttributeUsage(AttributeTargets.Class, Inherited = false)]

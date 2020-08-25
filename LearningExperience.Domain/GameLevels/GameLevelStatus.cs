@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace LearningExperience.Models.Enums
+namespace LearningExperience.Domain.Factories
 {
     public enum GameLevelStatus
     {

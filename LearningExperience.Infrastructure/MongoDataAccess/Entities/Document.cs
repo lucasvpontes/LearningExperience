@@ -1,7 +1,7 @@
 ﻿using LearningExperience.Models.Interfaces;
 using System;
 
-namespace LearningExperience.Models
+namespace LearningExperience.Infrastructure.MongoDataAccess.Entities
 {
 
 
