@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace LearningExperience.Models.DTO
+namespace LearningExperience.Api.UseCases.GetAllAdvisors
 {
-    public class AdvisorsRequestDto
+    public class GetAllAdvisorsRequest
     {
         public List<Advisor> Advisors { get; set; }
         public DateTime? RequestDate { get; set; }

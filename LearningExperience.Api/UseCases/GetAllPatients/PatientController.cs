@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace LearningExperience.Controllers
+namespace LearningExperience.Api.UseCases.GetAllPatients
 {
 
     [ApiController]
@@ -22,40 +22,11 @@ namespace LearningExperience.Controllers
             _patientService = patientService;
         }
 
-        [Route("RegisterPatient")]
-        [HttpPost]
-        public async Task<IActionResult> RegisterPatient(PatientDto patientDTO)
-        {
-            await _patientService.AddPatient(patientDTO);
-            return Ok(new { StatusCode = ReturnStatusCode.Ok });
-        }
-
         [HttpGet("GetAll")]
         public IEnumerable<Patient> GetAll()
         {
             var patients = _patientService.GetAll();
             return patients;
-        }
-
-        [HttpPost("RemovePatient")]
-        public async Task<OkResult> RemovePatient(PatientDto patientDTO)
-        {
-            await _patientService.RemovePatient(patientDTO);
-            return Ok();
-        }
-
-        [HttpPost("UpdatePatient")]
-        public async Task<IActionResult> UpdatePatient(PatientDto patientDTO)
-        {
-            await _patientService.UpdatePatient(patientDTO);
-            return Ok(new { StatusCode = ReturnStatusCode.Ok });
-        }
-
-        [HttpGet("GetPatientById")]
-        public Patient GetPatientById(string patientId)
-        {
-            var patient = _patientService.GetPatientById(patientId);
-            return patient;
         }
     }
 }

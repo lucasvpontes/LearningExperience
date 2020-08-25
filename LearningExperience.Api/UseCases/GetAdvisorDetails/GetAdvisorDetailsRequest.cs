@@ -1,8 +1,8 @@
 ﻿using System;
 
-namespace LearningExperience.Models.DTO
+namespace LearningExperience.Api.UseCases.GetAdvisorDetails
 {
-    public class AdvisorDto
+    public class GetAdvisorDetailsRequest
     {
         public string? Id { get; set; }
         public string Name { get; set; }

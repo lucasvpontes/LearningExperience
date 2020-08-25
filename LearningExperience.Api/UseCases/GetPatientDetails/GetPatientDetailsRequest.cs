@@ -1,10 +1,9 @@
-﻿using LearningExperience.Models;
-using LearningExperience.Models.Enums;
+﻿using LearningExperience.Domain.Patients;
 using System;
 
-namespace LearningExperience.DTO
+namespace LearningExperience.Api.UseCases.GetPatientDetails
 {
-    public class PatientDto
+    public class GetPatientDetailsRequest
     {
         public string? Id { get; set;}
         public string Name { get; set; }

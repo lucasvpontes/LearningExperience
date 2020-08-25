@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace LearningExperience.Models.DTO
+namespace LearningExperience.Api.UseCases.SignIn
 {
     public class SignInUserDto
     {

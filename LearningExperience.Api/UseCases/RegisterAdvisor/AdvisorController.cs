@@ -1,14 +1,9 @@
-﻿using LearningExperience.Models;
-using LearningExperience.Models.DTO;
-using LearningExperience.Models.Enums;
-using LearningExperience.Services;
+﻿using LearningExperience.Models.DTO;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace LearningExperience.Controllers
-{
+namespace LearningExperience.Api.UseCases.RegisterAdvisor
 
     [ApiController]
     [Route("api/v1/[controller]")]
@@ -24,38 +19,10 @@ namespace LearningExperience.Controllers
 
         [Route("RegisterAdvisor")]
         [HttpPost]
-        public async Task<IActionResult> RegisterAdvisor(AdvisorDto advisorDTO)
+        public async Task<IActionResult> RegisterAdvisor(InactivateAdvisorRequest advisorDTO)
         {
            await _advisorService.AddAdvisor(advisorDTO);
             return Ok(new { StatusCode = ReturnStatusCode.Ok });
-        }
-
-        [HttpGet("GetAll")]
-        public IEnumerable<Advisor> GetAll()
-        {
-            var advisors = _advisorService.GetAll();
-            return advisors;
-        }
-
-        [HttpPost("RemoveAdvisor")]
-        public async Task<OkResult> RemoveAdvisor(AdvisorDto advisorDTO)
-        {
-         await _advisorService.RemoveAdvisor(advisorDTO);
-            return Ok();
-        }
-
-        [HttpPost("UpdateAdvisor")]
-        public async Task<IActionResult> UpdateAdvisor(AdvisorDto advisorDTO)
-        {
-            await _advisorService.UpdateAdvisor(advisorDTO);
-            return Ok(new { StatusCode = ReturnStatusCode.Ok});
-        }
-
-        [HttpGet("GetAdvisorById")]
-        public Advisor GetAdvisorById(string advisorId)
-        {
-            var advisor = _advisorService.GetAdvisorById(advisorId);
-            return advisor;
         }
     }
 }

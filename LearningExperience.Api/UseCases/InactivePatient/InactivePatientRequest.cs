@@ -1,7 +1,7 @@
 ﻿using LearningExperience.Domain.Patients;
 using System;
 
-namespace LearningExperience.Api.UseCases.RegisterPatient
+namespace LearningExperience.Api.UseCases.InactivePatient
 {
     public class PatientDto
     {

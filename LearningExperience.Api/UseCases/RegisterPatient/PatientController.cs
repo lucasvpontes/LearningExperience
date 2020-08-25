@@ -1,6 +1,5 @@
 ﻿using LearningExperience.Domain.Patients;
 using LearningExperience.Domain.ValueObjects;
-using LearningExperience.DTO;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
@@ -27,4 +26,5 @@ namespace LearningExperience.Api.UseCases.RegisterPatient
             await _patientService.AddPatient(patientDTO);
             return Ok(new { StatusCode = ReturnStatusCode.Ok });
         }
+    }
 }

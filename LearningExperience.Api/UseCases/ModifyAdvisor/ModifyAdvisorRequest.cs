@@ -1,8 +1,8 @@
 ﻿using System;
 
-namespace LearningExperience.Models.DTO
+namespace LearningExperience.Api.UseCases.ModifyAdvisor
 {
-    public class AdvisorDto
+    public class InactivateAdvisorRequest
     {
         public string? Id { get; set; }
         public string Name { get; set; }

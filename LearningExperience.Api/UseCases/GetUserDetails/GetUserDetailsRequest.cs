@@ -2,7 +2,7 @@
 
 namespace LearningExperience.Models.DTO
 {
-    public class UserDto
+    public class GetUserDetailsRequest
     {
         public User User { get; set; }
         public DateTime? RequestDate { get; set; }

@@ -1,11 +1,9 @@
-﻿using LearningExperience.Models;
-using LearningExperience.Models.DTO;
-using LearningExperience.Repository;
+﻿using LearningExperience.Application.Repositories;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
 
-namespace LearningExperience.Services
+namespace LearningExperience.Domain.Advisors
 {
     public class Advisor: IAdvisor
     {

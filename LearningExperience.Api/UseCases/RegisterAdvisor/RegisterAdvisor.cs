@@ -1,8 +1,8 @@
 ﻿using System;
 
-namespace LearningExperience.Models.DTO
+namespace LearningExperience.Api.UseCases.RegisterAdvisor
 {
-    public class AdvisorDto
+    public class RegisterAdvisorRequest
     {
         public string? Id { get; set; }
         public string Name { get; set; }

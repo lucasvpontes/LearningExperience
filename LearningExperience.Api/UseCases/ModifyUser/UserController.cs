@@ -1,13 +1,8 @@
-﻿using LearningExperience.Models;
-using LearningExperience.Models.DTO;
-using LearningExperience.Models.Enums;
-using LearningExperience.Services;
-using Microsoft.AspNetCore.Authorization;
+﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace LearningExperience.Controllers
+namespace LearningExperience.Api.UseCases.ModifyUser
 {
 
     [ApiController]
@@ -20,28 +15,6 @@ namespace LearningExperience.Controllers
         public UserController(IUserService userService)
         {
             _userService = userService;
-        }
-
-        [Route("RegisterUser")]
-        [HttpPost]
-        public async Task<IActionResult> RegisterUser(AuthenticateUserDto userDTO)
-        {
-            await _userService.AddUser(userDTO);
-            return Ok(new { StatusCode = ReturnStatusCode.Ok });
-        }
-
-        [HttpGet("GetAll")]
-        public IEnumerable<User> GetAll()
-        {
-            var advisors = _userService.GetAll();
-            return advisors;
-        }
-
-        [HttpPost("RemoveUser")]
-        public async Task<OkResult> RemoveUser(AuthenticateUserDto userDTO)
-        {
-            await _userService.RemoveUser(userDTO);
-            return Ok();
         }
 
         [HttpPost("UpdateUser")]
