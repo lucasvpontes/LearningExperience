@@ -18,7 +18,7 @@ namespace LearningExperience.Infrastructure.MongoDataAccess.Repositories
             _mongoRepository = mongoRepository;
         }
 
-        public async Task AddAdvisor(AdvisorDto advisorInsert)
+        public async Task AddAdvisor(InactivateAdvisorRequest advisorInsert)
         {
             Advisor advisor = new Advisor()
             {
@@ -39,13 +39,13 @@ namespace LearningExperience.Infrastructure.MongoDataAccess.Repositories
             return advisors;
         }
 
-        public async Task RemoveAdvisor(AdvisorDto advisorRemoved)
+        public async Task RemoveAdvisor(InactivateAdvisorRequest advisorRemoved)
         {
             await _mongoRepository.DeleteOneAsync(
                 advisor => advisor.Id == advisorRemoved.Id);
         }
 
-        public async Task UpdateAdvisor(AdvisorDto advisorUpdated)
+        public async Task UpdateAdvisor(InactivateAdvisorRequest advisorUpdated)
         {
             var update = Builders<Advisor>.Update
             .Set(advisor => advisor.Name, advisorUpdated.Name)

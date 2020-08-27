@@ -7,13 +7,13 @@ namespace LearningExperience.Application.Repositories
 {
     public interface IUserRepository
     {
-        Task AddUser(AuthenticateUserDTO user);
+        Task AddUser(AuthenticateUserDto user);
         IEnumerable<User> GetAll();
-        Task RemoveUser(AuthenticateUserDTO user);
-        Task UpdateUser(AuthenticateUserDTO user);
-        bool ValidateUser(AuthenticateUserDTO user);
-        User GetUserByLogin(AuthenticateUserDTO userAuth);
-        User VerifyIfUserExists(AuthenticateUserDTO userAuth);
+        Task RemoveUser(AuthenticateUserDto user);
+        Task UpdateUser(AuthenticateUserDto user);
+        bool ValidateUser(AuthenticateUserDto user);
+        User GetUserByLogin(AuthenticateUserDto userAuth);
+        User VerifyIfUserExists(AuthenticateUserDto userAuth);
     }
 }
 

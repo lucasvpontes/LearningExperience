@@ -4,4 +4,25 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="LambdaReportProvider\Entities\" />
+    <Folder Include="LambdaReportProvider\Queries\" />
+    <Folder Include="MongoDataAccess\Queries\" />
+    <Folder Include="EntityFrameworkDataAccess\Entities\" />
+    <Folder Include="EntityFrameworkDataAccess\Queries\" />
+    <Folder Include="EntityFrameworkDataAccess\Repositories\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.IdentityModel.Tokens" Version="6.7.1" />
+    <PackageReference Include="MongoDB.Bson" Version="2.11.0" />
+    <PackageReference Include="MongoDB.Driver" Version="2.10.3" />
+    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="6.7.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\LearningExperience.Api\LearningExperience.Api.csproj" />
+    <ProjectReference Include="..\LearningExperience.Application\LearningExperience.Application.csproj" />
+  </ItemGroup>
+
 </Project>

@@ -15,10 +15,20 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\LearningExperience.Models\LearningExperience.Models.csproj" />
+    <ProjectReference Include="..\LearningExperience.Application\LearningExperience.Application.csproj" />
+    <ProjectReference Include="..\LearningExperience.Domain\LearningExperience.Domain.csproj" />
     <ProjectReference Include="..\LearningExperience.Ioc\LearningExperience.Ioc.csproj" />
-    <ProjectReference Include="..\LearningExperience.Repository\LearningExperience.Repository.csproj" />
-    <ProjectReference Include="..\LearningExperience.Services\LearningExperience.Services.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="UseCases\GetModulesProgress\" />
+    <Folder Include="UseCases\GenerateGameLevel\" />
+    <Folder Include="UseCases\GetReportDetails\" />
+    <Folder Include="UseCases\GetAllModules\" />
+    <Folder Include="UseCases\GetAllReports\" />
+    <Folder Include="UseCases\ConfigureHardware\" />
+    <Folder Include="UseCases\GetHardwareConfiguration\" />
+    <Folder Include="UseCases\GenerateReport\" />
   </ItemGroup>
 
 </Project>

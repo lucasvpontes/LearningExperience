@@ -21,7 +21,7 @@ namespace LearningExperience.Api.UseCases.RegisterPatient
 
         [Route("RegisterPatient")]
         [HttpPost]
-        public async Task<IActionResult> RegisterPatient(PatientDto patientDTO)
+        public async Task<IActionResult> RegisterPatient(RegisterPatientRequest patientDTO)
         {
             await _patientService.AddPatient(patientDTO);
             return Ok(new { StatusCode = ReturnStatusCode.Ok });

@@ -1,9 +1,9 @@
 ﻿using LearningExperience.Domain.Patients;
 using System;
 
-namespace LearningExperience.DTO
+namespace LearningExperience.Api.UseCases.ModifyPatient
 {
-    public class PatientDto
+    public class ModifyPatientRequest
     {
         public string? Id { get; set;}
         public string Name { get; set; }

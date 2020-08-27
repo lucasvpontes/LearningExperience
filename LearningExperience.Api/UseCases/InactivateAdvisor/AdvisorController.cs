@@ -20,7 +20,7 @@ namespace LearningExperience.Api.UseCases.InactiveAdvisor
         }
 
         [HttpPost("RemoveAdvisor")]
-        public async Task<OkResult> RemoveAdvisor(AdvisorDto advisorDTO)
+        public async Task<OkResult> RemoveAdvisor(InactivateAdvisorRequest advisorDTO)
         {
          await _advisorService.RemoveAdvisor(advisorDTO);
             return Ok();

@@ -1,5 +1,4 @@
-﻿using LearningExperience.DTO;
-using Microsoft.AspNetCore.Authorization;
+﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
 
@@ -19,7 +18,7 @@ namespace LearningExperience.Api.UseCases.ModifyPatient
         }
 
         [HttpPost("UpdatePatient")]
-        public async Task<IActionResult> UpdatePatient(PatientDto patientDTO)
+        public async Task<IActionResult> UpdatePatient(ModifyPatientRequest patientDTO)
         {
             await _patientService.UpdatePatient(patientDTO);
             return Ok(new { StatusCode = ReturnStatusCode.Ok });

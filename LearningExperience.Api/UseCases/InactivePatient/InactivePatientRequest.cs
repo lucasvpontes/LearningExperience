@@ -3,7 +3,7 @@ using System;
 
 namespace LearningExperience.Api.UseCases.InactivePatient
 {
-    public class PatientDto
+    public class InactivePatientRequest
     {
         public string? Id { get; set;}
         public string Name { get; set; }

@@ -4,4 +4,22 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="Commands\ConfigureHardware\" />
+    <Folder Include="Commands\GenerateGameLevel\" />
+    <Folder Include="Commands\GenerateReport\" />
+    <Folder Include="Commands\GenerateToken\" />
+    <Folder Include="Commands\ModifyUser\" />
+    <Folder Include="Commands\ModifyAdvisor\" />
+    <Folder Include="Commands\ModifyPatient\" />
+    <Folder Include="Commands\InactiveUser\" />
+    <Folder Include="Commands\InactiveAdvisor\" />
+    <Folder Include="Commands\InactivePatient\" />
+    <Folder Include="Commands\RegisterAdvisor\" />
+    <Folder Include="Commands\RegisterPatient\" />
+    <Folder Include="Commands\SignIn\" />
+    <Folder Include="Commands\SignUp\" />
+    <Folder Include="Results\" />
+  </ItemGroup>
+
 </Project>
