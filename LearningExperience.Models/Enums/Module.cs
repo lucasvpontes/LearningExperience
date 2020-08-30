@@ -3,8 +3,8 @@
     public  enum Module
     { 
         None,
-        Figures3d,
-        Figures2d,
+        Shape3d,
+        Shape2d,
         ComparableLevel,
         AssociatedLevel,
         IdenticalLevel,
