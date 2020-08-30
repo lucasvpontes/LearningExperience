@@ -9,8 +9,8 @@ namespace LearningExperience.Services.Factories
 
         public GameLevel GerenateLevel()
         {
-        
-            
+
+            return null;
         }
     }
 }
