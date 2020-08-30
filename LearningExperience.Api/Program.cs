@@ -14,6 +14,7 @@ namespace LearningExperience.Api
         public static void Main(string[] args)
         {
             CreateHostBuilder(args).Build().Run();
+            InitializeGameLevelImages();
         }
 
         public static IHostBuilder CreateHostBuilder(string[] args) =>
@@ -22,5 +23,6 @@ namespace LearningExperience.Api
                 {
                     webBuilder.UseStartup<Startup>();
                 });
+
     }
 }

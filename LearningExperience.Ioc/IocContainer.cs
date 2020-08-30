@@ -1,6 +1,7 @@
 ﻿using LearningExperience.Repository;
 using LearningExperience.Services;
 using Microsoft.Extensions.DependencyInjection;
+using System.Collections;
 
 namespace LearningExperience.Ioc
 {
@@ -22,6 +23,5 @@ namespace LearningExperience.Ioc
                 .AddTransient<IUserService, UserService>()
                 .AddTransient<IAuthService, AuthService>();
         }
-
     }
 }
