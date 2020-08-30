@@ -2,6 +2,7 @@
 using LearningExperience.Models.DTO;
 using LearningExperience.Models.Enums;
 using LearningExperience.Services;
+using LearningExperience.Services.Interfaces;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
@@ -22,9 +23,8 @@ namespace LearningExperience.Controllers
             _userService = userService;
         }
 
-        [Route("RegisterUser")]
-        [HttpPost]
-        public async Task<IActionResult> RegisterUser(AuthenticateUserDTO userDTO)
+        [HttpPost("RegisterUser")]
+        public async Task<IActionResult> RegisterUser([FromBody] AuthenticateUserDTO userDTO)
         {
             await _userService.AddUser(userDTO);
             return Ok(new { StatusCode = ReturnStatusCode.Ok });
@@ -38,18 +38,25 @@ namespace LearningExperience.Controllers
         }
 
         [HttpPost("RemoveUser")]
-        public async Task<OkResult> RemoveUser(AuthenticateUserDTO userDTO)
+        public async Task<OkResult> RemoveUser([FromBody] string userId)
         {
-            await _userService.RemoveUser(userDTO);
+            await _userService.RemoveUser(userId);
             return Ok();
         }
 
         [HttpPost("UpdateUser")]
-        public async Task<OkResult> UpdateUser(AuthenticateUserDTO userDTO)
+        public async Task<OkResult> UpdateUser(UserDTO userDTO)
         {
             await _userService.UpdateUser(userDTO);
             return Ok();
         }
+
+        //[HttpGet("GetUserById")]
+        //public async Task<OkResult> GetUserById([FromBody] string userId)
+        //{
+        //    await _userService
+        //}
+
 
     }
 }

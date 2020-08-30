@@ -1,9 +1,6 @@
-﻿using LearningExperience.Models;
-using LearningExperience.Models.DTO;
-using System.Collections.Generic;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
-namespace LearningExperience.Services
+namespace LearningExperience.Services.Interfaces
 {
     public interface IAuthService
     {

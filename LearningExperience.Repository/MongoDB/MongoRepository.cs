@@ -1,5 +1,6 @@
 ﻿using LearningExperience.Models;
 using LearningExperience.Models.Interfaces;
+using LearningExperience.Repository.Interfaces;
 using MongoDB.Driver;
 using System;
 using System.Collections.Generic;

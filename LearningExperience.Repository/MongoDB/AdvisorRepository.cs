@@ -1,7 +1,6 @@
 ﻿using LearningExperience.Models;
 using LearningExperience.Models.DTO;
-using LearningExperience.Repository;
-using MongoDB.Bson;
+using LearningExperience.Repository.Interfaces;
 using MongoDB.Driver;
 using System;
 using System.Collections.Generic;
@@ -40,10 +39,10 @@ namespace LearningExperience.Repository
             return advisors;
         }
 
-        public async Task RemoveAdvisor(AdvisorDTO advisorRemoved)
+        public async Task RemoveAdvisor(string advisorId)
         {
             await _mongoRepository.DeleteOneAsync(
-                advisor => advisor.Id == advisorRemoved.Id);
+                advisor => advisor.Id == advisorId);
         }
 
         public async Task UpdateAdvisor(AdvisorDTO advisorUpdated)

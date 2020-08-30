@@ -1,7 +1,7 @@
 ﻿using LearningExperience.DTO;
 using LearningExperience.Models;
-using LearningExperience.Repository;
-using MongoDB.Driver;
+using LearningExperience.Repository.Interfaces;
+using LearningExperience.Services.Interfaces;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
@@ -33,9 +33,9 @@ namespace LearningExperience.Services
             return _patientRepository.GetPatientById(patientId);
         }
 
-        public async Task RemovePatient(PatientDTO patientRemoved)
+        public async Task RemovePatient(string patientId)
         {
-            await _patientRepository.RemovePatient(patientRemoved);
+            await _patientRepository.RemovePatient(patientId);
         }
 
         public async Task UpdatePatient(PatientDTO patientsUpdated)

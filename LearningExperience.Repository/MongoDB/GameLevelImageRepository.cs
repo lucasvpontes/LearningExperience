@@ -1,10 +1,11 @@
 ﻿using LearningExperience.Models.DTO;
 using LearningExperience.Models.Model;
+using LearningExperience.Repository.Interfaces;
 using System.Threading.Tasks;
 
 namespace LearningExperience.Repository.MongoDB
 {
-    public class GameLevelImageRepository
+    public class GameLevelImageRepository: IGameLevelImageRepository
     {
         private readonly IMongoRepository<GameLevelImage> _mongoRepository;
         public GameLevelImageRepository(IMongoRepository<GameLevelImage> mongoRepository)
@@ -12,19 +13,19 @@ namespace LearningExperience.Repository.MongoDB
             _mongoRepository = mongoRepository;
         }
 
-        public async Task AddGameLevelImage(RegisterImageRequestDTO request)
+        public async Task RegisterImage(RegisterImageRequestDTO request)
         {
             var image = new GameLevelImage()
             {
                 Name = request.Name,
-                GameModule = request.GameModule,
-                Urn = request.Urn
-                
+                Module = request.Module,
+                Path = request.Path
+
             };
             await _mongoRepository.InsertOneAsync(image);
         } 
 
-        public async Task RemoveGameLevelImage(string imageId)
+        public async Task RemoveImage(string imageId)
         {
             await _mongoRepository.DeleteOneAsync(
                gameLevelImage => gameLevelImage.Id == imageId);

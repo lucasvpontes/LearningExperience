@@ -1,6 +1,7 @@
 ﻿using LearningExperience.Models;
 using LearningExperience.Models.DTO;
-using LearningExperience.Repository;
+using LearningExperience.Repository.Interfaces;
+using LearningExperience.Services.Interfaces;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
@@ -28,12 +29,12 @@ namespace LearningExperience.Services
             return users;
         }
 
-        public async Task RemoveUser(AuthenticateUserDTO userRemoved)
+        public async Task RemoveUser(string userId)
         {
-            await _userRepository.RemoveUser(userRemoved);
+            await _userRepository.RemoveUser(userId);
         }
 
-        public async Task UpdateUser(AuthenticateUserDTO user)
+        public async Task UpdateUser(UserDTO user)
         {
             await _userRepository.UpdateUser(user);
         }

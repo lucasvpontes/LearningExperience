@@ -7,7 +7,7 @@ namespace LearningExperience.Models.Model
     [BsonIgnoreExtraElements]
     public class GameLevelImage: Document
     {
-        public Module GameModule { get; set; }
-        public string Urn { get; set; }
+        public Module Module { get; set; }
+        public string Path { get; set; }
     }
 }

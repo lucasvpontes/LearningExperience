@@ -7,7 +7,7 @@ using System.Linq.Expressions;
 using System.Threading.Tasks;
 
 
-namespace LearningExperience.Repository
+namespace LearningExperience.Repository.Interfaces
 {
 
     public interface IMongoRepository<TDocument> where TDocument : IDocument
