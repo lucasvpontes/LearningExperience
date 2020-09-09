@@ -1,4 +1,4 @@
-﻿namespace LearningExperience.Services.Factories.GameLevel
+﻿namespace LearningExperience.Models.Enums
 {
     public enum GameLevelType
     {

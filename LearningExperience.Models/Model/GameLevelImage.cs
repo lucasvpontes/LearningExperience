@@ -1,4 +1,4 @@
-﻿using LearningExperience.Services.Factories.GameLevel;
+﻿using LearningExperience.Models.Enums;
 using MongoDB.Bson.Serialization.Attributes;
 
 namespace LearningExperience.Models.Model

@@ -1,4 +1,4 @@
-﻿using LearningExperience.Services.Factories.GameLevel;
+﻿using LearningExperience.Models.Enums;
 
 namespace LearningExperience.Models.DTO
 {

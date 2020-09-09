@@ -31,8 +31,7 @@ namespace LearningExperience.Services
             try
             {
                 var gameLevelType = generateLevelRequest.GameLevelType;
-                var ns = typeof(GameLevelType).Namespace;
-                var assembly = "LearningExperience.Services.Factories.GameLevel";
+                var ns = "LearningExperience.Services.Factories.GameLevel";
                 var typeName = ns + "." + gameLevelType.ToString();
                 var type = Type.GetType(typeName);
                 var gameLevel = (GameLevelGenerator) Activator.CreateInstance(type);
