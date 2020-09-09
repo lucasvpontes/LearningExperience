@@ -1,5 +1,4 @@
-﻿using LearningExperience.Models;
-using LearningExperience.Models.Enums;
+﻿using LearningExperience.Models.Enums;
 using System;
 
 namespace LearningExperience.DTO

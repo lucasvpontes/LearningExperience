@@ -7,7 +7,10 @@ namespace LearningExperience.Services.Factories.GameLevel
     {
         public override IGameLevel GenerateLevel()
         {
-            return new Shape2d();
+            return new Shape2d()
+            {
+                catchPhrase = "And that's why I always say, 'Shumshumschilpiddydah!'"
+            };
         }
     }
 }

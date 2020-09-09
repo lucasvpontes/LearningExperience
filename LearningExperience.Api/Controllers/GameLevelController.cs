@@ -1,9 +1,12 @@
 ﻿using LearningExperience.Models.DTO;
 using LearningExperience.Models.Enums;
+using LearningExperience.Models.Model;
 using LearningExperience.Services.Interfaces;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using System.Collections.Generic;
 using System.Threading.Tasks;
+
 
 namespace LearningExperience.Controllers
 {
@@ -13,26 +16,26 @@ namespace LearningExperience.Controllers
     [Authorize]
     public class GameLevelController : ControllerBase
     {
-        private readonly IGameLevelImageService _gameLevelService;
+        private readonly IGameLevelService _gameLevelService;
 
-        public GameLevelController(IGameLevelImageService gameLevelService)
+        public GameLevelController(IGameLevelService gameLevelService)
         {
             _gameLevelService = gameLevelService;
         }
 
         [HttpPost("GerenateLevel")]
-        public async Task<IActionResult> GenerateLevel([FromBody] RegisterImageRequestDTO requestDTO)
+        public  IList<GameLevel> GenerateLevel(GenerateLevelRequestDTO gameLevelType)
         {
-            await _gameLevelService.RegisterImage(requestDTO);
-            return Ok(new { StatusCode = ReturnStatusCode.Ok });
+            var gameLevels = _gameLevelService.GenerateLevel(gameLevelType);
+            return gameLevels;
         }
 
 
-
-        [HttpPost("RemoveImage")]
-        public async Task<IActionResult> RemoveImage([FromBody] string imageId)
+        // TODO: Implementar reset.
+        [HttpPost("ResetProgress")]
+        public async Task<IActionResult> ResetProgress([FromBody] string userId)
         {
-            await _gameLevelService.RemoveImage(imageId);
+            await _gameLevelService.RemoveImage(userId);
             return Ok(new { StatusCode = ReturnStatusCode.Ok });
         }
     }

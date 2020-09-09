@@ -18,7 +18,7 @@ namespace LearningExperience.Repository.MongoDB
             var image = new GameLevelImage()
             {
                 Name = request.Name,
-                Module = request.Module,
+                GameLevelType = request.GameLevelType,
                 Path = request.Path
 
             };

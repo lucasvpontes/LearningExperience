@@ -13,9 +13,9 @@ namespace LearningExperience.Controllers
     [Authorize]
     public class GameImageLevelController : ControllerBase
     {
-        private readonly IGameLevelImageService _gameLevelService;
+        private readonly IGameLevelService _gameLevelService;
 
-        public GameImageLevelController(IGameLevelImageService gameLevelImageService)
+        public GameImageLevelController(IGameLevelService gameLevelImageService)
         {
             _gameLevelService = gameLevelImageService;
         }

@@ -26,7 +26,7 @@ namespace LearningExperience.Ioc
                 .AddTransient<IPatientService, PatientService>()
                 .AddTransient<IUserService, UserService>()
                 .AddTransient<IAuthService, AuthService>()
-                .AddTransient<IGameLevelImageService, GameLevelImageService>();
+                .AddTransient<IGameLevelService, GameLevelService>();
                
         }
     }

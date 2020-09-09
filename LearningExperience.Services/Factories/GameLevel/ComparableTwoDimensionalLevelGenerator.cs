@@ -3,7 +3,7 @@ using System;
 
 namespace LearningExperience.Services.Factories.GameLevel
 {
-    public class ComparableLevelGenerator : GameLevelGenerator
+    public class ComparableTwoDimensionalLevelGenerator : GameLevelGenerator
     {
         public override IGameLevel GenerateLevel()
         {
