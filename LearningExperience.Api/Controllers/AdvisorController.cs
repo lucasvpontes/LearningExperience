@@ -1,7 +1,6 @@
 ﻿using LearningExperience.Models;
 using LearningExperience.Models.DTO;
 using LearningExperience.Models.Enums;
-using LearningExperience.Services;
 using LearningExperience.Services.Interfaces;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;

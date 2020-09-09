@@ -3,7 +3,7 @@ using LearningExperience.Models.Model.Interfaces;
 
 namespace LearningExperience.Services.Factories.GameLevel
 {
-    public class Shape2dLevelGenerator : GameLevelGenerator
+    public class EqualTwoDimensionalLevelGenerator : GameLevelGenerator
     {
         public override IGameLevel GenerateLevel()
         {
