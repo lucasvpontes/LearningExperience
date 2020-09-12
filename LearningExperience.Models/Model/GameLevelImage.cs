@@ -9,5 +9,6 @@ namespace LearningExperience.Models.Model
     {
         public GameLevelType GameLevelType { get; set; }
         public string Path { get; set; }
+        public bool Match { get; set; }
     }
 }

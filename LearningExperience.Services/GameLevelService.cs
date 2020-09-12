@@ -21,7 +21,8 @@ namespace LearningExperience.Services
         public GameLevelResult GenerateLevel(GenerateLevelRequestDTO gameLevelType)
         {
             var gameLevel = GetLevel(gameLevelType);
-            var options = gameLevel.ConfigureLevelLogic();
+            var images = _gameLevelRepository.GetAll();
+            var options = gameLevel.ConfigureLevelLogic(images);
             return options;
         }
 
@@ -34,10 +35,10 @@ namespace LearningExperience.Services
                 var ns = "LearningExperience.Services.Factories.GameLevelGenerators";
                 var typeName = ns + "." + gameLevelType.ToString();
                 var type = Type.GetType(typeName);
-                var gameLevel = (GameLevelGenerator) Activator.CreateInstance(type);
+                var gameLevel = (GameLevelGenerator)Activator.CreateInstance(type);
                 return gameLevel;
             }
-            catch(Exception e)
+            catch (Exception e)
             {
                 Console.WriteLine(e);
                 return null;
