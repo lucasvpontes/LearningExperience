@@ -1,5 +1,6 @@
 ﻿using LearningExperience.Models;
 using LearningExperience.Models.DTO;
+using LearningExperience.Models.Model;
 using LearningExperience.Repository.Interfaces;
 using LearningExperience.Services.Interfaces;
 using System.Collections.Generic;
@@ -11,10 +12,14 @@ namespace LearningExperience.Services
     public class UserService : IUserService
     {
         private readonly IUserRepository _userRepository;
+        private readonly IUserProgressRepository _userProgressRepository;
 
-        public UserService(IUserRepository userRepository)
+        public UserService(
+            IUserRepository userRepository, 
+            IUserProgressRepository userProgressRepository)
         {
             _userRepository = userRepository;
+            _userProgressRepository = userProgressRepository;
         }
 
         public async Task AddUser(AuthenticateUserDTO user)
@@ -59,14 +64,14 @@ namespace LearningExperience.Services
             return true;
         }
 
-        public double GetUserProgress(UserProgressDTO userProgress)
+        public UserProgress GetUserProgress(UserProgressDTO userProgress)
         {
-            throw new System.NotImplementedException();
+            return _userProgressRepository.GetUserProgress(userProgress);
         }
 
-        public Task UpdateUserProgress(UserProgressDTO userProgress)
+        public async Task UpdateUserProgress(UserProgressUpdateDTO userProgress)
         {
-            throw new System.NotImplementedException();
+            await _userProgressRepository.UpdateUserProgress(userProgress);
         }
     }
 }

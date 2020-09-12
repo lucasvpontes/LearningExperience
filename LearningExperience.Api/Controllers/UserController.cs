@@ -1,7 +1,7 @@
 ﻿using LearningExperience.Models;
 using LearningExperience.Models.DTO;
 using LearningExperience.Models.Enums;
-using LearningExperience.Services;
+using LearningExperience.Models.Model;
 using LearningExperience.Services.Interfaces;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -52,13 +52,13 @@ namespace LearningExperience.Controllers
         }
 
         [HttpPost("GetUserProgress")]
-        public double GetUserProgress(UserProgressDTO userProgress)
+        public UserProgress GetUserProgress(UserProgressDTO userProgress)
         {
             return _userService.GetUserProgress(userProgress);
         }
 
         [HttpPost("UpdateUserProgress")]
-        public async Task<IActionResult> UpdateUserProgress(UserProgressDTO userProgress)
+        public async Task<IActionResult> UpdateUserProgress(UserProgressUpdateDTO userProgress)
         {
             await  _userService.UpdateUserProgress(userProgress);
             return Ok(new { StatusCode = ReturnStatusCode.Ok });

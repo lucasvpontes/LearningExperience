@@ -4,7 +4,7 @@ namespace LearningExperience.Models.DTO
 {
     public class UserProgressDTO
     {
-        public string Id { get; set; }
+        public string UserId { get; set; }
         public GameLevelType Module { get; set; }
     }
 }

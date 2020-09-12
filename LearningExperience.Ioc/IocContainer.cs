@@ -17,7 +17,9 @@ namespace LearningExperience.Ioc
                 .AddScoped(typeof(IAdvisorRepository), typeof(AdvisorRepository))
                 .AddScoped(typeof(IPatientRepository), typeof(PatientRepository))
                 .AddScoped(typeof(IUserRepository), typeof(UserRepository))
+                .AddScoped(typeof(IUserProgressRepository), typeof(UserProgressRepository))
                 .AddScoped(typeof(IGameLevelImageRepository), typeof(GameLevelImageRepository));
+                
         }
         public static IServiceCollection RegisterServices(this IServiceCollection services)
         {
