@@ -21,7 +21,7 @@ namespace LearningExperience.Services
         public GameLevelResult GenerateLevel(GenerateLevelRequestDTO gameLevelRequest)
         {
             var gameLevel = GetLevel(gameLevelRequest);
-            var images = _gameLevelRepository.GetImagesByModule(gameLevelRequest.GameLevelType); ; // TODO: Alterar pra getModule
+            var images = _gameLevelRepository.GetImagesByModule(gameLevelRequest.GameLevelType); // TODO: Alterar pra getModule
             var options = gameLevel.ConfigureLevelLogic(images);
             return options;
         }
