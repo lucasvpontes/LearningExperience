@@ -1,13 +1,24 @@
 ﻿using LearningExperience.Models.DTO;
-using LearningExperience.Models.Model.Interfaces;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace LearningExperience.Models.Model.ConcreteLevels
 {
-    internal class ComparableTwoDimensional : IGameLevel
+    public class ComparableTwoDimensional : GameLevel
     {
-        public GameLevelResult Configure()
+            public override GameLevelResult Configure(IList<GameLevelImage> gameLevelImages)
         {
-            throw new System.NotImplementedException();
+            IList<GameLevelImage> shuffledList = Shuffle(gameLevelImages).Take(4).ToList();
+            shuffledList.First().Match = true;
+
+            GameLevelResult gameLevelResult = new GameLevelResult()
+            {
+                MainImage = shuffledList.First(),
+                Comparable = shuffledList
+            };
+
+            gameLevelResult.Comparable = Shuffle(gameLevelResult.Comparable);
+            return gameLevelResult;
         }
     }
 }

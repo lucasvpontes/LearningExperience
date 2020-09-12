@@ -1,4 +1,5 @@
 ﻿using LearningExperience.Models.DTO;
+using LearningExperience.Models.Enums;
 using LearningExperience.Models.Model;
 using LearningExperience.Repository.Interfaces;
 using System.Collections.Generic;
@@ -33,11 +34,12 @@ namespace LearningExperience.Repository.MongoDB
                gameLevelImage => gameLevelImage.Id == imageId);
         }
 
-        public IList<GameLevelImage> GetAll()
+        public IList<GameLevelImage> GetImagesByModule(GameLevelType type)
         {
             var gameLevelImages = _mongoRepository.FilterBy(
-                filter => filter.Deleted == false
-            );
+                filter => (filter.Deleted == false &&
+                           filter.GameLevelType == type
+            ));
             return gameLevelImages.ToList();
         }
     }

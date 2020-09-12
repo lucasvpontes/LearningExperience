@@ -6,11 +6,11 @@ using System.Linq;
 
 namespace LearningExperience.Models.Model.ConcreteLevels
 {
-    public class AssociatedLevel : IGameLevel
+    public class AssociatedLevel : GameLevel
     {
-        public GameLevelResult Configure(IList<GameLevelImage> gameLevelImages)
+        public override GameLevelResult Configure(IList<GameLevelImage> gameLevelImages)
         {
-            IList<GameLevelImage> shuffledList = Shuffle(gameLevelImages);
+            IList<GameLevelImage> shuffledList = Shuffle(gameLevelImages).Take(4).ToList();
             shuffledList.First().Match = true;
 
             GameLevelResult gameLevelResult = new GameLevelResult()
@@ -21,11 +21,6 @@ namespace LearningExperience.Models.Model.ConcreteLevels
 
             gameLevelResult.Comparable = Shuffle(gameLevelResult.Comparable);
             return gameLevelResult;
-        }
-
-        public IList<GameLevelImage> Shuffle(IList<GameLevelImage> gameLevelImages)
-        {
-            return gameLevelImages.OrderBy(x => Guid.NewGuid()).ToList();
         }
     }
 }

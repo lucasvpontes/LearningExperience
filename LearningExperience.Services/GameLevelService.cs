@@ -18,17 +18,16 @@ namespace LearningExperience.Services
 
         }
 
-        public GameLevelResult GenerateLevel(GenerateLevelRequestDTO gameLevelType)
+        public GameLevelResult GenerateLevel(GenerateLevelRequestDTO gameLevelRequest)
         {
-            var gameLevel = GetLevel(gameLevelType);
-            var images = _gameLevelRepository.GetAll();
+            var gameLevel = GetLevel(gameLevelRequest);
+            var images = _gameLevelRepository.GetImagesByModule(gameLevelRequest.GameLevelType); ; // TODO: Alterar pra getModule
             var options = gameLevel.ConfigureLevelLogic(images);
             return options;
         }
 
         public GameLevelGenerator GetLevel(GenerateLevelRequestDTO generateLevelRequest)
         {
-
             try
             {
                 var gameLevelType = generateLevelRequest.GameLevelType;
