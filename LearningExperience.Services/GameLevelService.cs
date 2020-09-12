@@ -18,16 +18,11 @@ namespace LearningExperience.Services
 
         }
 
-        public IGameLevel GenerateLevel(GenerateLevelRequestDTO gameLevelType)
+        public GameLevelResult GenerateLevel(GenerateLevelRequestDTO gameLevelType)
         {
             var gameLevel = GetLevel(gameLevelType);
-            var options = gameLevel.GenerateLevelLogic(gameLevelType);
+            var options = gameLevel.ConfigureLevelLogic();
             return options;
-        }
-
-        private object GetProgressForUser(GenerateLevelRequestDTO gameLevelType)
-        {
-            throw new NotImplementedException();
         }
 
         public GameLevelGenerator GetLevel(GenerateLevelRequestDTO generateLevelRequest)

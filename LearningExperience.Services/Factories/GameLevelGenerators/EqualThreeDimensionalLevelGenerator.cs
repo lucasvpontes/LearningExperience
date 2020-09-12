@@ -6,9 +6,9 @@ namespace LearningExperience.Services.Factories.GameLevelGenerators
 {
     public class EqualThreeDimensionalLevelGenerator : GameLevelGenerator
     {
-        public override IGameLevel GenerateLevelLogic(GenerateLevelRequestDTO gameLevelType)
+        public override IGameLevel GenerateLevel()
         {
-            return new Shape3d();
+            return new EqualThreeDimensionalLevel();
         }
     }
 }

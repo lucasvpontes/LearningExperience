@@ -6,6 +6,13 @@ namespace LearningExperience.Services.Factories.GameLevelGenerators
 {
     public abstract class GameLevelGenerator
     {
-        public abstract IGameLevel GenerateLevelLogic(GenerateLevelRequestDTO gameLevelType);
+        public abstract IGameLevel GenerateLevel();
+
+        public GameLevelResult ConfigureLevelLogic()
+        {
+            var level = GenerateLevel();
+            var result = level.Configure();
+            return result;
+        }
     }
 }

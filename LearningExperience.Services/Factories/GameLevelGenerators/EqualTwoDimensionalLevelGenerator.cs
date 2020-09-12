@@ -6,10 +6,9 @@ namespace LearningExperience.Services.Factories.GameLevelGenerators
 {
     public class EqualTwoDimensionalLevelGenerator : GameLevelGenerator
     {
-        public override IGameLevel GenerateLevelLogic(GenerateLevelRequestDTO gameLevelType)
+        public override IGameLevel GenerateLevel()
         {
-            var gameLevel = new Shape2d();
-            return gameLevel;
+            return new EqualTwoDimensionalLevel();
         }
     }
 }

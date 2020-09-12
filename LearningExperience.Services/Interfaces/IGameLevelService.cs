@@ -8,6 +8,6 @@ namespace LearningExperience.Services.Interfaces
     {
         Task RegisterImage(RegisterImageRequestDTO requestDTO);
         Task RemoveImage(string imageId);
-        IGameLevel GenerateLevel(GenerateLevelRequestDTO gameLevelType);
+        GameLevelResult GenerateLevel(GenerateLevelRequestDTO gameLevelType);
     }
 }

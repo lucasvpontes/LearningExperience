@@ -1,14 +1,13 @@
-﻿using LearningExperience.Models.DTO;
+﻿using LearningExperience.Models.Model.ConcreteLevels;
 using LearningExperience.Models.Model.Interfaces;
-using System;
 
 namespace LearningExperience.Services.Factories.GameLevelGenerators
 {
     public class AssociatedLevelGenerator : GameLevelGenerator
     {
-        public override IGameLevel GenerateLevelLogic(GenerateLevelRequestDTO gameLevelType)
+        public override IGameLevel GenerateLevel()
         {
-            throw new NotImplementedException();
+            return new AssociatedLevel();
         }
     }
 }

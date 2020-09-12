@@ -51,12 +51,17 @@ namespace LearningExperience.Controllers
             return Ok();
         }
 
-        //[HttpGet("GetUserById")]
-        //public async Task<OkResult> GetUserById([FromBody] string userId)
-        //{
-        //    await _userService
-        //}
+        [HttpPost("GetUserProgress")]
+        public double GetUserProgress(UserProgressDTO userProgress)
+        {
+            return _userService.GetUserProgress(userProgress);
+        }
 
-
+        [HttpPost("UpdateUserProgress")]
+        public async Task<IActionResult> UpdateUserProgress(UserProgressDTO userProgress)
+        {
+            await  _userService.UpdateUserProgress(userProgress);
+            return Ok(new { StatusCode = ReturnStatusCode.Ok });
+        }
     }
 }

@@ -1,12 +1,13 @@
-﻿using LearningExperience.Models.Model.Interfaces;
+﻿using LearningExperience.Models.DTO;
+using LearningExperience.Models.Model.Interfaces;
 
 namespace LearningExperience.Models.Model.ConcreteLevels
 {
-    public class Shape2d : IGameLevel
+    public class EqualTwoDimensionalLevel : IGameLevel
     {
         public string catchPhrase { get; set; }
 
-        public IGameLevel GenerateLevel()
+        public GameLevelResult Configure()
         {
             throw new System.NotImplementedException();
         }

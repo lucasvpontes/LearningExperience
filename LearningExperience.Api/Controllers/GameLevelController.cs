@@ -23,7 +23,7 @@ namespace LearningExperience.Controllers
         }
 
         [HttpPost("GerenateLevel")]
-        public  IGameLevel GenerateLevel(GenerateLevelRequestDTO gameLevelType)
+        public  GameLevelResult GenerateLevel(GenerateLevelRequestDTO gameLevelType)
         {
             var gameLevels = _gameLevelService.GenerateLevel(gameLevelType);
             return gameLevels;

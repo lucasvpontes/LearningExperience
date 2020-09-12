@@ -1,13 +1,13 @@
 ﻿using LearningExperience.Models.DTO;
 using LearningExperience.Models.Model.Interfaces;
 
-namespace LearningExperience.Models.Model.ConcreteLevels
+namespace LearningExperience.Models.Model
 {
-    public class AssociatedLevel : IGameLevel
+    public class EqualThreeDimensionalLevel : IGameLevel
     {
         public GameLevelResult Configure()
         {
-            return null;
+            throw new System.NotImplementedException();
         }
     }
 }

@@ -59,6 +59,15 @@ namespace LearningExperience.Services
             return true;
         }
 
+        public double GetUserProgress(UserProgressDTO userProgress)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public Task UpdateUserProgress(UserProgressDTO userProgress)
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }
 

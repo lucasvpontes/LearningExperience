@@ -3,11 +3,11 @@ using LearningExperience.Models.Model.Interfaces;
 
 namespace LearningExperience.Models.Model.ConcreteLevels
 {
-    public class AssociatedLevel : IGameLevel
+    public class EqualTwoAndThreeDimensionalLevel : IGameLevel
     {
         public GameLevelResult Configure()
         {
-            return null;
+            throw new System.NotImplementedException();
         }
     }
 }
