@@ -1,28 +1,33 @@
 ﻿using LearningExperience.Models.DTO;
-using LearningExperience.Models.Model;
+using LearningExperience.Models.Model.Interfaces;
 using LearningExperience.Repository.Interfaces;
-using LearningExperience.Services.Factories.GameLevel;
+using LearningExperience.Services.Factories.GameLevelGenerators;
 using LearningExperience.Services.Interfaces;
 using System;
-using System.Collections.Generic;
 using System.Threading.Tasks;
 
 namespace LearningExperience.Services
 {
     public class GameLevelService : IGameLevelService
     {
-        private readonly IGameLevelImageRepository _gameLevelImageRepository;
+        private readonly IGameLevelImageRepository _gameLevelRepository;
 
-        public GameLevelService(IGameLevelImageRepository advisorRepository)
+        public GameLevelService(IGameLevelImageRepository gameLevelRepository)
         {
-            _gameLevelImageRepository = advisorRepository;
+            _gameLevelRepository = gameLevelRepository;
+
         }
 
-        public IList<GameLevel> GenerateLevel(GenerateLevelRequestDTO gameLevelType)
+        public IGameLevel GenerateLevel(GenerateLevelRequestDTO gameLevelType)
         {
             var gameLevel = GetLevel(gameLevelType);
-            Console.WriteLine(gameLevel.GenerateLevel());
-            return null;
+            var options = gameLevel.GenerateLevelLogic(gameLevelType);
+            return options;
+        }
+
+        private object GetProgressForUser(GenerateLevelRequestDTO gameLevelType)
+        {
+            throw new NotImplementedException();
         }
 
         public GameLevelGenerator GetLevel(GenerateLevelRequestDTO generateLevelRequest)
@@ -31,7 +36,7 @@ namespace LearningExperience.Services
             try
             {
                 var gameLevelType = generateLevelRequest.GameLevelType;
-                var ns = "LearningExperience.Services.Factories.GameLevel";
+                var ns = "LearningExperience.Services.Factories.GameLevelGenerators";
                 var typeName = ns + "." + gameLevelType.ToString();
                 var type = Type.GetType(typeName);
                 var gameLevel = (GameLevelGenerator) Activator.CreateInstance(type);
@@ -46,12 +51,12 @@ namespace LearningExperience.Services
 
         public async Task RegisterImage(RegisterImageRequestDTO requestDTO)
         {
-            await _gameLevelImageRepository.RegisterImage(requestDTO);
+            await _gameLevelRepository.RegisterImage(requestDTO);
         }
 
         public async Task RemoveImage(string imageId)
         {
-            await _gameLevelImageRepository.RemoveImage(imageId);
+            await _gameLevelRepository.RemoveImage(imageId);
         }
     }
 }

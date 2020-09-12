@@ -1,6 +1,6 @@
 ﻿using LearningExperience.Models.Model.Interfaces;
 
-namespace LearningExperience.Models.Model
+namespace LearningExperience.Models.Model.ConcreteLevels
 {
     public class ComparableLevel : IGameLevel
     {

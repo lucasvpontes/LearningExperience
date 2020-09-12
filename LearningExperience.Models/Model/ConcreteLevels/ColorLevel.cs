@@ -1,13 +1,14 @@
 ﻿using LearningExperience.Models.Model.Interfaces;
 
-namespace LearningExperience.Models.Model
+namespace LearningExperience.Models.Model.ConcreteLevels
 {
-    public class Shape2d : IGameLevel
+    public class ColorLevel: IGameLevel
     {
         public string catchPhrase { get; set; }
+
         public IGameLevel GenerateLevel()
         {
-            return null;
+            throw new System.NotImplementedException();
         }
     }
 }

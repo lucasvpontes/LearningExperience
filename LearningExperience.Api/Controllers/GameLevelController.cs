@@ -1,10 +1,9 @@
 ﻿using LearningExperience.Models.DTO;
 using LearningExperience.Models.Enums;
-using LearningExperience.Models.Model;
+using LearningExperience.Models.Model.Interfaces;
 using LearningExperience.Services.Interfaces;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using System.Collections.Generic;
 using System.Threading.Tasks;
 
 
@@ -24,7 +23,7 @@ namespace LearningExperience.Controllers
         }
 
         [HttpPost("GerenateLevel")]
-        public  IList<GameLevel> GenerateLevel(GenerateLevelRequestDTO gameLevelType)
+        public  IGameLevel GenerateLevel(GenerateLevelRequestDTO gameLevelType)
         {
             var gameLevels = _gameLevelService.GenerateLevel(gameLevelType);
             return gameLevels;

@@ -1,4 +1,4 @@
-﻿using LearningExperience.Services.Factories.GameLevel;
+﻿using LearningExperience.Services.Factories.GameLevelGenerators;
 using System;
 
 namespace LearningExperience.Services.Factories
@@ -7,7 +7,7 @@ namespace LearningExperience.Services.Factories
     {
         public void ClientCode(GameLevelGenerator levelGenerator)
         {
-            Console.WriteLine("That's just a test.\n" + levelGenerator.GenerateLevel());
+            Console.WriteLine("That's just a test.\n" + levelGenerator.GenerateLevelLogic());
         }
     }
 }
