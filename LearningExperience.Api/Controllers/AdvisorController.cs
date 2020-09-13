@@ -52,7 +52,7 @@ namespace LearningExperience.Controllers
         }
 
         [HttpGet("GetAdvisorById")]
-        public Advisor GetAdvisorById([FromBody] string advisorId)
+        public Advisor GetAdvisorById(string advisorId)
         {
             var advisor = _advisorService.GetAdvisorById(advisorId);
             return advisor;

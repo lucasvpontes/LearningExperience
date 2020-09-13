@@ -52,7 +52,7 @@ namespace LearningExperience.Controllers
         }
 
         [HttpGet("GetPatientById")]
-        public Patient GetPatientById([FromBody] string patientId)
+        public Patient GetPatientById(string patientId)
         {
             var patient = _patientService.GetPatientById(patientId);
             return patient;
