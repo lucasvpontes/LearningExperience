@@ -15,7 +15,7 @@ namespace LearningExperience.Repository.MongoDB
         {
             _mongoRepository = mongoRepository;
         }
-        public UserProgress GetUserProgress(UserProgressDTO userProgress)
+        public double GetUserProgress(UserProgressDTO userProgress)
         {
             var user = _mongoRepository.FindOne(user => user.UserId == userProgress.UserId && user.Module == userProgress.Module);
 
@@ -25,7 +25,7 @@ namespace LearningExperience.Repository.MongoDB
                 user = _mongoRepository.FindOne(userSelected => userSelected.UserId == userProgress.UserId && userSelected.Module == userProgress.Module);
             }
 
-            return user;
+            return user.Progress;
         }
 
         public async Task UpdateUserProgress(UserProgressUpdateDTO userProgress)

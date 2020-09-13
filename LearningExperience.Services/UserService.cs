@@ -64,7 +64,7 @@ namespace LearningExperience.Services
             return true;
         }
 
-        public UserProgress GetUserProgress(UserProgressDTO userProgress)
+        public double GetUserProgress(UserProgressDTO userProgress)
         {
             return _userProgressRepository.GetUserProgress(userProgress);
         }

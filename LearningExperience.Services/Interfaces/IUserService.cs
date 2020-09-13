@@ -14,7 +14,7 @@ namespace LearningExperience.Services.Interfaces
         Task UpdateUser(UserDTO user);
         User GetUserByLogin(AuthenticateUserDTO user);
         bool ValidateUser(AuthenticateUserDTO user);
-        UserProgress GetUserProgress(UserProgressDTO userProgress);
+        double GetUserProgress(UserProgressDTO userProgress);
         Task UpdateUserProgress(UserProgressUpdateDTO userProgress);
     }
 }

@@ -52,7 +52,7 @@ namespace LearningExperience.Controllers
         }
 
         [HttpGet("GetUserProgress")]
-        public UserProgress GetUserProgress(string userId, GameLevelType module)
+        public double GetUserProgress(string userId, GameLevelType module)
         {
             UserProgressDTO userProgress = new UserProgressDTO()
             {
