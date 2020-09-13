@@ -51,9 +51,15 @@ namespace LearningExperience.Controllers
             return Ok();
         }
 
-        [HttpPost("GetUserProgress")]
-        public UserProgress GetUserProgress(UserProgressDTO userProgress)
+        [HttpGet("GetUserProgress")]
+        public UserProgress GetUserProgress(string userId, GameLevelType module)
         {
+            UserProgressDTO userProgress = new UserProgressDTO()
+            {
+                UserId = userId,
+                Module = module
+            };
+
             return _userService.GetUserProgress(userProgress);
         }
 
