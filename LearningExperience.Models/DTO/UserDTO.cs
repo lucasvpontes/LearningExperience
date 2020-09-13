@@ -4,7 +4,9 @@ namespace LearningExperience.Models.DTO
 {
     public class UserDTO
     {
-        public User User { get; set; }
-        public DateTime? RequestDate { get; set; }
+        public string? Id { get; set; }
+        public string Name { get; set; }
+        public string Email { get; set; }
+        public string Password { get; set; }
     }
 }

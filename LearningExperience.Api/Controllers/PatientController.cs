@@ -1,7 +1,7 @@
 ﻿using LearningExperience.DTO;
 using LearningExperience.Models;
 using LearningExperience.Models.Enums;
-using LearningExperience.Services;
+using LearningExperience.Services.Interfaces;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
@@ -38,9 +38,9 @@ namespace LearningExperience.Controllers
         }
 
         [HttpPost("RemovePatient")]
-        public async Task<OkResult> RemovePatient(PatientDTO patientDTO)
+        public async Task<OkResult> RemovePatient([FromBody] string patientId)
         {
-            await _patientService.RemovePatient(patientDTO);
+            await _patientService.RemovePatient(patientId);
             return Ok();
         }
 
@@ -52,7 +52,7 @@ namespace LearningExperience.Controllers
         }
 
         [HttpGet("GetPatientById")]
-        public Patient GetPatientById(string patientId)
+        public Patient GetPatientById([FromBody] string patientId)
         {
             var patient = _patientService.GetPatientById(patientId);
             return patient;

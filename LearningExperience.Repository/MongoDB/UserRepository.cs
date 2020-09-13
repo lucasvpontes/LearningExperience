@@ -1,11 +1,8 @@
-﻿using Castle.Core.Internal;
-using LearningExperience.Models;
+﻿using LearningExperience.Models;
 using LearningExperience.Models.DTO;
-using LearningExperience.Repository;
-using MongoDB.Bson;
+using LearningExperience.Repository.Interfaces;
 using MongoDB.Driver;
 using System.Collections.Generic;
-using System.Reflection.Metadata.Ecma335;
 using System.Threading.Tasks;
 
 
@@ -40,13 +37,13 @@ namespace LearningExperience.Repository
             return users;
         }
 
-        public async Task RemoveUser(AuthenticateUserDTO userRemoved)
+        public async Task RemoveUser(string userId)
         {
             await _mongoRepository.DeleteOneAsync(
-                user => user.Email == userRemoved.Email);
+                user => user.Id == userId);
         }
 
-        public async Task UpdateUser(AuthenticateUserDTO userUpdated)
+        public async Task UpdateUser(UserDTO userUpdated)
         {
             var update = Builders<User>.Update
             .Set(user => user.Id, userUpdated.Id);
@@ -68,9 +65,9 @@ namespace LearningExperience.Repository
             return _mongoRepository.FindOne(user => user.Email == userAuth.Email && user.Password == userAuth.Password);
         }
 
-        public User VerifyIfUserExists(AuthenticateUserDTO userAuth)
+        public User VerifyIfUserExists(AuthenticateUserDTO userDTO)
         {
-           return _mongoRepository.FindOne(user => user.Email == userAuth.Email);
+           return _mongoRepository.FindOne(user => user.Email == userDTO.Email);
         }
     }
 }

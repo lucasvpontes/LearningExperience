@@ -1,12 +1,9 @@
-﻿using LearningExperience.Models;
-using LearningExperience.Models.DTO;
-using LearningExperience.Repository;
+﻿using LearningExperience.Services.Interfaces;
 using Microsoft.IdentityModel.Tokens;
 using System;
 using System.Collections.Generic;
 using System.IdentityModel.Tokens.Jwt;
 using System.Text;
-using System.Threading.Tasks;
 
 
 namespace LearningExperience.Services

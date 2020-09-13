@@ -1,7 +1,7 @@
 ﻿using LearningExperience.Models;
 using LearningExperience.Models.DTO;
 using LearningExperience.Models.Enums;
-using LearningExperience.Services;
+using LearningExperience.Services.Interfaces;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
@@ -38,9 +38,9 @@ namespace LearningExperience.Controllers
         }
 
         [HttpPost("RemoveAdvisor")]
-        public async Task<OkResult> RemoveAdvisor(AdvisorDTO advisorDTO)
+        public async Task<OkResult> RemoveAdvisor([FromBody] string advisorId)
         {
-         await _advisorService.RemoveAdvisor(advisorDTO);
+         await _advisorService.RemoveAdvisor(advisorId);
             return Ok();
         }
 
@@ -52,7 +52,7 @@ namespace LearningExperience.Controllers
         }
 
         [HttpGet("GetAdvisorById")]
-        public Advisor GetAdvisorById(string advisorId)
+        public Advisor GetAdvisorById([FromBody] string advisorId)
         {
             var advisor = _advisorService.GetAdvisorById(advisorId);
             return advisor;

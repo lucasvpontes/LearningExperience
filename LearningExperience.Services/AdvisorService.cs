@@ -1,6 +1,7 @@
 ﻿using LearningExperience.Models;
 using LearningExperience.Models.DTO;
-using LearningExperience.Repository;
+using LearningExperience.Repository.Interfaces;
+using LearningExperience.Services.Interfaces;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
@@ -32,9 +33,9 @@ namespace LearningExperience.Services
             return advisors;
         }
 
-        public async Task RemoveAdvisor(AdvisorDTO advisorRemoved)
+        public async Task RemoveAdvisor(string advisorId)
         {
-            await _advisorRepository.RemoveAdvisor(advisorRemoved);
+            await _advisorRepository.RemoveAdvisor(advisorId);
         }
 
         public async Task UpdateAdvisor(AdvisorDTO advisorUpdated)

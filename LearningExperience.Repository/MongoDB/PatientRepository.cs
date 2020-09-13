@@ -1,5 +1,6 @@
 ﻿using LearningExperience.DTO;
 using LearningExperience.Models;
+using LearningExperience.Repository.Interfaces;
 using MongoDB.Driver;
 using System;
 using System.Collections.Generic;
@@ -46,10 +47,10 @@ namespace LearningExperience.Repository
             return _mongoRepository.FindOne(filter => filter.Id == patientId);
         }
 
-        public async Task RemovePatient(PatientDTO patientRemoved)
+        public async Task RemovePatient(string patientId)
         {
             await _mongoRepository.DeleteOneAsync(
-                patient => patient.Id == patientRemoved.Id);
+                patient => patient.Id == patientId);
         }
 
         public async Task UpdatePatient(PatientDTO patientUpated)
