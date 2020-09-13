@@ -34,7 +34,7 @@ namespace LearningExperience.Repository.MongoDB
             .Set(user => user.Progress, userProgress.Progress * 100)
             .Set(user => user.LastUpdate, DateTime.Now);
 
-            await _mongoRepository.UpdateOneAsync(filter => filter.Id == userProgress.Id, update);
+            await _mongoRepository.UpdateOneAsync(filter => filter.UserId == userProgress.Id, update);
         }
 
         private void InsertUserProgress(UserProgressDTO userProgress)
