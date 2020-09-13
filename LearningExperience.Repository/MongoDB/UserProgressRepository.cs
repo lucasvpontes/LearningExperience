@@ -31,7 +31,7 @@ namespace LearningExperience.Repository.MongoDB
         public async Task UpdateUserProgress(UserProgressUpdateDTO userProgress)
         {
             var update = Builders<UserProgress>.Update
-            .Set(user => user.Progress, userProgress.Progress)
+            .Set(user => user.Progress, userProgress.Progress * 100)
             .Set(user => user.LastUpdate, DateTime.Now);
 
             await _mongoRepository.UpdateOneAsync(filter => filter.Id == userProgress.Id, update);
