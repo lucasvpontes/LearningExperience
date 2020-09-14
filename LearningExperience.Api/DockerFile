@@ -12,7 +12,6 @@ COPY ["LearningExperience.Repository/LearningExperience.Repository.csproj", "Lea
 COPY ["LearningExperience.Ioc/LearningExperience.Ioc.csproj", "LearningExperience.Ioc/"]
 COPY ["LearningExperience.Services/LearningExperience.Services.csproj", "LearningExperience.Services/"]
 RUN dotnet restore "LearningExperience.Api/LearningExperience.Api.csproj"
-COPY. .
 WORKDIR "/src/LearningExperience.Api"
 RUN dotnet build "LearningExperience.Api.csproj" -c Release -o /app/build
 

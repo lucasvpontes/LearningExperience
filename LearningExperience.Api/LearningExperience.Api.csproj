@@ -21,4 +21,10 @@
     <ProjectReference Include="..\LearningExperience.Services\LearningExperience.Services.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Update="..\.dockerignore">
+      <DependentUpon>Dockerfile</DependentUpon>
+    </None>
+  </ItemGroup>
+
 </Project>
