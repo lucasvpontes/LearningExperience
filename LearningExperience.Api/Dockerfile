@@ -12,7 +12,7 @@ WORKDIR "/src/LearningExperience/LearningExperience.Api"
 RUN dotnet build "LearningExperience.Api.csproj" -c Release -o /app/build
 
 FROM build AS publish
-RUN dotnet publish "LearningExperience.Api.csproj" -c Release -o /app/publish
+RUN dotnet publish "/LearningExperience.Api/LearningExperience.Api.csproj" -c Release -o /app/publish
 
 FROM base AS final
 WORKDIR /app
