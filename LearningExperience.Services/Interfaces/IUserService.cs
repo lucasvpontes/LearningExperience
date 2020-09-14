@@ -1,5 +1,6 @@
 ﻿using LearningExperience.Models;
 using LearningExperience.Models.DTO;
+using LearningExperience.Models.Model;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
@@ -15,7 +16,7 @@ namespace LearningExperience.Services.Interfaces
         bool ValidateUser(AuthenticateUserDTO user);
         double GetUserProgress(UserProgressDTO userProgress);
         Task UpdateUserProgress(UserProgressUpdateDTO userProgress);
-        IEnumerable<UserProgressDTO> GetProgressByUser(string userId);
+        IList<UserProgressResultDTO> GetProgressByUser(string userId);
     }
 }
 

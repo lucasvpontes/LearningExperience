@@ -71,7 +71,7 @@ namespace LearningExperience.Controllers
         }
 
         [HttpGet("GetProgressByUser")]
-        public IEnumerable<UserProgressDTO> GetProgressByUser(string userId)
+        public IList<UserProgressResultDTO> GetProgressByUser(string userId)
         {
             return _userService.GetProgressByUser(userId);
         }

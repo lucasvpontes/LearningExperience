@@ -27,7 +27,7 @@ namespace LearningExperience.Repository.MongoDB
                 user = _mongoRepository.FindOne(userSelected => userSelected.UserId == userProgress.UserId && userSelected.Module == userProgress.Module);
             }
 
-            return user.Progress/100;
+            return user.Progress / 100;
         }
 
         public async Task UpdateUserProgress(UserProgressUpdateDTO userProgress)
@@ -36,7 +36,7 @@ namespace LearningExperience.Repository.MongoDB
             .Set(user => user.Progress, userProgress.Progress * 100)
             .Set(user => user.LastUpdate, DateTime.Now);
 
-            await _mongoRepository.UpdateOneAsync(filter => filter.UserId == userProgress.Id, update);
+            await _mongoRepository.UpdateOneAsync(filter => (filter.UserId == userProgress.Id && filter.Module == userProgress.Module), update);
         }
 
         private void InsertUserProgress(UserProgressDTO userProgress)

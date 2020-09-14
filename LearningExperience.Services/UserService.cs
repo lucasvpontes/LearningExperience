@@ -3,7 +3,10 @@ using LearningExperience.Models.DTO;
 using LearningExperience.Models.Model;
 using LearningExperience.Repository.Interfaces;
 using LearningExperience.Services.Interfaces;
+using Microsoft.VisualBasic;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.Linq;
 using System.Threading.Tasks;
 
 
@@ -73,20 +76,19 @@ namespace LearningExperience.Services
         {
             await _userProgressRepository.UpdateUserProgress(userProgress);
         }
-        public IEnumerable<UserProgressDTO> GetProgressByUser(string userId)
+        public IList<UserProgressResultDTO> GetProgressByUser(string userId)
         {
             var progressList = _userProgressRepository.GetProgressByUser(userId);
-            var progressResultList = new List<UserProgressDTO>();
-
-            foreach (UserProgress progress in progressList) {
-                var progressResult = new UserProgressDTO()
+            var progressResultList = new List<UserProgressResultDTO>();
+            foreach(UserProgress userProgress in progressList)
+            {
+                var userProgressResult = new UserProgressResultDTO()
                 {
-                    UserId = progress.UserId,
-                    Module = progress.Module
+                    Progress = userProgress.Progress / 100,
+                    Module = userProgress.Module
                 };
-                progressResultList.Add(progressResult);
+                progressResultList.Add(userProgressResult);
             }
-
             return progressResultList;
         }
     }
