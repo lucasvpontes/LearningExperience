@@ -15,7 +15,7 @@ namespace LearningExperience.Services
         private readonly IUserProgressRepository _userProgressRepository;
 
         public UserService(
-            IUserRepository userRepository, 
+            IUserRepository userRepository,
             IUserProgressRepository userProgressRepository)
         {
             _userRepository = userRepository;
@@ -24,8 +24,8 @@ namespace LearningExperience.Services
 
         public async Task AddUser(AuthenticateUserDTO user)
         {
-            if(!VerifyIfUserExists(user))
-            await _userRepository.AddUser(user);
+            if (!VerifyIfUserExists(user))
+                await _userRepository.AddUser(user);
         }
 
         public IEnumerable<User> GetAll()
@@ -72,6 +72,22 @@ namespace LearningExperience.Services
         public async Task UpdateUserProgress(UserProgressUpdateDTO userProgress)
         {
             await _userProgressRepository.UpdateUserProgress(userProgress);
+        }
+        public IEnumerable<UserProgressDTO> GetProgressByUser(string userId)
+        {
+            var progressList = _userProgressRepository.GetProgressByUser(userId);
+            var progressResultList = new List<UserProgressDTO>();
+
+            foreach (UserProgress progress in progressList) {
+                var progressResult = new UserProgressDTO()
+                {
+                    UserId = progress.UserId,
+                    Module = progress.Module
+                };
+                progressResultList.Add(progressResult);
+            }
+
+            return progressResultList;
         }
     }
 }

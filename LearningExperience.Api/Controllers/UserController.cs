@@ -69,5 +69,11 @@ namespace LearningExperience.Controllers
             await  _userService.UpdateUserProgress(userProgress);
             return Ok(new { StatusCode = ReturnStatusCode.Ok });
         }
+
+        [HttpGet("GetProgressByUser")]
+        public IEnumerable<UserProgressDTO> GetProgressByUser(string userId)
+        {
+            return _userService.GetProgressByUser(userId);
+        }
     }
 }

@@ -4,6 +4,8 @@ using LearningExperience.Models.Model.Interfaces;
 using LearningExperience.Services.Interfaces;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 
 
@@ -37,5 +39,6 @@ namespace LearningExperience.Controllers
             await _gameLevelService.RemoveImage(userId);
             return Ok(new { StatusCode = ReturnStatusCode.Ok });
         }
+
     }
 }

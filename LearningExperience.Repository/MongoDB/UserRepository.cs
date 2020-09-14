@@ -1,4 +1,5 @@
-﻿using LearningExperience.Models;
+﻿
+using LearningExperience.Models;
 using LearningExperience.Models.DTO;
 using LearningExperience.Repository.Interfaces;
 using MongoDB.Driver;
@@ -25,7 +26,7 @@ namespace LearningExperience.Repository
                 Password = user.Password,
                 Name = user.Name
             };
-            
+
             await _mongoRepository.InsertOneAsync(newUser);
         }
 
@@ -53,11 +54,11 @@ namespace LearningExperience.Repository
         public bool ValidateUser(AuthenticateUserDTO userAuth)
         {
             var validUser = _mongoRepository.FindOne(user => user.Email == userAuth.Email && user.Password == userAuth.Password);
-           
-            if(validUser == null)
-                 return false;
-             else
-                 return true;
+
+            if (validUser == null)
+                return false;
+            else
+                return true;
         }
 
         public User GetUserByLogin(AuthenticateUserDTO userAuth)
@@ -67,7 +68,7 @@ namespace LearningExperience.Repository
 
         public User VerifyIfUserExists(AuthenticateUserDTO userDTO)
         {
-           return _mongoRepository.FindOne(user => user.Email == userDTO.Email);
+            return _mongoRepository.FindOne(user => user.Email == userDTO.Email);
         }
     }
 }

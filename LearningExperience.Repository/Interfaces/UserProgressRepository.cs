@@ -1,5 +1,6 @@
 ﻿using LearningExperience.Models.DTO;
 using LearningExperience.Models.Model;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 
 namespace LearningExperience.Repository.Interfaces
@@ -8,5 +9,6 @@ namespace LearningExperience.Repository.Interfaces
     {
         Task UpdateUserProgress(UserProgressUpdateDTO userProgress);
         double GetUserProgress(UserProgressDTO userProgress);
+        IEnumerable<UserProgress> GetProgressByUser(string userId);
     }
 }

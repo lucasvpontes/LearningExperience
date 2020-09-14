@@ -3,6 +3,8 @@ using LearningExperience.Models.Model;
 using LearningExperience.Repository.Interfaces;
 using MongoDB.Driver;
 using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 
 namespace LearningExperience.Repository.MongoDB
@@ -46,6 +48,13 @@ namespace LearningExperience.Repository.MongoDB
                 Progress = 0
             };
             _mongoRepository.InsertOne(user);
+        }
+
+        public IEnumerable<UserProgress> GetProgressByUser(string userId)
+        {
+            var progressUser = _mongoRepository.FilterBy(
+                filter => filter.UserId == userId);
+            return progressUser;
         }
     }
 }

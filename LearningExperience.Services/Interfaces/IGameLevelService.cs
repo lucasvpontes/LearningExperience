@@ -1,5 +1,5 @@
 ﻿using LearningExperience.Models.DTO;
-using LearningExperience.Models.Model.Interfaces;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 
 namespace LearningExperience.Services.Interfaces
