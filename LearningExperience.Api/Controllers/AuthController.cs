@@ -38,7 +38,7 @@ namespace LearningExperience.Api.Controllers
             if (IsvalidUser)
             {
                 tokenString = _authService.BuildJWTToken(tokenParams);
-                return Ok(new { Status = ReturnStatusCode.Ok, Token = tokenString, TokenExpiresIn = _jwtTokenSettings.TokenExpiry, Id = validUser.Id });
+                return Ok(new { Status = ReturnStatusCode.Ok, Token = tokenString, TokenExpiresIn = _jwtTokenSettings.TokenExpiry, Id = validUser.Id, UserName = validUser.Name });
             }
             else
             {
