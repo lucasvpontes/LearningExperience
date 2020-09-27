@@ -67,9 +67,9 @@ namespace LearningExperience.Services
             return true;
         }
 
-        public double GetUserProgress(UserProgressDTO userProgress)
+        public double GetProgressByModule(UserProgressDTO userProgress)
         {
-            return _userProgressRepository.GetUserProgress(userProgress);
+            return _userProgressRepository.GetProgressByModule(userProgress);
         }
 
         public async Task UpdateUserProgress(UserProgressUpdateDTO userProgress)

@@ -8,7 +8,7 @@ namespace LearningExperience.Repository.Interfaces
     public interface IUserProgressRepository
     {
         Task UpdateUserProgress(UserProgressUpdateDTO userProgress);
-        double GetUserProgress(UserProgressDTO userProgress);
+        double GetProgressByModule(UserProgressDTO userProgress);
         IEnumerable<UserProgress> GetProgressByUser(string userId);
     }
 }

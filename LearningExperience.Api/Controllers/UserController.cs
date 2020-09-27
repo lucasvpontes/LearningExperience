@@ -1,7 +1,6 @@
 ﻿using LearningExperience.Models;
 using LearningExperience.Models.DTO;
 using LearningExperience.Models.Enums;
-using LearningExperience.Models.Model;
 using LearningExperience.Services.Interfaces;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -51,8 +50,8 @@ namespace LearningExperience.Controllers
             return Ok();
         }
 
-        [HttpGet("GetUserProgress")]
-        public double GetUserProgress(string userId, GameLevelType module)
+        [HttpGet("GetProgressByModule")]
+        public double GetProgressByModule(string userId, GameLevelType module)
         {
             UserProgressDTO userProgress = new UserProgressDTO()
             {
