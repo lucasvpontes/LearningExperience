@@ -17,7 +17,7 @@ namespace LearningExperience.Repository.MongoDB
         {
             _mongoRepository = mongoRepository;
         }
-        public double GetUserProgress(UserProgressDTO userProgress)
+        public double GetProgressByModule(UserProgressDTO userProgress)
         {
             var user = _mongoRepository.FindOne(user => user.UserId == userProgress.UserId && user.Module == userProgress.Module);
 

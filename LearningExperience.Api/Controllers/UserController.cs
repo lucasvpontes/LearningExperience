@@ -59,7 +59,7 @@ namespace LearningExperience.Controllers
                 Module = module
             };
 
-            return _userService.GetUserProgress(userProgress);
+            return _userService.GetProgressByModule(userProgress);
         }
 
         [HttpPost("UpdateUserProgress")]
