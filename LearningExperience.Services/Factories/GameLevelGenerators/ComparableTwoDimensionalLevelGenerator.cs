@@ -1,4 +1,5 @@
-﻿using LearningExperience.Models.Model.Interfaces;
+﻿using LearningExperience.Models.Model.ConcreteLevels;
+using LearningExperience.Models.Model.Interfaces;
 
 namespace LearningExperience.Services.Factories.GameLevelGenerators
 {
@@ -6,7 +7,7 @@ namespace LearningExperience.Services.Factories.GameLevelGenerators
     {
         public override IGameLevel GenerateLevel()
         {
-            return new ComparableTwoDimensional();
+            return new ComparableTwoDimensionalLevel();
         }
     }
 }

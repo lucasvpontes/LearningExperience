@@ -7,7 +7,7 @@
         ComparableTwoDimensionalLevelGenerator,
         AssociatedLevelGenerator,
         EqualTwoAndThreeDimensionalLevelGenerator,
-        EqualFiveShapesLevelGenerator,
+        EqualFiveShapesLevelGenerator, // Nível especial, fazer dps
         ColorLevelGenerator
     }
 }
