@@ -1,0 +1,190 @@
+/* 1 */
+{
+	"_id" : "ffbc0646-df74-4838-ad25-f505a52e54d9",
+	"Name" : "Leão",
+	"CreatedAt" : ISODate("2020-09-27T14:05:07.518-03:00"),
+	"Deleted" : false,
+	"GameLevelType" : 1,
+	"Path" : "../../../../../assets/images/module/figures2d/lion.jpg",
+	"Match" : false
+},
+
+/* 2 */
+{
+	"_id" : "f626546e-1dcf-4a3a-a800-e764b1ffbdf9",
+	"Name" : "Cachorro",
+	"CreatedAt" : ISODate("2020-09-27T14:03:40.341-03:00"),
+	"Deleted" : false,
+	"GameLevelType" : 1,
+	"Path" : "../../../../../assets/images/module/figures2d/dog.jpg",
+	"Match" : false
+},
+
+/* 3 */
+{
+	"_id" : "f422beac-3fbc-4e29-b0d3-66a5466a5c1b",
+	"Name" : "Elefante",
+	"CreatedAt" : ISODate("2020-09-27T14:03:59.140-03:00"),
+	"Deleted" : false,
+	"GameLevelType" : 1,
+	"Path" : "../../../../../assets/images/module/figures2d/elephant.jpg",
+	"Match" : false
+},
+
+/* 4 */
+{
+	"_id" : "c5df7cc5-d967-4780-9bca-4462966eca9a",
+	"Name" : "Carro",
+	"CreatedAt" : ISODate("2020-09-27T13:48:16.305-03:00"),
+	"Deleted" : false,
+	"GameLevelType" : 1,
+	"Path" : "../../../../../assets/images/module/figures2d/car.jpg",
+	"Match" : false
+},
+
+/* 5 */
+{
+	"_id" : "af3f2a5b-7de8-4630-a6a6-861d07195646",
+	"Name" : "Cachorro",
+	"CreatedAt" : ISODate("2020-09-27T16:30:30.056-03:00"),
+	"Deleted" : false,
+	"GameLevelType" : 3,
+	"Path" : "../../../../../assets/images/module/figures2d/dog.jpg",
+	"Match" : false,
+	"ExternalId" : "a44d0e18-1a8d-40fb-99b1-bd0be1555566"
+},
+
+/* 6 */
+{
+	"_id" : "a44d0e18-1a8d-40fb-99b1-bd0be1555566",
+	"Name" : "Foca",
+	"CreatedAt" : ISODate("2020-09-27T16:30:08.163-03:00"),
+	"Deleted" : false,
+	"GameLevelType" : 3,
+	"Path" : "../../../../../assets/images/module/figures2d/seal.jpg",
+	"Match" : false,
+	"ExternalId" : "af3f2a5b-7de8-4630-a6a6-861d07195646"
+},
+
+/* 7 */
+{
+	"_id" : "a09e3db2-e47a-4fd4-97cd-dee1dc4a62b7",
+	"Name" : "Foca",
+	"CreatedAt" : ISODate("2020-09-27T14:05:17.607-03:00"),
+	"Deleted" : false,
+	"GameLevelType" : 1,
+	"Path" : "../../../../../assets/images/module/figures2d/seal.jpg",
+	"Match" : false
+},
+
+/* 8 */
+{
+	"_id" : "9836da4d-b61a-4365-ad16-2519b8387a44",
+	"Name" : "Macaco",
+	"CreatedAt" : ISODate("2020-09-27T16:30:44.343-03:00"),
+	"Deleted" : false,
+	"GameLevelType" : 3,
+	"Path" : "../../../../../assets/images/module/figures2d/monkey.jpg",
+	"Match" : false,
+	"ExternalId" : "8296b0f4-5f18-4745-9e4c-8a2560c9d6bd"
+},
+
+/* 9 */
+{
+	"_id" : "892627ef-ade9-4862-84a6-278e63e8fbeb",
+	"Name" : "Bola",
+	"CreatedAt" : ISODate("2020-09-27T14:02:36.075-03:00"),
+	"Deleted" : false,
+	"GameLevelType" : 1,
+	"Path" : "../../../../../assets/images/module/figures2d/ball.jpg",
+	"Match" : false
+},
+
+/* 10 */
+{
+	"_id" : "8296b0f4-5f18-4745-9e4c-8a2560c9d6bd",
+	"Name" : "Gato",
+	"CreatedAt" : ISODate("2020-09-27T16:30:17.549-03:00"),
+	"Deleted" : false,
+	"GameLevelType" : 3,
+	"Path" : "../../../../../assets/images/module/figures2d/cat.jpg",
+	"Match" : false,
+	"ExternalId" : "9836da4d-b61a-4365-ad16-2519b8387a44"
+},
+
+/* 11 */
+{
+	"_id" : "73b15572-3ae4-440d-ac46-bb4ef90ff5e5",
+	"Name" : "Gato",
+	"CreatedAt" : ISODate("2020-09-27T14:03:13.829-03:00"),
+	"Deleted" : false,
+	"GameLevelType" : 1,
+	"Path" : "../../../../../assets/images/module/figures2d/cat.jpg",
+	"Match" : false
+},
+
+/* 12 */
+{
+	"_id" : "670123f1-c1f7-4b0c-ae4e-1ee13f5c3948",
+	"Name" : "Flor",
+	"CreatedAt" : ISODate("2020-09-27T13:48:25.581-03:00"),
+	"Deleted" : false,
+	"GameLevelType" : 1,
+	"Path" : "../../../../../assets/images/module/figures2d/flower.jpg",
+	"Match" : false
+},
+
+/* 13 */
+{
+	"_id" : "4ecc303e-f1b4-48d7-b81c-52bad68bf6ab",
+	"Name" : "Vaca",
+	"CreatedAt" : ISODate("2020-09-27T14:03:27.022-03:00"),
+	"Deleted" : false,
+	"GameLevelType" : 1,
+	"Path" : "../../../../../assets/images/module/figures2d/cow.jpg",
+	"Match" : false
+},
+
+/* 14 */
+{
+	"_id" : "3e1e3937-712b-4ba0-baae-c46f90e03f14",
+	"Name" : "Cavalo",
+	"CreatedAt" : ISODate("2020-09-27T13:47:59.978-03:00"),
+	"Deleted" : false,
+	"GameLevelType" : 1,
+	"Path" : "../../../../../assets/images/module/figures2d/horse.jpg",
+	"Match" : false
+},
+
+/* 15 */
+{
+	"_id" : "2d2ffc5d-21e6-40fd-8a9c-90ed244aa7b6",
+	"Name" : "Livros",
+	"CreatedAt" : ISODate("2020-09-27T14:02:59.813-03:00"),
+	"Deleted" : false,
+	"GameLevelType" : 1,
+	"Path" : "../../../../../assets/images/module/figures2d/books.png",
+	"Match" : false
+},
+
+/* 16 */
+{
+	"_id" : "1e3b4f57-7209-4abb-990d-0211cc78da91",
+	"Name" : "Sorvete",
+	"CreatedAt" : ISODate("2020-09-27T14:04:19.379-03:00"),
+	"Deleted" : false,
+	"GameLevelType" : 1,
+	"Path" : "../../../../../assets/images/module/figures2d/icecream.jpg",
+	"Match" : false
+},
+
+/* 17 */
+{
+	"_id" : "0cf55a86-bb16-41ff-9c62-d6f41f9a7a9c",
+	"Name" : "Maçã",
+	"CreatedAt" : ISODate("2020-09-27T13:48:10.743-03:00"),
+	"Deleted" : false,
+	"GameLevelType" : 1,
+	"Path" : "../../../../../assets/images/module/figures2d/apples.jpg",
+	"Match" : false
+}
