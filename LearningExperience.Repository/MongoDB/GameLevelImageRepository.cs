@@ -22,7 +22,8 @@ namespace LearningExperience.Repository.MongoDB
             {
                 Name = request.Name,
                 GameLevelType = request.GameLevelType,
-                Path = request.Path
+                Path = request.Path,
+                ExternalId = request.ExternalId
 
             };
             await _mongoRepository.InsertOneAsync(image);
