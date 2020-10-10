@@ -2,8 +2,8 @@
 {
     public enum GameLevelType
     {
-        EqualTwoDimensionalLevelGenerator = 1,
-        EqualThreeDimensionalLevelGenerator,
+        EqualThreeDimensionalLevelGenerator = 1,
+        EqualTwoDimensionalLevelGenerator,
         ComparableTwoDimensionalLevelGenerator,
         AssociatedLevelGenerator,
         EqualTwoAndThreeDimensionalLevelGenerator,
