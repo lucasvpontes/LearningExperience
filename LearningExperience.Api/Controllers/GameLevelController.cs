@@ -25,7 +25,7 @@ namespace LearningExperience.Controllers
         }
 
         [HttpPost("GerenateLevel")]
-        public  GameLevelResult GenerateLevel(GenerateLevelRequestDTO gameLevelType)
+        public GameLevelResult GenerateLevel(GenerateLevelRequestDTO gameLevelType)
         {
             var gameLevels = _gameLevelService.GenerateLevel(gameLevelType);
             return gameLevels;
@@ -39,6 +39,15 @@ namespace LearningExperience.Controllers
             await _gameLevelService.RemoveImage(userId);
             return Ok(new { StatusCode = ReturnStatusCode.Ok });
         }
+
+        [HttpPost("CreateAsyncXRay")]
+        public async Task<IActionResult> CreateAsyncXRay(AsyncXRayDTO xray)
+        {
+            await _gameLevelService.CreateAsyncXRay(xray);
+            return Ok(new { StatusCode = ReturnStatusCode.Ok });
+        }
+
+
 
     }
 }

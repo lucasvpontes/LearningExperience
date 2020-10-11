@@ -11,9 +11,11 @@ namespace LearningExperience.Repository.MongoDB
     public class GameLevelImageRepository : IGameLevelImageRepository
     {
         private readonly IMongoRepository<GameLevelImage> _mongoRepository;
-        public GameLevelImageRepository(IMongoRepository<GameLevelImage> mongoRepository)
+        private readonly IMongoRepository<AsyncXRay> _xrayRepository;
+        public GameLevelImageRepository(IMongoRepository<GameLevelImage> mongoRepository, IMongoRepository<AsyncXRay> xrayRepository)
         {
             _mongoRepository = mongoRepository;
+            _xrayRepository = xrayRepository;
         }
 
         public async Task RegisterImage(RegisterImageRequestDTO request)
@@ -42,6 +44,17 @@ namespace LearningExperience.Repository.MongoDB
                            filter.GameLevelType == type
             ));
             return gameLevelImages.ToList();
+        }
+
+        public async Task CreateAsyncXRay(AsyncXRayDTO xray)
+        {
+            var asyncXRay = new AsyncXRay()
+            {
+                UserId = xray.UserId,
+                Action = xray.Action
+            };
+
+            await _xrayRepository.InsertOneAsync(asyncXRay);
         }
     }
 }

@@ -54,5 +54,10 @@ namespace LearningExperience.Services
         {
             await _gameLevelRepository.RemoveImage(imageId);
         }
+
+        public async Task CreateAsyncXRay(AsyncXRayDTO xray)
+        {
+            await _gameLevelRepository.CreateAsyncXRay(xray);
+        } 
     }
 }

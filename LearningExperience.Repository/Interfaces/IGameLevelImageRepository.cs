@@ -11,5 +11,6 @@ namespace LearningExperience.Repository.Interfaces
         Task RegisterImage(RegisterImageRequestDTO request);
         Task RemoveImage(string imageId);
         IList<GameLevelImage> GetImagesByModule(GameLevelType type);
+        Task CreateAsyncXRay(AsyncXRayDTO xray);
     }
 }

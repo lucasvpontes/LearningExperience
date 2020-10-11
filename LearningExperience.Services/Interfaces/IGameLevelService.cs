@@ -9,5 +9,7 @@ namespace LearningExperience.Services.Interfaces
         Task RegisterImage(RegisterImageRequestDTO requestDTO);
         Task RemoveImage(string imageId);
         GameLevelResult GenerateLevel(GenerateLevelRequestDTO gameLevelType);
+        Task CreateAsyncXRay(AsyncXRayDTO xray);
+
     }
 }
