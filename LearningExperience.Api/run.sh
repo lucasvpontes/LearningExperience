@@ -1,3 +1,2 @@
-﻿git pull
-dotnet publish -c Release
+﻿dotnet publish -c Release
 dotnet run
