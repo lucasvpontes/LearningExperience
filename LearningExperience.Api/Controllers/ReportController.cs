@@ -26,7 +26,7 @@ namespace LearningExperience.Controllers
         }
 
         [HttpGet("GetReportProgressByModule")]
-        public List<ReportData> GetReportProgressByModule(string userId)
+        public List<ReportByModuleResultDTO> GetReportProgressByModule(string userId)
         {
             var reportResult = _reportService.GetReportProgressByModule(userId);
             return reportResult;

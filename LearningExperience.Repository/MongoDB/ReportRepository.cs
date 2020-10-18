@@ -29,7 +29,8 @@ namespace LearningExperience.Repository.MongoDB
         {
             var reportDataList = _mongoRepository.FilterBy(
             filter => filter.Deleted == false &&
-                      filter.UserId == userId
+                      filter.UserId == userId &&
+                      filter.Action != AsyncAction.Reforçadores
             ).ToList();
             return reportDataList;
         }
