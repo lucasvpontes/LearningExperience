@@ -46,8 +46,5 @@ namespace LearningExperience.Controllers
             await _gameLevelService.CreateAsyncXRay(xray);
             return Ok(new { StatusCode = ReturnStatusCode.Ok });
         }
-
-
-
     }
 }

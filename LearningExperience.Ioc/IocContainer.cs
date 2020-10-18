@@ -18,7 +18,8 @@ namespace LearningExperience.Ioc
                 .AddScoped(typeof(IPatientRepository), typeof(PatientRepository))
                 .AddScoped(typeof(IUserRepository), typeof(UserRepository))
                 .AddScoped(typeof(IUserProgressRepository), typeof(UserProgressRepository))
-                .AddScoped(typeof(IGameLevelImageRepository), typeof(GameLevelImageRepository));
+                .AddScoped(typeof(IGameLevelImageRepository), typeof(GameLevelImageRepository))
+                .AddScoped(typeof(IReportRepository), typeof(ReportRepository));
                 
         }
         public static IServiceCollection RegisterServices(this IServiceCollection services)
@@ -28,8 +29,8 @@ namespace LearningExperience.Ioc
                 .AddTransient<IPatientService, PatientService>()
                 .AddTransient<IUserService, UserService>()
                 .AddTransient<IAuthService, AuthService>()
-                .AddTransient<IGameLevelService, GameLevelService>();
-               
+                .AddTransient<IGameLevelService, GameLevelService>()
+               .AddTransient<IReportService, ReportService>();
         }
     }
 }

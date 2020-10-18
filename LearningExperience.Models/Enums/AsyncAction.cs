@@ -1,9 +1,14 @@
-﻿namespace LearningExperience.Models.Enums
+﻿using System.ComponentModel;
+
+namespace LearningExperience.Models.Enums
 {
     public enum AsyncAction
     {
-        Right,
-        Wrong,
-        Reinforcer
+        [Description("Acertos")]
+        Acertos,
+        [Description("Erros")]
+        Erros,
+        [Description("Reforçadores")]
+        Reforçadores
     }
 }
