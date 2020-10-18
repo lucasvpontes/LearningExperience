@@ -95,7 +95,7 @@ namespace LearningExperience.Services
 
         public List<ReportData> GetReportProgressByMonth(string userId)
         {
-            var result = _reportRepository.GetReportProgressByMatches(userId);
+            var result = _reportRepository.GetReportProgressByMonth(userId);
             var filteredResult = result.GroupBy(x => x.Action)
                                      .Select(grp => grp.ToList()).ToList();
 
@@ -107,9 +107,9 @@ namespace LearningExperience.Services
                 {
                     Label = reportData.First().Action.ToString(), //TODO: Adicionar description nesse enum
                     Action = reportData.First().Action,
-                    Count = reportData.Count(),
-                    GameLevelType = reportData.First().GameLevelType
+                    Count = reportData.Count()
                 };
+
 
                 dataResult.Add(data);
             }

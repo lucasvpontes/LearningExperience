@@ -1,6 +1,7 @@
 ﻿using LearningExperience.Models.Enums;
 using LearningExperience.Models.Model;
 using LearningExperience.Repository.Interfaces;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -39,7 +40,8 @@ namespace LearningExperience.Repository.MongoDB
         {
             var reportDataList = _mongoRepository.FilterBy(
             filter => filter.Deleted == false &&
-                      filter.UserId == userId
+                      filter.UserId == userId &&
+                      filter.CreatedAt > new DateTime(DateTime.Now.Year, DateTime.Now.Month, 01) 
             ).ToList();
 
             return reportDataList;
