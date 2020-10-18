@@ -7,5 +7,6 @@ namespace LearningExperience.Models.Model
         public int Count { get; set; }
         public AsyncAction Action { get; set; }
         public string Label { get; set; }
+        public GameLevelType GameLevelType { get; set; }
     }
 }

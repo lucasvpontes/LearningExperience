@@ -39,14 +39,52 @@ namespace LearningExperience.Services
             return dataResult;
         }
 
-        public List<AsyncXRay> GetReportProgressByModule(string userId)
+        public List<ReportData> GetReportProgressByModule(string userId)
         {
-            return _reportRepository.GetReportProgressByModule(userId);
+            var result = _reportRepository.GetReportProgressByMatches(userId);
+            var filteredResult = result.GroupBy(x => new { x.GameLevelType, x.Action})
+                                       .Select(grp => grp.ToList()).ToList();
+
+            var dataResult = new List<ReportData>();
+
+            foreach (List<AsyncXRay> reportData in filteredResult)
+            {
+                var data = new ReportData()
+                {
+                    Label = reportData.First().Action.ToString(), //TODO: Adicionar description nesse enum
+                    Action = reportData.First().Action,
+                    Count = reportData.Count(),
+                    GameLevelType = reportData.First().GameLevelType
+                };
+
+                dataResult.Add(data);
+            }
+
+            return dataResult;
         }
 
-        public List<AsyncXRay> GetReportProgressByMonth(string userId)
+        public List<ReportData> GetReportProgressByMonth(string userId)
         {
-            return _reportRepository.GetReportProgressByMonth(userId);
+            var result = _reportRepository.GetReportProgressByMatches(userId);
+            var filteredResult = result.GroupBy(x => x.Action)
+                                     .Select(grp => grp.ToList()).ToList();
+
+            var dataResult = new List<ReportData>();
+
+            foreach (List<AsyncXRay> reportData in filteredResult)
+            {
+                var data = new ReportData()
+                {
+                    Label = reportData.First().Action.ToString(), //TODO: Adicionar description nesse enum
+                    Action = reportData.First().Action,
+                    Count = reportData.Count(),
+                    GameLevelType = reportData.First().GameLevelType
+                };
+
+                dataResult.Add(data);
+            }
+
+            return dataResult;
         }
     }
 }

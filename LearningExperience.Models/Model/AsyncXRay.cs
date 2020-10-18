@@ -10,5 +10,6 @@ namespace LearningExperience.Models.Model
     {
         public string UserId { get; set; }
         public AsyncAction Action { get; set; }
+        public GameLevelType GameLevelType { get; set; }
     }
 }

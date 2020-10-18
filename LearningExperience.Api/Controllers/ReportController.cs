@@ -26,17 +26,17 @@ namespace LearningExperience.Controllers
         }
 
         [HttpGet("GetReportProgressByModule")]
-        public List<AsyncXRay> GetReportProgressByModule(string userId)
+        public List<ReportData> GetReportProgressByModule(string userId)
         {
             var reportResult = _reportService.GetReportProgressByModule(userId);
             return reportResult;
         }
 
         [HttpGet("GetReportProgressByMonth")]
-        public async Task<IActionResult> GetReportProgressByMonth(string userId)
+        public List<ReportData> GetReportProgressByMonth(string userId)
         {
             var reportResult = _reportService.GetReportProgressByMonth(userId);
-            return Ok(new { StatusCode = ReturnStatusCode.Ok, reportResult });
+            return reportResult;
         }
 
         [HttpGet("GetReportProgressByMatches")]
