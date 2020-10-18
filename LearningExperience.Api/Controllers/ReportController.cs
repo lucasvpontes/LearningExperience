@@ -33,7 +33,7 @@ namespace LearningExperience.Controllers
         }
 
         [HttpGet("GetReportProgressByMonth")]
-        public List<ReportData> GetReportProgressByMonth(string userId)
+        public List<ReportByMonthResultDTO> GetReportProgressByMonth(string userId)
         {
             var reportResult = _reportService.GetReportProgressByMonth(userId);
             return reportResult;

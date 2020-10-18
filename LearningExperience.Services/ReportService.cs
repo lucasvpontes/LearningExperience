@@ -93,17 +93,17 @@ namespace LearningExperience.Services
             return moduleReportResult;
         }
 
-        public List<ReportData> GetReportProgressByMonth(string userId)
+        public List<ReportByMonthResultDTO> GetReportProgressByMonth(string userId)
         {
             var result = _reportRepository.GetReportProgressByMonth(userId);
             var filteredResult = result.GroupBy(x => x.Action)
                                      .Select(grp => grp.ToList()).ToList();
 
-            var dataResult = new List<ReportData>();
+            var dataResult = new List<ReportByMonthResultDTO>();
 
             foreach (List<AsyncXRay> reportData in filteredResult)
             {
-                var data = new ReportData()
+                var data = new ReportByMonthResultDTO()
                 {
                     Label = reportData.First().Action.ToString(), //TODO: Adicionar description nesse enum
                     Action = reportData.First().Action,

@@ -7,7 +7,7 @@ namespace LearningExperience.Services.Interfaces
     public interface IReportService
     {
         List<ReportByModuleResultDTO> GetReportProgressByModule(string userId);
-        List<ReportData> GetReportProgressByMonth(string userId);
+        List<ReportByMonthResultDTO> GetReportProgressByMonth(string userId);
         List<ReportData> GetReportProgressByMatches(string userId);
     }
 }
