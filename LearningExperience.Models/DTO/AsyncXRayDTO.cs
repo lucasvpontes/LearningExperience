@@ -6,5 +6,6 @@ namespace LearningExperience.Models.DTO
     {
         public string  UserId { get; set; }
         public AsyncAction Action { get; set; }
+        public GameLevelType GameLevelType { get; set; }
     }
 }

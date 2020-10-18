@@ -41,7 +41,7 @@ namespace LearningExperience.Controllers
         }
 
         [HttpPost("CreateAsyncXRay")]
-        public async Task<IActionResult> CreateAsyncXRay(AsyncXRayDTO xray)
+        public async Task<IActionResult> CreateAsyncXRay([FromBody] AsyncXRayDTO xray)
         {
             await _gameLevelService.CreateAsyncXRay(xray);
             return Ok(new { StatusCode = ReturnStatusCode.Ok });

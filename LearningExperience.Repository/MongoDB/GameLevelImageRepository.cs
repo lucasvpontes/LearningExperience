@@ -51,7 +51,8 @@ namespace LearningExperience.Repository.MongoDB
             var asyncXRay = new AsyncXRay()
             {
                 UserId = xray.UserId,
-                Action = xray.Action
+                Action = xray.Action,
+                GameLevelType = xray.GameLevelType
             };
 
             await _xrayRepository.InsertOneAsync(asyncXRay);
