@@ -17,7 +17,9 @@ namespace LearningExperience.Models.Model.ConcreteLevels
             var comparable = shuffledList.Single(s => s.Id == exernalId);
             comparable.Match =  true;
 
-            shuffledList = Shuffle(shuffledList).Where(s => s.Id != comparebleMain.Id && s.Id != comparable.Id).Take(3).ToList();
+            shuffledList = Shuffle(shuffledList).Where(s => s.Id != comparebleMain.Id && 
+                                                       s.Id != comparable.Id && s.Id != s.ExternalId)
+                                                .Take(3).ToList();
             shuffledList.Add(comparable);
 
             GameLevelResult gameLevelResult = new GameLevelResult()
