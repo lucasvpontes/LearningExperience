@@ -17,7 +17,7 @@ namespace LearningExperience.Models.Model.ConcreteLevels
             comparable.Match = true;
 
             shuffledList = Shuffle(shuffledList).Where(s => s.Id != comparebleMain.Id && 
-                                                       s.Id != comparable.Id && s.Id != s.ExternalId)
+                                                       s.Id != comparable.Id)
                                                 .Take(3).ToList();
             
             shuffledList.Add(comparable);
