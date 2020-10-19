@@ -67,26 +67,26 @@ namespace LearningExperience.Services
 
             foreach (ReportData matchesResult in orderedResult)
             {
-                if(matchesResult.Action == AsyncAction.Acertos)
+                if(matchesResult.Action == AsyncAction.Erros)
                 {
-                    reportRightResult.Add(matchesResult.Count);
+                    reportWrongResult.Add(matchesResult.Count);
                 }
                 else
                 {
-                    reportWrongResult.Add(matchesResult.Count);
+                    reportRightResult.Add(matchesResult.Count);
                 }
             };
 
             var moduleReportResult = new List<ReportByModuleResultDTO>();
             moduleReportResult.Add(new ReportByModuleResultDTO
             {
-                Data = reportRightResult,
-                Label = "Acertos"
+                Data = reportWrongResult,
+                Label = "Erros"
             });
             moduleReportResult.Add(new ReportByModuleResultDTO
             {
-                Data = reportWrongResult,
-                Label = "Erros"
+                Data = reportRightResult,
+                Label = "Acertos"
             });
 
 
