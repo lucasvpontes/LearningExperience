@@ -37,7 +37,9 @@ namespace LearningExperience.Services
                 dataResult.Add(data);  
             }
 
-            return dataResult;
+            var orderedResult = dataResult.OrderBy(x => x.Action).ToList();
+
+            return orderedResult;
         }
 
         public List<ReportByModuleResultDTO> GetReportProgressByModule(string userId)
@@ -114,7 +116,9 @@ namespace LearningExperience.Services
                 dataResult.Add(data);
             }
 
-            return dataResult;
+            var orderedResult = dataResult.OrderBy(x => x.Action).ToList();
+
+            return orderedResult;
         }
     }
 }
