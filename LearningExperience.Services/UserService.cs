@@ -1,4 +1,5 @@
-﻿using LearningExperience.Models;
+﻿
+using LearningExperience.Models;
 using LearningExperience.Models.DTO;
 using LearningExperience.Models.Model;
 using LearningExperience.Repository.Interfaces;
@@ -90,6 +91,11 @@ namespace LearningExperience.Services
                 progressResultList.Add(userProgressResult);
             }
             return progressResultList;
+        }
+
+        public UserDTO GetUserById(string id)
+        {
+            return _userRepository.GetUserById(id);
         }
     }
 }

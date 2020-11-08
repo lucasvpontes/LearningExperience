@@ -14,6 +14,7 @@ namespace LearningExperience.Repository.Interfaces
         bool ValidateUser(AuthenticateUserDTO user);
         User GetUserByLogin(AuthenticateUserDTO userAuth);
         User VerifyIfUserExists(AuthenticateUserDTO userAuth);
+        UserDTO GetUserById(string userId);
     }
 }
 

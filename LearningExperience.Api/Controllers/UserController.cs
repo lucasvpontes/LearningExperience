@@ -74,5 +74,11 @@ namespace LearningExperience.Controllers
         {
             return _userService.GetProgressByUser(userId);
         }
+
+        [HttpGet("GetUserById")]
+        public UserDTO GetUserById(string id)
+        {
+            return _userService.GetUserById(id);
+        }
     }
 }

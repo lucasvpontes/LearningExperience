@@ -17,6 +17,7 @@ namespace LearningExperience.Services.Interfaces
         double GetProgressByModule(UserProgressDTO userProgress);
         Task UpdateUserProgress(UserProgressUpdateDTO userProgress);
         IList<UserProgressResultDTO> GetProgressByUser(string userId);
+        UserDTO GetUserById(string userId);
     }
 }
 
