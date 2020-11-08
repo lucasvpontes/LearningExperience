@@ -1,22 +1,23 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Text;
 
 namespace LearningExperience.Models.DTO
 {
-    public class UserDTO
+    public class UserReturnDTO
     {
-        public string? Id { get; set; }
-        public string? Name { get; set; }
+        public string Id { get; set; }
+        public string Name { get; set; }
         public string Email { get; set; }
-        public string Password { get; set; }
 
-        public UserDTO(User user)
+        public UserReturnDTO(User user)
         {
             Id = user.Id;
             Name = user.Name;
             Email = user.Email;
         }
 
-        public UserDTO()
+        public UserReturnDTO()
         {
 
         }

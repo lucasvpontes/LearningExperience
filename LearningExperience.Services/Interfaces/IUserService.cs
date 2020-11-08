@@ -1,6 +1,5 @@
 ﻿using LearningExperience.Models;
 using LearningExperience.Models.DTO;
-using LearningExperience.Models.Model;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
@@ -17,6 +16,7 @@ namespace LearningExperience.Services.Interfaces
         double GetProgressByModule(UserProgressDTO userProgress);
         Task UpdateUserProgress(UserProgressUpdateDTO userProgress);
         IList<UserProgressResultDTO> GetProgressByUser(string userId);
+        UserReturnDTO GetUserById(string userId);
     }
 }
 

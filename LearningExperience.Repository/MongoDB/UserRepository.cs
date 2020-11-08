@@ -70,6 +70,12 @@ namespace LearningExperience.Repository
         {
             return _mongoRepository.FindOne(user => user.Email == userDTO.Email);
         }
+        public UserReturnDTO GetUserById(string id)
+        {
+            User user = _mongoRepository.FindById(id);
+            UserReturnDTO userDTO = new UserReturnDTO(user);
+            return userDTO;
+        }
     }
 }
 
