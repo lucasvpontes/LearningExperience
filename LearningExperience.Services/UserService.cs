@@ -93,7 +93,7 @@ namespace LearningExperience.Services
             return progressResultList;
         }
 
-        public UserDTO GetUserById(string id)
+        public UserReturnDTO GetUserById(string id)
         {
             return _userRepository.GetUserById(id);
         }

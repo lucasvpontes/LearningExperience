@@ -76,7 +76,7 @@ namespace LearningExperience.Controllers
         }
 
         [HttpGet("GetUserById")]
-        public UserDTO GetUserById(string id)
+        public UserReturnDTO GetUserById(string id)
         {
             return _userService.GetUserById(id);
         }
