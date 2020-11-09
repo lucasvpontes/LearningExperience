@@ -47,7 +47,11 @@ namespace LearningExperience.Repository
         public async Task UpdateUser(UserDTO userUpdated)
         {
             var update = Builders<User>.Update
-            .Set(user => user.Id, userUpdated.Id);
+            .Set(user => user.Id, userUpdated.Id)
+            .Set(user => user.Name, userUpdated.Name)
+            .Set(user => user.Email, userUpdated.Email)
+            .Set(user => user.Password, userUpdated.Password);
+
             await _mongoRepository.UpdateOneAsync(user => user.Id == userUpdated.Id, update);
         }
 

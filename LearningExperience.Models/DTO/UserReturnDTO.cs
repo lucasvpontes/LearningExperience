@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace LearningExperience.Models.DTO
+﻿namespace LearningExperience.Models.DTO
 {
     public class UserReturnDTO
     {

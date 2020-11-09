@@ -37,17 +37,17 @@ namespace LearningExperience.Controllers
         }
 
         [HttpPost("RemoveUser")]
-        public async Task<OkResult> RemoveUser([FromBody] string userId)
+        public async Task<IActionResult> RemoveUser([FromBody] string userId)
         {
             await _userService.RemoveUser(userId);
-            return Ok();
+            return Ok(new { StatusCode = ReturnStatusCode.Ok });
         }
 
         [HttpPost("UpdateUser")]
-        public async Task<OkResult> UpdateUser(UserDTO userDTO)
+        public async Task<IActionResult> UpdateUser(UserDTO userDTO)
         {
             await _userService.UpdateUser(userDTO);
-            return Ok();
+            return Ok(new { StatusCode = ReturnStatusCode.Ok });
         }
 
         [HttpGet("GetProgressByModule")]
