@@ -1,119 +1,739 @@
-/* 1 */
 {
-	"_id" : "ffbc0646-df74-4838-ad25-f505a52e54d9",
-	"Name" : "Leão",
-	"CreatedAt" : ISODate("2020-09-27T14:05:07.518-03:00"),
-	"Deleted" : false,
-	"GameLevelType" : 1,
-	"Path" : "../../../../../assets/images/module/figures2d/lion.jpg",
-	"Match" : false
+  "_id": "d53b2756-0735-4e11-a442-9c5a44601f08",
+  "Name": "Macaco",
+  "CreatedAt": "2020-11-16T05:17:14.659Z",
+  "Deleted": false,
+  "GameLevelType": 4,
+  "Path": "../../../../../assets/images/module/comparableLevel/monkey.png",
+  "Match": false,
+  "ExternalId": "39bd43eb-8b3a-4b45-8f0e-55f86817eeb9"
 },
-
-/* 2 */
 {
-	"_id" : "f626546e-1dcf-4a3a-a800-e764b1ffbdf9",
-	"Name" : "Cachorro",
-	"CreatedAt" : ISODate("2020-09-27T14:03:40.341-03:00"),
-	"Deleted" : false,
-	"GameLevelType" : 1,
-	"Path" : "../../../../../assets/images/module/figures2d/dog.jpg",
-	"Match" : false
+  "_id": "ffbc0646-df74-4838-ad25-f505a52e54d9",
+  "Name": "Leão",
+  "CreatedAt": "2020-09-27T17:05:07.518Z",
+  "Deleted": false,
+  "GameLevelType": 2,
+  "Path": "../../../../../assets/images/module/figures2d/lion.jpg",
+  "Match": false
 },
-
-/* 4 */
 {
-	"_id" : "c5df7cc5-d967-4780-9bca-4462966eca9a",
-	"Name" : "Carro",
-	"CreatedAt" : ISODate("2020-09-27T13:48:16.305-03:00"),
-	"Deleted" : false,
-	"GameLevelType" : 1,
-	"Path" : "../../../../../assets/images/module/figures2d/car.jpg",
-	"Match" : false
+  "_id": "ff380986-f5e4-41ee-8c7b-393b8fb46e1b",
+  "Name": "Microfone",
+  "CreatedAt": "2020-11-16T05:26:02.744Z",
+  "Deleted": false,
+  "GameLevelType": 5,
+  "Path": "../../../../../assets/images/module/associatedLevel/real-microphone.png",
+  "Match": false,
+  "ExternalId": "7f5da58f-eb2a-4f1c-a473-42124d6d5d50"
 },
-/* 9 */
 {
-	"_id" : "892627ef-ade9-4862-84a6-278e63e8fbeb",
-	"Name" : "Bola",
-	"CreatedAt" : ISODate("2020-09-27T14:02:36.075-03:00"),
-	"Deleted" : false,
-	"GameLevelType" : 1,
-	"Path" : "../../../../../assets/images/module/figures2d/ball.jpg",
-	"Match" : false
+  "_id": "fc13c0f2-6329-435f-835f-c9f1e5decf05",
+  "Name": "Tesoura",
+  "CreatedAt": "2020-11-16T05:37:59.422Z",
+  "Deleted": false,
+  "GameLevelType": 6,
+  "Path": "../../../../../assets/images/module/comparableLevel/scissors-real.png",
+  "Match": false,
+  "ExternalId": "b8394a8b-50a7-4e88-b8ee-7cc69d79790d"
 },
-
-/* 11 */
 {
-	"_id" : "73b15572-3ae4-440d-ac46-bb4ef90ff5e5",
-	"Name" : "Gato",
-	"CreatedAt" : ISODate("2020-09-27T14:03:13.829-03:00"),
-	"Deleted" : false,
-	"GameLevelType" : 1,
-	"Path" : "../../../../../assets/images/module/figures2d/cat.jpg",
-	"Match" : false
+  "_id": "f626546e-1dcf-4a3a-a800-e764b1ffbdf9",
+  "Name": "Cachorro",
+  "CreatedAt": "2020-09-27T17:03:40.341Z",
+  "Deleted": false,
+  "GameLevelType": 2,
+  "Path": "../../../../../assets/images/module/figures2d/dog.jpg",
+  "Match": false
 },
-
-/* 12 */
 {
-	"_id" : "670123f1-c1f7-4b0c-ae4e-1ee13f5c3948",
-	"Name" : "Flor",
-	"CreatedAt" : ISODate("2020-09-27T13:48:25.581-03:00"),
-	"Deleted" : false,
-	"GameLevelType" : 1,
-	"Path" : "../../../../../assets/images/module/figures2d/flower.jpg",
-	"Match" : false
+  "_id": "f3806757-2515-4d91-892c-b8fc603ac063",
+  "Name": "Carro",
+  "CreatedAt": "2020-11-15T23:45:41.084Z",
+  "Deleted": false,
+  "GameLevelType": 1,
+  "Path": "../../../../../assets/images/module/figures3d/car.png",
+  "Match": false,
+  "ExternalId": null
 },
-
-/* 13 */
 {
-	"_id" : "4ecc303e-f1b4-48d7-b81c-52bad68bf6ab",
-	"Name" : "Vaca",
-	"CreatedAt" : ISODate("2020-09-27T14:03:27.022-03:00"),
-	"Deleted" : false,
-	"GameLevelType" : 1,
-	"Path" : "../../../../../assets/images/module/figures2d/cow.jpg",
-	"Match" : false
+  "_id": "efc24b7d-1f21-47e0-b295-38e21a57cb5e",
+  "Name": "Urso",
+  "CreatedAt": "2020-11-15T23:45:24.814Z",
+  "Deleted": false,
+  "GameLevelType": 1,
+  "Path": "../../../../../assets/images/module/figures3d/bear.png",
+  "Match": false,
+  "ExternalId": null
 },
-
-/* 14 */
 {
-	"_id" : "3e1e3937-712b-4ba0-baae-c46f90e03f14",
-	"Name" : "Cavalo",
-	"CreatedAt" : ISODate("2020-09-27T13:47:59.978-03:00"),
-	"Deleted" : false,
-	"GameLevelType" : 1,
-	"Path" : "../../../../../assets/images/module/figures2d/horse.jpg",
-	"Match" : false
+  "_id": "ee69c740-88ad-4db1-abfb-25b59dc098ec",
+  "Name": "Pirâmide",
+  "CreatedAt": "2020-11-16T05:08:31.171Z",
+  "Deleted": false,
+  "GameLevelType": 3,
+  "Path": "../../../../../assets/images/module/figures3d/green-piramid.png",
+  "Match": false,
+  "ExternalId": "be05e30a-81af-4ca4-b654-862e0449ce27"
 },
-
-/* 15 */
 {
-	"_id" : "2d2ffc5d-21e6-40fd-8a9c-90ed244aa7b6",
-	"Name" : "Livros",
-	"CreatedAt" : ISODate("2020-09-27T14:02:59.813-03:00"),
-	"Deleted" : false,
-	"GameLevelType" : 1,
-	"Path" : "../../../../../assets/images/module/figures2d/books.png",
-	"Match" : false
+  "_id": "ea446f01-9c71-497a-9e19-fc021af3ce90",
+  "Name": "Vela",
+  "CreatedAt": "2020-11-16T05:15:22.885Z",
+  "Deleted": false,
+  "GameLevelType": 4,
+  "Path": "../../../../../assets/images/module/comparableLevel/candle.png",
+  "Match": false,
+  "ExternalId": "c1a311fe-501f-4339-a02b-a981d929a138"
 },
-
-/* 16 */
 {
-	"_id" : "1e3b4f57-7209-4abb-990d-0211cc78da91",
-	"Name" : "Sorvete",
-	"CreatedAt" : ISODate("2020-09-27T14:04:19.379-03:00"),
-	"Deleted" : false,
-	"GameLevelType" : 1,
-	"Path" : "../../../../../assets/images/module/figures2d/icecream.jpg",
-	"Match" : false
+  "_id": "e5fcdaaa-17e5-4ec6-81d5-9b4229ec8f62",
+  "Name": "Garfo",
+  "CreatedAt": "2020-11-16T05:01:53.673Z",
+  "Deleted": false,
+  "GameLevelType": 3,
+  "Path": "../../../../../assets/images/module/comparableLevel/fork-draw.png",
+  "Match": false,
+  "ExternalId": "6607535b-18e1-464d-a3e7-aba7b80e42e4"
 },
-
-/* 17 */
 {
-	"_id" : "0cf55a86-bb16-41ff-9c62-d6f41f9a7a9c",
-	"Name" : "Maçã",
-	"CreatedAt" : ISODate("2020-09-27T13:48:10.743-03:00"),
-	"Deleted" : false,
-	"GameLevelType" : 1,
-	"Path" : "../../../../../assets/images/module/figures2d/apples.jpg",
-	"Match" : false
+  "_id": "d18a887f-323b-449d-b149-df8246b8a8a2",
+  "Name": "Lousa",
+  "CreatedAt": "2020-11-16T05:27:19.926Z",
+  "Deleted": false,
+  "GameLevelType": 5,
+  "Path": "../../../../../assets/images/module/comparableLevel/board-draw.png",
+  "Match": false,
+  "ExternalId": "136e7c02-6927-413b-9887-587f5da4194b"
+},
+{
+  "_id": "cb4e6035-bb09-4a91-b3ed-85471e4ffb38",
+  "Name": "Pato",
+  "CreatedAt": "2020-11-15T23:48:30.250Z",
+  "Deleted": false,
+  "GameLevelType": 1,
+  "Path": "../../../../../assets/images/module/figures3d/duck.png",
+  "Match": false,
+  "ExternalId": null
+},
+{
+  "_id": "c5df7cc5-d967-4780-9bca-4462966eca9a",
+  "Name": "Carro",
+  "CreatedAt": "2020-09-27T16:48:16.305Z",
+  "Deleted": false,
+  "GameLevelType": 2,
+  "Path": "../../../../../assets/images/module/figures2d/car.jpg",
+  "Match": false
+},
+{
+  "_id": "c36332f4-2687-419b-9132-239a734acdff",
+  "Name": "Cone",
+  "CreatedAt": "2020-11-15T23:46:24.077Z",
+  "Deleted": false,
+  "GameLevelType": 1,
+  "Path": "../../../../../assets/images/module/figures3d/cone.png",
+  "Match": false,
+  "ExternalId": null
+},
+{
+  "_id": "c2df5a0e-1e00-4451-8954-bc0f412b56dd",
+  "Name": "Microfone",
+  "CreatedAt": "2020-11-16T05:43:12.698Z",
+  "Deleted": false,
+  "GameLevelType": 6,
+  "Path": "../../../../../assets/images/module/associatedLevel/second-microphone.png",
+  "Match": false,
+  "ExternalId": "3310bc1b-6648-4115-8eee-ddfc74c9a479"
+},
+{
+  "_id": "c1a311fe-501f-4339-a02b-a981d929a138",
+  "Name": "Bolo",
+  "CreatedAt": "2020-11-16T05:14:41.179Z",
+  "Deleted": false,
+  "GameLevelType": 4,
+  "Path": "../../../../../assets/images/module/comparableLevel/cake.png",
+  "Match": false,
+  "ExternalId": "ea446f01-9c71-497a-9e19-fc021af3ce90"
+},
+{
+  "_id": "be05e30a-81af-4ca4-b654-862e0449ce27",
+  "Name": "Pirâmide",
+  "CreatedAt": "2020-11-16T05:08:57.314Z",
+  "Deleted": false,
+  "GameLevelType": 3,
+  "Path": "../../../../../assets/images/module/figures3d/pink-piramid.png",
+  "Match": false,
+  "ExternalId": "ee69c740-88ad-4db1-abfb-25b59dc098ec"
+},
+{
+  "_id": "b8394a8b-50a7-4e88-b8ee-7cc69d79790d",
+  "Name": "Tesoura",
+  "CreatedAt": "2020-11-16T05:37:47.437Z",
+  "Deleted": false,
+  "GameLevelType": 6,
+  "Path": "../../../../../assets/images/module/comparableLevel/scisssors-draw.png",
+  "Match": false,
+  "ExternalId": "fc13c0f2-6329-435f-835f-c9f1e5decf05"
+},
+{
+  "_id": "b732f785-6b95-45a8-b593-f89b328b490b",
+  "Name": "Avião",
+  "CreatedAt": "2020-11-16T05:29:09.093Z",
+  "Deleted": false,
+  "GameLevelType": 5,
+  "Path": "../../../../../assets/images/module/comparableLevel/plane-real.png",
+  "Match": false,
+  "ExternalId": "476ea6c5-5790-4f49-9cd7-971e2f09f607"
+},
+{
+  "_id": "b2e14acc-539a-492b-a523-62c9c4bf95a1",
+  "Name": "Foguete",
+  "CreatedAt": "2020-11-16T05:00:43.496Z",
+  "Deleted": false,
+  "GameLevelType": 3,
+  "Path": "../../../../../assets/images/module/comparableLevel/rocket-draw.jpg",
+  "Match": false,
+  "ExternalId": "30c4ca5a-b42d-4261-89a9-a4e44750456b"
+},
+{
+  "_id": "b0149759-1c97-4979-ade7-40d48a12478c",
+  "Name": "Pirâmide",
+  "CreatedAt": "2020-11-15T23:49:31.383Z",
+  "Deleted": false,
+  "GameLevelType": 1,
+  "Path": "../../../../../assets/images/module/figures3d/green-piramid.png",
+  "Match": false,
+  "ExternalId": null
+},
+{
+  "_id": "af4ea3a6-9ddc-4f80-9713-efb998dcf53d",
+  "Name": "Foguete",
+  "CreatedAt": "2020-11-16T05:22:12.091Z",
+  "Deleted": false,
+  "GameLevelType": 4,
+  "Path": "../../../../../assets/images/module/comparableLevel/rocket.png",
+  "Match": false,
+  "ExternalId": "223fb584-e420-4d32-9f2b-87202e17f2af"
+},
+{
+  "_id": "aceac207-7921-4eff-b3e1-629ed74acff5",
+  "Name": "Galinha",
+  "CreatedAt": "2020-11-16T05:13:39.747Z",
+  "Deleted": false,
+  "GameLevelType": 4,
+  "Path": "../../../../../assets/images/module/comparableLevel/chicken.png",
+  "Match": false,
+  "ExternalId": "0c8a5092-d0b8-47fe-ac37-abbaae7a3117"
+},
+{
+  "_id": "acad5c18-dd9a-4b91-a3a2-5ef8c6c01dc9",
+  "Name": "Hexagono",
+  "CreatedAt": "2020-11-15T23:49:54.022Z",
+  "Deleted": false,
+  "GameLevelType": 1,
+  "Path": "../../../../../assets/images/module/figures3d/hexagon.png",
+  "Match": false,
+  "ExternalId": null
+},
+{
+  "_id": "9f95b2de-8458-4870-a9be-b1b682a0794c",
+  "Name": "Colmeia",
+  "CreatedAt": "2020-11-16T05:18:22.665Z",
+  "Deleted": false,
+  "GameLevelType": 4,
+  "Path": "../../../../../assets/images/module/comparableLevel/hive.jpg",
+  "Match": false,
+  "ExternalId": "849232d1-8a2b-428a-bec8-a087bb00fef8"
+},
+{
+  "_id": "99a1bb3b-8cc9-4005-b73f-0805d24a1b3e",
+  "Name": "Esfera",
+  "CreatedAt": "2020-11-15T23:50:16.802Z",
+  "Deleted": false,
+  "GameLevelType": 1,
+  "Path": "../../../../../assets/images/module/figures3d/orange-ball.png",
+  "Match": false,
+  "ExternalId": null
+},
+{
+  "_id": "954b4af8-6396-467b-8b6a-215e80b6c113",
+  "Name": "Pé",
+  "CreatedAt": "2020-11-16T05:23:24.679Z",
+  "Deleted": false,
+  "GameLevelType": 4,
+  "Path": "../../../../../assets/images/module/comparableLevel/foot.png",
+  "Match": false,
+  "ExternalId": "908d0972-8827-43c5-9c70-57ee5c966fa6"
+},
+{
+  "_id": "908d0972-8827-43c5-9c70-57ee5c966fa6",
+  "Name": "Meia",
+  "CreatedAt": "2020-11-16T05:23:08.503Z",
+  "Deleted": false,
+  "GameLevelType": 4,
+  "Path": "../../../../../assets/images/module/comparableLevel/socks.png",
+  "Match": false,
+  "ExternalId": "954b4af8-6396-467b-8b6a-215e80b6c113"
+},
+{
+  "_id": "8acddd92-c8be-477f-b799-9101cfb121ed",
+  "Name": "Porta",
+  "CreatedAt": "2020-11-16T05:40:13.137Z",
+  "Deleted": false,
+  "GameLevelType": 6,
+  "Path": "../../../../../assets/images/module/comparableLevel/door-real.png",
+  "Match": false,
+  "ExternalId": "83600d5d-17c9-4c48-9634-1efdada84793"
+},
+{
+  "_id": "892627ef-ade9-4862-84a6-278e63e8fbeb",
+  "Name": "Bola",
+  "CreatedAt": "2020-09-27T17:02:36.075Z",
+  "Deleted": false,
+  "GameLevelType": 2,
+  "Path": "../../../../../assets/images/module/figures2d/ball.jpg",
+  "Match": false
+},
+{
+  "_id": "849232d1-8a2b-428a-bec8-a087bb00fef8",
+  "Name": "Urso",
+  "CreatedAt": "2020-11-16T05:17:56.895Z",
+  "Deleted": false,
+  "GameLevelType": 4,
+  "Path": "../../../../../assets/images/module/comparableLevel/bear.jpg",
+  "Match": false,
+  "ExternalId": "9f95b2de-8458-4870-a9be-b1b682a0794c"
+},
+{
+  "_id": "83a6e01a-42f2-47c7-b693-4e1fc890c939",
+  "Name": "Morango",
+  "CreatedAt": "2020-11-16T05:31:08.546Z",
+  "Deleted": false,
+  "GameLevelType": 5,
+  "Path": "../../../../../assets/images/module/comparableLevel/strawberry-draw.png",
+  "Match": false,
+  "ExternalId": "0d0cd07b-e86b-4aac-8345-f2e9af227284"
+},
+{
+  "_id": "83600d5d-17c9-4c48-9634-1efdada84793",
+  "Name": "Porta",
+  "CreatedAt": "2020-11-16T05:40:19.939Z",
+  "Deleted": false,
+  "GameLevelType": 6,
+  "Path": "../../../../../assets/images/module/comparableLevel/door-draw.png",
+  "Match": false,
+  "ExternalId": "8acddd92-c8be-477f-b799-9101cfb121ed"
+},
+{
+  "_id": "832d0a10-baa7-4a0b-95b8-51382be7be5c",
+  "Name": "Porta",
+  "CreatedAt": "2020-11-16T05:03:55.644Z",
+  "Deleted": false,
+  "GameLevelType": 3,
+  "Path": "../../../../../assets/images/module/comparableLevel/door-draw.png",
+  "Match": false,
+  "ExternalId": "6261cc9a-fb77-47c1-9672-d3cf24716af7"
+},
+{
+  "_id": "7f5da58f-eb2a-4f1c-a473-42124d6d5d50",
+  "Name": "Microfone",
+  "CreatedAt": "2020-11-16T05:26:28.038Z",
+  "Deleted": false,
+  "GameLevelType": 5,
+  "Path": "../../../../../assets/images/module/associatedLevel/second-microphone.png",
+  "Match": false,
+  "ExternalId": "ff380986-f5e4-41ee-8c7b-393b8fb46e1b"
+},
+{
+  "_id": "792e3a9a-d379-4e6a-a450-fba6875c86ee",
+  "Name": "Cadeado",
+  "CreatedAt": "2020-11-16T05:19:03.950Z",
+  "Deleted": false,
+  "GameLevelType": 4,
+  "Path": "../../../../../assets/images/module/comparableLevel/locker.png",
+  "Match": false,
+  "ExternalId": "0a41e0a7-0fa3-4103-a68e-29edd3334a72"
+},
+{
+  "_id": "76ee3fab-16b9-4222-a7de-b004e2f6e309",
+  "Name": "Aquário",
+  "CreatedAt": "2020-11-16T05:16:39.948Z",
+  "Deleted": false,
+  "GameLevelType": 4,
+  "Path": "../../../../../assets/images/module/comparableLevel/aquarium.png",
+  "Match": false,
+  "ExternalId": "5c012003-dff0-4cb0-b931-82b7f113a166"
+},
+{
+  "_id": "73b15572-3ae4-440d-ac46-bb4ef90ff5e5",
+  "Name": "Gato",
+  "CreatedAt": "2020-09-27T17:03:13.829Z",
+  "Deleted": false,
+  "GameLevelType": 2,
+  "Path": "../../../../../assets/images/module/figures2d/cat.jpg",
+  "Match": false
+},
+{
+  "_id": "72361ce5-0be7-487c-a98f-753dc7073aab",
+  "Name": "Cilindro",
+  "CreatedAt": "2020-11-15T23:46:42.565Z",
+  "Deleted": false,
+  "GameLevelType": 1,
+  "Path": "../../../../../assets/images/module/figures3d/cylinder.jpg",
+  "Match": false,
+  "ExternalId": null
+},
+{
+  "_id": "6df7ddd2-b4d7-4ec2-9cea-241b9a59f1bf",
+  "Name": "Avião",
+  "CreatedAt": "2020-11-16T05:40:01.388Z",
+  "Deleted": false,
+  "GameLevelType": 6,
+  "Path": "../../../../../assets/images/module/comparableLevel/plane-real.png",
+  "Match": false,
+  "ExternalId": "5d97f31a-e1dd-4cb5-89c8-efe102941cde"
+},
+{
+  "_id": "69f10bf1-6f3e-41bc-96d2-066414609b57",
+  "Name": "Porta",
+  "CreatedAt": "2020-11-16T05:28:07.265Z",
+  "Deleted": false,
+  "GameLevelType": 5,
+  "Path": "../../../../../assets/images/module/comparableLevel/door-draw.png",
+  "Match": false,
+  "ExternalId": "0daa2329-154c-4eb0-803d-28756fba4ae4"
+},
+{
+  "_id": "672ac373-2306-43aa-b8a6-be1ad8e08468",
+  "Name": "Melancia",
+  "CreatedAt": "2020-11-15T23:56:14.818Z",
+  "Deleted": false,
+  "GameLevelType": 1,
+  "Path": "../../../../../assets/images/module/figures3d/watermellon.png",
+  "Match": false,
+  "ExternalId": null
+},
+{
+  "_id": "670123f1-c1f7-4b0c-ae4e-1ee13f5c3948",
+  "Name": "Flor",
+  "CreatedAt": "2020-09-27T16:48:25.581Z",
+  "Deleted": false,
+  "GameLevelType": 2,
+  "Path": "../../../../../assets/images/module/figures2d/flower.jpg",
+  "Match": false
+},
+{
+  "_id": "6607535b-18e1-464d-a3e7-aba7b80e42e4",
+  "Name": "Garfo",
+  "CreatedAt": "2020-11-16T05:01:47.772Z",
+  "Deleted": false,
+  "GameLevelType": 3,
+  "Path": "../../../../../assets/images/module/comparableLevel/fork-real.png",
+  "Match": false,
+  "ExternalId": "e5fcdaaa-17e5-4ec6-81d5-9b4229ec8f62"
+},
+{
+  "_id": "6261cc9a-fb77-47c1-9672-d3cf24716af7",
+  "Name": "Porta",
+  "CreatedAt": "2020-11-16T05:04:04.785Z",
+  "Deleted": false,
+  "GameLevelType": 3,
+  "Path": "../../../../../assets/images/module/comparableLevel/door-real.png",
+  "Match": false,
+  "ExternalId": "832d0a10-baa7-4a0b-95b8-51382be7be5c"
+},
+{
+  "_id": "5d97f31a-e1dd-4cb5-89c8-efe102941cde",
+  "Name": "Avião",
+  "CreatedAt": "2020-11-16T05:41:18.052Z",
+  "Deleted": false,
+  "GameLevelType": 6,
+  "Path": "../../../../../assets/images/module/comparableLevel/plane-draw.png",
+  "Match": false,
+  "ExternalId": "6df7ddd2-b4d7-4ec2-9cea-241b9a59f1bf"
+},
+{
+  "_id": "5c012003-dff0-4cb0-b931-82b7f113a166",
+  "Name": "Peixe",
+  "CreatedAt": "2020-11-16T05:15:58.629Z",
+  "Deleted": false,
+  "GameLevelType": 4,
+  "Path": "../../../../../assets/images/module/comparableLevel/fish.png",
+  "Match": false,
+  "ExternalId": "76ee3fab-16b9-4222-a7de-b004e2f6e309"
+},
+{
+  "_id": "5ad60198-4981-4575-885a-c7a8f7bb94fd",
+  "Name": "Tesoura",
+  "CreatedAt": "2020-11-16T05:32:14.920Z",
+  "Deleted": false,
+  "GameLevelType": 5,
+  "Path": "../../../../../assets/images/module/comparableLevel/scisssors-draw.png",
+  "Match": false,
+  "ExternalId": "4f3632f4-a931-4299-8140-aaa1831b7978"
+},
+{
+  "_id": "57ad93f3-1c42-415a-866a-7aa55b0bec40",
+  "Name": "Mochila",
+  "CreatedAt": "2020-11-15T23:44:44.580Z",
+  "Deleted": false,
+  "GameLevelType": 1,
+  "Path": "../../../../../assets/images/module/figures3d/backpack.png",
+  "Match": false,
+  "ExternalId": null
+},
+{
+  "_id": "53f9e37b-e5d4-4dab-bfc7-312385726b22",
+  "Name": "Prisma",
+  "CreatedAt": "2020-11-15T23:50:38.482Z",
+  "Deleted": false,
+  "GameLevelType": 1,
+  "Path": "../../../../../assets/images/module/figures3d/pink-prism.png",
+  "Match": false,
+  "ExternalId": null
+},
+{
+  "_id": "4f3632f4-a931-4299-8140-aaa1831b7978",
+  "Name": "Tesoura",
+  "CreatedAt": "2020-11-16T05:32:03.668Z",
+  "Deleted": false,
+  "GameLevelType": 5,
+  "Path": "../../../../../assets/images/module/comparableLevel/scissors-real.png",
+  "Match": false,
+  "ExternalId": "5ad60198-4981-4575-885a-c7a8f7bb94fd"
+},
+{
+  "_id": "4ecc303e-f1b4-48d7-b81c-52bad68bf6ab",
+  "Name": "Vaca",
+  "CreatedAt": "2020-09-27T17:03:27.022Z",
+  "Deleted": false,
+  "GameLevelType": 2,
+  "Path": "../../../../../assets/images/module/figures2d/cow.jpg",
+  "Match": false
+},
+{
+  "_id": "476ea6c5-5790-4f49-9cd7-971e2f09f607",
+  "Name": "Avião",
+  "CreatedAt": "2020-11-16T05:29:21.864Z",
+  "Deleted": false,
+  "GameLevelType": 5,
+  "Path": "../../../../../assets/images/module/comparableLevel/plane-draw.png",
+  "Match": false,
+  "ExternalId": "b732f785-6b95-45a8-b593-f89b328b490b"
+},
+{
+  "_id": "3e1e3937-712b-4ba0-baae-c46f90e03f14",
+  "Name": "Cavalo",
+  "CreatedAt": "2020-09-27T16:47:59.978Z",
+  "Deleted": false,
+  "GameLevelType": 2,
+  "Path": "../../../../../assets/images/module/figures2d/horse.jpg",
+  "Match": false
+},
+{
+  "_id": "39bd43eb-8b3a-4b45-8f0e-55f86817eeb9",
+  "Name": "Banana",
+  "CreatedAt": "2020-11-16T05:17:24.997Z",
+  "Deleted": false,
+  "GameLevelType": 4,
+  "Path": "../../../../../assets/images/module/comparableLevel/banana.png",
+  "Match": false,
+  "ExternalId": "d53b2756-0735-4e11-a442-9c5a44601f08"
+},
+{
+  "_id": "38381be1-ee82-4a39-82dc-8c211af56f2d",
+  "Name": "Paralelepípedo",
+  "CreatedAt": "2020-11-15T23:49:09.015Z",
+  "Deleted": false,
+  "GameLevelType": 1,
+  "Path": "../../../../../assets/images/module/figures3d/green-straight-parallelepiped.png",
+  "Match": false,
+  "ExternalId": null
+},
+{
+  "_id": "382929db-6a6d-498e-95f1-074793060fc3",
+  "Name": "Morango",
+  "CreatedAt": "2020-11-16T05:38:48.681Z",
+  "Deleted": false,
+  "GameLevelType": 6,
+  "Path": "../../../../../assets/images/module/comparableLevel/real-strawberry.png",
+  "Match": false,
+  "ExternalId": "1f14c586-1bcb-4ac2-a4f8-9734e4e2467e"
+},
+{
+  "_id": "352decab-5ace-436d-82ca-3ca879e034b7",
+  "Name": "Prisma",
+  "CreatedAt": "2020-11-16T05:10:17.714Z",
+  "Deleted": false,
+  "GameLevelType": 3,
+  "Path": "../../../../../assets/images/module/figures3d/prism.png",
+  "Match": false,
+  "ExternalId": "2298bd44-79b9-43a0-9ebd-9ef95d0c8930"
+},
+{
+  "_id": "3310bc1b-6648-4115-8eee-ddfc74c9a479",
+  "Name": "Microfone",
+  "CreatedAt": "2020-11-16T05:42:59.747Z",
+  "Deleted": false,
+  "GameLevelType": 6,
+  "Path": "../../../../../assets/images/module/associatedLevel/real-microphone.png",
+  "Match": false,
+  "ExternalId": "c2df5a0e-1e00-4451-8954-bc0f412b56dd"
+},
+{
+  "_id": "3289de5c-2279-45c8-91b2-75876e88f458",
+  "Name": "Botão",
+  "CreatedAt": "2020-11-16T05:05:18.258Z",
+  "Deleted": false,
+  "GameLevelType": 3,
+  "Path": "../../../../../assets/images/module/figures3d/green-button.png",
+  "Match": false,
+  "ExternalId": "052100e2-9c34-4bb8-9c98-2126e0c7ccf0"
+},
+{
+  "_id": "30c4ca5a-b42d-4261-89a9-a4e44750456b",
+  "Name": "Foguete",
+  "CreatedAt": "2020-11-16T05:00:39.192Z",
+  "Deleted": false,
+  "GameLevelType": 3,
+  "Path": "../../../../../assets/images/module/comparableLevel/rocket.png",
+  "Match": false,
+  "ExternalId": "b2e14acc-539a-492b-a523-62c9c4bf95a1"
+},
+{
+  "_id": "2d2ffc5d-21e6-40fd-8a9c-90ed244aa7b6",
+  "Name": "Livros",
+  "CreatedAt": "2020-09-27T17:02:59.813Z",
+  "Deleted": false,
+  "GameLevelType": 2,
+  "Path": "../../../../../assets/images/module/figures2d/books.png",
+  "Match": false
+},
+{
+  "_id": "2934d8c6-639c-495b-af14-39c5592fbfb0",
+  "Name": "Tesoura",
+  "CreatedAt": "2020-11-16T05:03:17.850Z",
+  "Deleted": false,
+  "GameLevelType": 3,
+  "Path": "../../../../../assets/images/module/comparableLevel/scisssors-draw.png",
+  "Match": false,
+  "ExternalId": "23d3a8f8-7c40-4e98-8b06-bbf0cf7da27d"
+},
+{
+  "_id": "23d3a8f8-7c40-4e98-8b06-bbf0cf7da27d",
+  "Name": "Tesoura",
+  "CreatedAt": "2020-11-16T05:02:54.201Z",
+  "Deleted": false,
+  "GameLevelType": 3,
+  "Path": "../../../../../assets/images/module/comparableLevel/scissors-real.png",
+  "Match": false,
+  "ExternalId": "2934d8c6-639c-495b-af14-39c5592fbfb0"
+},
+{
+  "_id": "2298bd44-79b9-43a0-9ebd-9ef95d0c8930",
+  "Name": "Prisma",
+  "CreatedAt": "2020-11-16T05:10:28.312Z",
+  "Deleted": false,
+  "GameLevelType": 3,
+  "Path": "../../../../../assets/images/module/figures3d/pink-prism.png",
+  "Match": false,
+  "ExternalId": "352decab-5ace-436d-82ca-3ca879e034b7"
+},
+{
+  "_id": "223fb584-e420-4d32-9f2b-87202e17f2af",
+  "Name": "Lua",
+  "CreatedAt": "2020-11-16T05:21:55.878Z",
+  "Deleted": false,
+  "GameLevelType": 4,
+  "Path": "../../../../../assets/images/module/comparableLevel/moon.png",
+  "Match": false,
+  "ExternalId": "af4ea3a6-9ddc-4f80-9713-efb998dcf53d"
+},
+{
+  "_id": "1f14c586-1bcb-4ac2-a4f8-9734e4e2467e",
+  "Name": "Morango",
+  "CreatedAt": "2020-11-16T05:38:12.923Z",
+  "Deleted": false,
+  "GameLevelType": 6,
+  "Path": "../../../../../assets/images/module/comparableLevel/real-strawberry.png",
+  "Match": false,
+  "ExternalId": "382929db-6a6d-498e-95f1-074793060fc3"
+},
+{
+  "_id": "1e3b4f57-7209-4abb-990d-0211cc78da91",
+  "Name": "Sorvete",
+  "CreatedAt": "2020-09-27T17:04:19.379Z",
+  "Deleted": false,
+  "GameLevelType": 2,
+  "Path": "../../../../../assets/images/module/figures2d/icecream.jpg",
+  "Match": false
+},
+{
+  "_id": "136e7c02-6927-413b-9887-587f5da4194b",
+  "Name": "Lousa",
+  "CreatedAt": "2020-11-16T05:27:31.275Z",
+  "Deleted": false,
+  "GameLevelType": 5,
+  "Path": "../../../../../assets/images/module/comparableLevel/board-real.png",
+  "Match": false,
+  "ExternalId": "d18a887f-323b-449d-b149-df8246b8a8a2"
+},
+{
+  "_id": "0daa2329-154c-4eb0-803d-28756fba4ae4",
+  "Name": "Porta",
+  "CreatedAt": "2020-11-16T05:28:17.450Z",
+  "Deleted": false,
+  "GameLevelType": 5,
+  "Path": "../../../../../assets/images/module/comparableLevel/door-real.png",
+  "Match": false,
+  "ExternalId": "69f10bf1-6f3e-41bc-96d2-066414609b57"
+},
+{
+  "_id": "0d0cd07b-e86b-4aac-8345-f2e9af227284",
+  "Name": "Morango",
+  "CreatedAt": "2020-11-16T05:31:18.986Z",
+  "Deleted": false,
+  "GameLevelType": 5,
+  "Path": "../../../../../assets/images/module/comparableLevel/real-strawberry.png",
+  "Match": false,
+  "ExternalId": "83a6e01a-42f2-47c7-b693-4e1fc890c939"
+},
+{
+  "_id": "0cf55a86-bb16-41ff-9c62-d6f41f9a7a9c",
+  "Name": "Maçã",
+  "CreatedAt": "2020-09-27T16:48:10.743Z",
+  "Deleted": false,
+  "GameLevelType": 2,
+  "Path": "../../../../../assets/images/module/figures2d/apples.jpg",
+  "Match": false
+},
+{
+  "_id": "0c8a5092-d0b8-47fe-ac37-abbaae7a3117",
+  "Name": "Ovos",
+  "CreatedAt": "2020-11-16T05:13:17.823Z",
+  "Deleted": false,
+  "GameLevelType": 4,
+  "Path": "../../../../../assets/images/module/comparableLevel/eggs.png",
+  "Match": false,
+  "ExternalId": "aceac207-7921-4eff-b3e1-629ed74acff5"
+},
+{
+  "_id": "0a41e0a7-0fa3-4103-a68e-29edd3334a72",
+  "Name": "Chave",
+  "CreatedAt": "2020-11-16T05:18:47.107Z",
+  "Deleted": false,
+  "GameLevelType": 4,
+  "Path": "../../../../../assets/images/module/comparableLevel/key.png",
+  "Match": false,
+  "ExternalId": "792e3a9a-d379-4e6a-a450-fba6875c86ee"
+},
+{
+  "_id": "052100e2-9c34-4bb8-9c98-2126e0c7ccf0",
+  "Name": "Botão",
+  "CreatedAt": "2020-11-16T05:05:54.689Z",
+  "Deleted": false,
+  "GameLevelType": 3,
+  "Path": "../../../../../assets/images/module/figures3d/blue-button.png",
+  "Match": false,
+  "ExternalId": "3289de5c-2279-45c8-91b2-75876e88f458"
 }

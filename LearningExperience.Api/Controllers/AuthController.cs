@@ -74,7 +74,7 @@ namespace LearningExperience.Api.Controllers
                 var userProgress = new UserProgressDTO
                 {
                     UserId = validUser.Id,
-                    Module = level           
+                    Module = level          
                 };
                 _userService.InsertUserProgress(userProgress);
             }
