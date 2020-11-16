@@ -1,14 +1,4 @@
 {
-  "_id": "d53b2756-0735-4e11-a442-9c5a44601f08",
-  "Name": "Macaco",
-  "CreatedAt": "2020-11-16T05:17:14.659Z",
-  "Deleted": false,
-  "GameLevelType": 4,
-  "Path": "../../../../../assets/images/module/comparableLevel/monkey.png",
-  "Match": false,
-  "ExternalId": "39bd43eb-8b3a-4b45-8f0e-55f86817eeb9"
-},
-{
   "_id": "ffbc0646-df74-4838-ad25-f505a52e54d9",
   "Name": "Leão",
   "CreatedAt": "2020-09-27T17:05:07.518Z",
@@ -95,6 +85,26 @@
   "Path": "../../../../../assets/images/module/comparableLevel/fork-draw.png",
   "Match": false,
   "ExternalId": "6607535b-18e1-464d-a3e7-aba7b80e42e4"
+},
+{
+  "_id": "d53b2756-0735-4e11-a442-9c5a44601f08",
+  "Name": "Macaco",
+  "CreatedAt": "2020-11-16T05:17:14.659Z",
+  "Deleted": false,
+  "GameLevelType": 4,
+  "Path": "../../../../../assets/images/module/comparableLevel/monkey.png",
+  "Match": false,
+  "ExternalId": "39bd43eb-8b3a-4b45-8f0e-55f86817eeb9"
+},
+{
+  "_id": "d26dc96a-3156-425c-b088-9661291c437c",
+  "Name": "Roxo",
+  "CreatedAt": "2020-11-16T06:15:49.929Z",
+  "Deleted": false,
+  "GameLevelType": 7,
+  "Path": "../../../../../assets/images/module/colorLevel/purple.jpg",
+  "Match": false,
+  "ExternalId": "g"
 },
 {
   "_id": "d18a887f-323b-449d-b149-df8246b8a8a2",
@@ -246,6 +256,16 @@
   "ExternalId": "849232d1-8a2b-428a-bec8-a087bb00fef8"
 },
 {
+  "_id": "9c0dce3b-66f8-47c0-a49b-7fa312428c5d",
+  "Name": "Verde",
+  "CreatedAt": "2020-11-16T06:12:29.621Z",
+  "Deleted": false,
+  "GameLevelType": 7,
+  "Path": "../../../../../assets/images/module/colorLevel/green.png",
+  "Match": false,
+  "ExternalId": "c"
+},
+{
   "_id": "99a1bb3b-8cc9-4005-b73f-0805d24a1b3e",
   "Name": "Esfera",
   "CreatedAt": "2020-11-15T23:50:16.802Z",
@@ -335,6 +355,16 @@
   "ExternalId": "6261cc9a-fb77-47c1-9672-d3cf24716af7"
 },
 {
+  "_id": "820d8061-638e-4e8c-8d1f-a3d91849746d",
+  "Name": "Rosa",
+  "CreatedAt": "2020-11-16T06:15:09.170Z",
+  "Deleted": false,
+  "GameLevelType": 7,
+  "Path": "../../../../../assets/images/module/colorLevel/rosa.png",
+  "Match": false,
+  "ExternalId": "f"
+},
+{
   "_id": "7f5da58f-eb2a-4f1c-a473-42124d6d5d50",
   "Name": "Microfone",
   "CreatedAt": "2020-11-16T05:26:28.038Z",
@@ -382,6 +412,16 @@
   "Path": "../../../../../assets/images/module/figures3d/cylinder.jpg",
   "Match": false,
   "ExternalId": null
+},
+{
+  "_id": "6dfb1282-2bd9-42b0-8ba3-4de6161a74da",
+  "Name": "Azul Claro",
+  "CreatedAt": "2020-11-16T06:09:41.313Z",
+  "Deleted": false,
+  "GameLevelType": 7,
+  "Path": "../../../../../assets/images/module/colorLevel/blue-white.png",
+  "Match": false,
+  "ExternalId": "a"
 },
 {
   "_id": "6df7ddd2-b4d7-4ec2-9cea-241b9a59f1bf",
@@ -512,6 +552,16 @@
   "Match": false
 },
 {
+  "_id": "4b044ad4-3cfe-4975-8fd8-596235e8d6a0",
+  "Name": "Marrom",
+  "CreatedAt": "2020-11-16T06:14:11.922Z",
+  "Deleted": false,
+  "GameLevelType": 7,
+  "Path": "../../../../../assets/images/module/colorLevel/marrom.png",
+  "Match": false,
+  "ExternalId": "d"
+},
+{
   "_id": "476ea6c5-5790-4f49-9cd7-971e2f09f607",
   "Name": "Avião",
   "CreatedAt": "2020-11-16T05:29:21.864Z",
@@ -618,6 +668,36 @@
   "Path": "../../../../../assets/images/module/comparableLevel/scisssors-draw.png",
   "Match": false,
   "ExternalId": "23d3a8f8-7c40-4e98-8b06-bbf0cf7da27d"
+},
+{
+  "_id": "273a4100-5148-4f55-957c-d53ca2f7dd74",
+  "Name": "Vermelho",
+  "CreatedAt": "2020-11-16T06:14:49.494Z",
+  "Deleted": false,
+  "GameLevelType": 7,
+  "Path": "../../../../../assets/images/module/colorLevel/red.png",
+  "Match": false,
+  "ExternalId": "e"
+},
+{
+  "_id": "25a8447a-65e6-40dc-bbb8-af4543750ef4",
+  "Name": "Azul Escuro",
+  "CreatedAt": "2020-11-16T06:09:59.607Z",
+  "Deleted": false,
+  "GameLevelType": 7,
+  "Path": "../../../../../assets/images/module/colorLevel/blue.png",
+  "Match": false,
+  "ExternalId": "b"
+},
+{
+  "_id": "247e12e4-3c70-46a1-ac0b-95190f971b79",
+  "Name": "Amarelo",
+  "CreatedAt": "2020-11-16T06:16:14.252Z",
+  "Deleted": false,
+  "GameLevelType": 7,
+  "Path": "../../../../../assets/images/module/colorLevel/yellow.png",
+  "Match": false,
+  "ExternalId": "h"
 },
 {
   "_id": "23d3a8f8-7c40-4e98-8b06-bbf0cf7da27d",
@@ -736,4 +816,14 @@
   "Path": "../../../../../assets/images/module/figures3d/blue-button.png",
   "Match": false,
   "ExternalId": "3289de5c-2279-45c8-91b2-75876e88f458"
+},
+{
+  "_id": "05140eed-e8bf-45a2-b7c2-b73b40e48066",
+  "Name": "Laranja",
+  "CreatedAt": "2020-11-16T06:17:30.704Z",
+  "Deleted": false,
+  "GameLevelType": 7,
+  "Path": "../../../../../assets/images/module/colorLevel/orange.png",
+  "Match": false,
+  "ExternalId": "i"
 }
