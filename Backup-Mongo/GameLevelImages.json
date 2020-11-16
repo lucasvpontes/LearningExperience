@@ -1,4 +1,14 @@
 {
+  "_id": "b0149759-1c97-4979-ade7-40d48a12478c",
+  "Name": "Pirâmide",
+  "CreatedAt": "2020-11-15T23:49:31.383Z",
+  "Deleted": false,
+  "GameLevelType": 1,
+  "Path": "../../../../../assets/images/module/figures3d/green-piramid.png",
+  "Match": false,
+  "ExternalId": null
+},
+{
   "_id": "ffbc0646-df74-4838-ad25-f505a52e54d9",
   "Name": "Leão",
   "CreatedAt": "2020-09-27T17:05:07.518Z",
@@ -104,7 +114,7 @@
   "GameLevelType": 7,
   "Path": "../../../../../assets/images/module/colorLevel/purple.jpg",
   "Match": false,
-  "ExternalId": "g"
+  "ExternalId": ";"
 },
 {
   "_id": "d18a887f-323b-449d-b149-df8246b8a8a2",
@@ -206,16 +216,6 @@
   "ExternalId": "30c4ca5a-b42d-4261-89a9-a4e44750456b"
 },
 {
-  "_id": "b0149759-1c97-4979-ade7-40d48a12478c",
-  "Name": "Pirâmide",
-  "CreatedAt": "2020-11-15T23:49:31.383Z",
-  "Deleted": false,
-  "GameLevelType": 1,
-  "Path": "../../../../../assets/images/module/figures3d/green-piramid.png",
-  "Match": false,
-  "ExternalId": null
-},
-{
   "_id": "af4ea3a6-9ddc-4f80-9713-efb998dcf53d",
   "Name": "Foguete",
   "CreatedAt": "2020-11-16T05:22:12.091Z",
@@ -263,7 +263,7 @@
   "GameLevelType": 7,
   "Path": "../../../../../assets/images/module/colorLevel/green.png",
   "Match": false,
-  "ExternalId": "c"
+  "ExternalId": "2"
 },
 {
   "_id": "99a1bb3b-8cc9-4005-b73f-0805d24a1b3e",
@@ -362,7 +362,7 @@
   "GameLevelType": 7,
   "Path": "../../../../../assets/images/module/colorLevel/rosa.png",
   "Match": false,
-  "ExternalId": "f"
+  "ExternalId": "Z"
 },
 {
   "_id": "7f5da58f-eb2a-4f1c-a473-42124d6d5d50",
@@ -421,7 +421,7 @@
   "GameLevelType": 7,
   "Path": "../../../../../assets/images/module/colorLevel/blue-white.png",
   "Match": false,
-  "ExternalId": "a"
+  "ExternalId": "o"
 },
 {
   "_id": "6df7ddd2-b4d7-4ec2-9cea-241b9a59f1bf",
@@ -559,7 +559,7 @@
   "GameLevelType": 7,
   "Path": "../../../../../assets/images/module/colorLevel/marrom.png",
   "Match": false,
-  "ExternalId": "d"
+  "ExternalId": "N"
 },
 {
   "_id": "476ea6c5-5790-4f49-9cd7-971e2f09f607",
@@ -677,7 +677,7 @@
   "GameLevelType": 7,
   "Path": "../../../../../assets/images/module/colorLevel/red.png",
   "Match": false,
-  "ExternalId": "e"
+  "ExternalId": "\\"
 },
 {
   "_id": "25a8447a-65e6-40dc-bbb8-af4543750ef4",
@@ -687,7 +687,7 @@
   "GameLevelType": 7,
   "Path": "../../../../../assets/images/module/colorLevel/blue.png",
   "Match": false,
-  "ExternalId": "b"
+  "ExternalId": "p"
 },
 {
   "_id": "247e12e4-3c70-46a1-ac0b-95190f971b79",
@@ -697,7 +697,7 @@
   "GameLevelType": 7,
   "Path": "../../../../../assets/images/module/colorLevel/yellow.png",
   "Match": false,
-  "ExternalId": "h"
+  "ExternalId": "a"
 },
 {
   "_id": "23d3a8f8-7c40-4e98-8b06-bbf0cf7da27d",
@@ -825,5 +825,5 @@
   "GameLevelType": 7,
   "Path": "../../../../../assets/images/module/colorLevel/orange.png",
   "Match": false,
-  "ExternalId": "i"
+  "ExternalId": "I"
 }
