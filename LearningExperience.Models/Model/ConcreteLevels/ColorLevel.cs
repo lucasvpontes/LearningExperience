@@ -1,6 +1,7 @@
 ﻿using LearningExperience.Models.DTO;
 using LearningExperience.Models.Model.Interfaces;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace LearningExperience.Models.Model.ConcreteLevels
 {
@@ -8,7 +9,17 @@ namespace LearningExperience.Models.Model.ConcreteLevels
     {
         public override GameLevelResult Configure(IList<GameLevelImage> gameLevelImages)
         {
-            throw new System.NotImplementedException();
+            IList<GameLevelImage> shuffledList = Shuffle(gameLevelImages).Take(6).ToList();
+            shuffledList.First().Match = true;
+
+            GameLevelResult gameLevelResult = new GameLevelResult()
+            {
+                MainImage = shuffledList.First(),
+                Comparable = shuffledList
+            };
+
+            gameLevelResult.Comparable = Shuffle(gameLevelResult.Comparable);
+            return gameLevelResult;
         }
     }
 }
