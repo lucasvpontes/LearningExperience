@@ -11,12 +11,13 @@ namespace LearningExperience.Services.Interfaces
         IEnumerable<User> GetAll();
         Task RemoveUser(string userId);
         Task UpdateUser(UserDTO user);
-        User GetUserByLogin(AuthenticateUserDTO user);
+        Task<User> GetUserByLogin(AuthenticateUserDTO user);
         bool ValidateUser(AuthenticateUserDTO user);
         double GetProgressByModule(UserProgressDTO userProgress);
         Task UpdateUserProgress(UserProgressUpdateDTO userProgress);
         IList<UserProgressResultDTO> GetProgressByUser(string userId);
         UserReturnDTO GetUserById(string userId);
+        public void InsertUserProgress(UserProgressDTO userProgress);
     }
 }
 

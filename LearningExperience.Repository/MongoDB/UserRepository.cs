@@ -65,9 +65,9 @@ namespace LearningExperience.Repository
                 return true;
         }
 
-        public User GetUserByLogin(AuthenticateUserDTO userAuth)
+        public async Task<User> GetUserByLogin(AuthenticateUserDTO userAuth)
         {
-            return _mongoRepository.FindOne(user => user.Email == userAuth.Email && user.Password == userAuth.Password);
+            return await _mongoRepository.FindOneAsync(user => user.Email == userAuth.Email && user.Password == userAuth.Password);
         }
 
         public User VerifyIfUserExists(AuthenticateUserDTO userDTO)

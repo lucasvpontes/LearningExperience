@@ -4,10 +4,7 @@ using LearningExperience.Models.DTO;
 using LearningExperience.Models.Model;
 using LearningExperience.Repository.Interfaces;
 using LearningExperience.Services.Interfaces;
-using Microsoft.VisualBasic;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
 using System.Threading.Tasks;
 
 
@@ -29,7 +26,7 @@ namespace LearningExperience.Services
         public async Task AddUser(AuthenticateUserDTO user)
         {
             if (!VerifyIfUserExists(user))
-                await _userRepository.AddUser(user);
+              await _userRepository.AddUser(user);
         }
 
         public IEnumerable<User> GetAll()
@@ -53,9 +50,9 @@ namespace LearningExperience.Services
             return _userRepository.ValidateUser(user);
         }
 
-        public User GetUserByLogin(AuthenticateUserDTO user)
+        public async Task<User> GetUserByLogin(AuthenticateUserDTO user)
         {
-            return _userRepository.GetUserByLogin(user);
+            return await _userRepository.GetUserByLogin(user);
         }
 
         private bool VerifyIfUserExists(AuthenticateUserDTO user)
@@ -88,7 +85,7 @@ namespace LearningExperience.Services
                     Progress = userProgress.Progress / 100,
                     Module = userProgress.Module
                 };
-                progressResultList.Add(userProgressResult);
+                progressResultList.Add(userProgressResult);       
             }
             return progressResultList;
         }
@@ -96,6 +93,11 @@ namespace LearningExperience.Services
         public UserReturnDTO GetUserById(string id)
         {
             return _userRepository.GetUserById(id);
+        }
+
+        public void InsertUserProgress(UserProgressDTO userProgress)
+        {
+            _userProgressRepository.InsertUserProgress(userProgress);
         }
     }
 }

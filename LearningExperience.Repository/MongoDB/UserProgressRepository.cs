@@ -39,7 +39,7 @@ namespace LearningExperience.Repository.MongoDB
             await _mongoRepository.UpdateOneAsync(filter => (filter.UserId == userProgress.Id && filter.Module == userProgress.Module), update);
         }
 
-        private void InsertUserProgress(UserProgressDTO userProgress)
+        public void InsertUserProgress(UserProgressDTO userProgress)
         {
             UserProgress user = new UserProgress()
             {
@@ -53,7 +53,7 @@ namespace LearningExperience.Repository.MongoDB
         public IEnumerable<UserProgress> GetProgressByUser(string userId)
         {
             var progressUser = _mongoRepository.FilterBy(
-                filter => filter.UserId == userId);
+                filter => filter.UserId == userId).OrderBy(order => order.Module);
             return progressUser;
         }
     }

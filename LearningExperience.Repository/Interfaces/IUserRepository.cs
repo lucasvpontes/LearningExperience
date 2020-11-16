@@ -12,7 +12,7 @@ namespace LearningExperience.Repository.Interfaces
         Task RemoveUser(string userId);
         Task UpdateUser(UserDTO user);
         bool ValidateUser(AuthenticateUserDTO user);
-        User GetUserByLogin(AuthenticateUserDTO userAuth);
+        Task<User> GetUserByLogin(AuthenticateUserDTO userAuth);
         User VerifyIfUserExists(AuthenticateUserDTO userAuth);
         UserReturnDTO GetUserById(string userId);
     }

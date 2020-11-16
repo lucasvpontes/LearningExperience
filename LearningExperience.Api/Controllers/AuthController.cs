@@ -4,7 +4,10 @@ using LearningExperience.Models.Enums;
 using LearningExperience.Services.Interfaces;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 
 namespace LearningExperience.Api.Controllers
 {
@@ -26,19 +29,18 @@ namespace LearningExperience.Api.Controllers
 
         [AllowAnonymous]
         [HttpPost]
-        public IActionResult CreateToken([FromBody] AuthenticateUserDTO userDTO)
+        public async Task<IActionResult> CreateToken([FromBody] AuthenticateUserDTO userDTO)
         {
             if (userDTO.Email == null) return Ok(new { Status = ReturnStatusCode.NotAuthorized, Message = "Usuário ou senha incorretos" });
 
-            string tokenString = string.Empty;
 
             bool IsvalidUser = _userService.ValidateUser(userDTO);
-            var validUser = _userService.GetUserByLogin(userDTO);
+            var validUser = await _userService.GetUserByLogin(userDTO);
             AddParamsToJWT();
             if (IsvalidUser)
             {
-                tokenString = _authService.BuildJWTToken(tokenParams);
-                return Ok(new { Status = ReturnStatusCode.Ok, Token = tokenString, TokenExpiresIn = _jwtTokenSettings.TokenExpiry, Id = validUser.Id, UserName = validUser.Name });
+                var tokenString = _authService.BuildJWTToken(tokenParams);
+                return Ok(new { Status = ReturnStatusCode.Ok, Token = tokenString, TokenExpiresIn = _jwtTokenSettings.TokenExpiry, validUser.Id, UserName = validUser.Name });
             }
             else
             {
@@ -48,12 +50,11 @@ namespace LearningExperience.Api.Controllers
         [Route("RegisterLogin")]
         [AllowAnonymous]
         [HttpPost]
-        public IActionResult RegisterLogin([FromBody] AuthenticateUserDTO userDTO)
+        public async Task<IActionResult> RegisterLogin([FromBody] AuthenticateUserDTO userDTO)
         {
             var email = string.IsNullOrEmpty(userDTO.Email);
             var password = string.IsNullOrEmpty(userDTO.Password);
             var name = string.IsNullOrEmpty(userDTO.Name);
-            string tokenString = string.Empty;
 
             if (email || password || name)
                 return Unauthorized(new { ReturnStatusCode.NotAuthorized, Message = "Usuário, senha ou nome vazio", IsSignuped = false });
@@ -61,11 +62,25 @@ namespace LearningExperience.Api.Controllers
             if (userDTO.Password != userDTO.RepeatPassword)
                 return Unauthorized(new { ReturnStatusCode.NotAuthorized, Message = "Senhas não indenticas", IsSignuped = false });
 
-            _userService.AddUser(userDTO);
+            await _userService.AddUser(userDTO);
             AddParamsToJWT();
 
-            tokenString = _authService.BuildJWTToken(tokenParams);
-            return Ok(new { StatusCode = ReturnStatusCode.Ok, Message = "Cadastrado com sucesso", IsSignuped = true });
+            var validUser = await _userService.GetUserByLogin(userDTO);
+
+            var levels = Enum.GetValues(typeof(GameLevelType));
+
+            foreach (GameLevelType level in levels)
+            {
+                var userProgress = new UserProgressDTO
+                {
+                    UserId = validUser.Id,
+                    Module = level           
+                };
+                _userService.InsertUserProgress(userProgress);
+            }
+
+            var tokenString = _authService.BuildJWTToken(tokenParams);
+            return Ok(new { StatusCode = ReturnStatusCode.Ok, Message = "Cadastrado com sucesso", Token = tokenString, IsSignuped = true, validUser.Id, UserName = validUser.Name });
         }
 
         private Dictionary<string, string> AddParamsToJWT()

@@ -10,5 +10,6 @@ namespace LearningExperience.Repository.Interfaces
         Task UpdateUserProgress(UserProgressUpdateDTO userProgress);
         double GetProgressByModule(UserProgressDTO userProgress);
         IEnumerable<UserProgress> GetProgressByUser(string userId);
+        public void InsertUserProgress(UserProgressDTO userProgress);
     }
 }
