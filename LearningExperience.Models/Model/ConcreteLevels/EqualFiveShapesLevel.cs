@@ -18,7 +18,7 @@ namespace LearningExperience.Models.Model.ConcreteLevels
 
             shuffledList = Shuffle(shuffledList).Where(s => s.Id != comparebleMain.Id &&
                                                        s.Id != comparable.Id)
-                                                .Take(5).ToList();
+                                                .Take(4).ToList();
             shuffledList.Add(comparable);
 
             GameLevelResult gameLevelResult = new GameLevelResult()
